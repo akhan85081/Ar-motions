@@ -1,770 +1,861 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR MOTIONS | Premium Video Production & Editing</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="AR MOTIONS provides top-tier video editing and post-production. I specialize in premium motion graphics, documentary edits, SaaS UI animations, and short-form content for global clients.">
-    <meta name="keywords" content="video editing, premium video editing, professional video editors, motion graphics, documentary editing, YouTube editor, SaaS UI animation, real estate video ads, short form content editing, post-production, AR MOTIONS, fast turnaround video editing, hire video editor">
-    <meta name="author" content="Arshad Khan - AR MOTIONS">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://armotions.in/">
-    <meta property="og:title" content="AR MOTIONS | Premium Video Production & Editing">
-    <meta property="og:description" content="Elevate your brand with AR MOTIONS. I deliver premium video editing, motion graphics, and post-production services globally.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://armotions.in/">
-    <meta property="twitter:title" content="AR MOTIONS | Premium Video Production & Editing">
-    <meta property="twitter:description" content="Elevate your brand with AR MOTIONS. I deliver premium video editing, motion graphics, and post-production services globally.">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#03000a',
-                            purple: '#8B5CF6',
-                            neon: '#a855f7',
-                            light: '#f3e8ff'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #03000a; color: #ffffff; overflow-x: hidden; cursor: none; }
-        
-        /* Custom Cursor */
-        .custom-cursor {
-            position: fixed; top: 0; left: 0; width: 24px; height: 24px;
-            border-radius: 50%; background: rgba(168, 85, 247, 0.9);
-            box-shadow: 0 0 25px 12px rgba(168, 85, 247, 0.6);
-            pointer-events: none; z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
-            mix-blend-mode: screen;
-        }
-        .custom-cursor.hovering { 
-            width: 60px; height: 60px; 
-            background: rgba(139, 92, 246, 0.2); 
-            border: 2px solid rgba(168, 85, 247, 0.8); 
-            box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
-        }
-        /* Hide custom cursor on mobile */
-        @media (hover: none) and (pointer: coarse) { 
-            body { cursor: auto; } 
-            .custom-cursor { display: none !important; } 
-        }
-
-        .text-glow { text-shadow: 0 0 20px rgba(168, 85, 247, 0.5); }
-        .box-glow { box-shadow: 0 0 25px rgba(139, 92, 246, 0.2); }
-        .gradient-text {
-            background: linear-gradient(to right, #c084fc, #a855f7, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: shine 3s linear infinite;
-        }
-        @keyframes shine { to { background-position: 200% center; } }
-        
-        /* Liquid Glassmorphism Effect */
-        .liquid-glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 0 15px rgba(255,255,255,0.02), 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .liquid-glass:hover {
-            background: rgba(139, 92, 246, 0.08);
-            border-color: rgba(168, 85, 247, 0.3);
-            box-shadow: inset 0 0 20px rgba(168, 85, 247, 0.1), 0 15px 40px rgba(0, 0, 0, 0.5);
-            transform: translateY(-8px);
-        }
-        
-        .whatsapp-btn {
-            position: fixed; bottom: 30px; right: 30px;
-            background: linear-gradient(135deg, #25D366, #128C7E); color: white;
-            border-radius: 50px; padding: 12px 24px; display: flex; align-items: center; gap: 10px;
-            font-weight: 600; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 50; transition: all 0.3s ease; text-decoration: none;
-        }
-        .whatsapp-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6); }
-        @media (max-width: 640px) {
-            .whatsapp-btn { bottom: 20px; right: 20px; padding: 10px 18px; }
-        }
-        
-        .float-slow { animation: float 10s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
-
-        /* Floating Icons Background */
-        .floating-icon {
-            position: absolute; color: #a855f7; font-size: 2rem; opacity: 0;
-            animation: floatIcon linear infinite; z-index: 0; pointer-events: none;
-        }
-        @keyframes floatIcon {
-            0% { transform: translateY(110vh) rotate(0deg) scale(0.8); opacity: 0; }
-            10% { opacity: 0.15; }
-            90% { opacity: 0.15; }
-            100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
-        }
-
-        /* Sidebar transition */
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        .sidebar-open { transform: translateX(0); }
-        .sidebar-closed { transform: translateX(100%); }
-        
-        /* FAQ Accordion */
-        .faq-answer { transition: max-height 0.3s ease, padding 0.3s ease; max-height: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; }
-        .faq-item.active .faq-answer { max-height: 400px; padding-top: 1rem; padding-bottom: 1rem; }
-        .faq-item.active .faq-icon { transform: rotate(180deg); }
-        .faq-icon { transition: transform 0.3s ease; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR MOTIONS | Premium Video Production & Editing</title>
+<meta name="description" content="AR MOTIONS provides top-tier video editing and post-production. I specialize in premium motion graphics, documentary edits, SaaS UI animations, and short-form content for global clients.">
+<meta name="keywords" content="video editing, premium video editing, professional video editors, motion graphics, documentary editing, YouTube editor, SaaS UI animation, real estate video ads, short form content editing, post-production, AR MOTIONS, fast turnaround video editing, hire video editor">
+<meta name="author" content="Arshad Khan - AR MOTIONS">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://www.armotions.in/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.armotions.in/">
+<meta property="og:title" content="AR MOTIONS | Premium Video Production & Editing">
+<meta property="og:description" content="Elevate your brand with AR MOTIONS. I deliver premium video editing, motion graphics, and post-production services globally.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.armotions.in/">
+<meta name="twitter:title" content="AR MOTIONS | Premium Video Production & Editing">
+<meta name="twitter:description" content="Elevate your brand with AR MOTIONS. I deliver premium video editing, motion graphics, and post-production services globally.">
+<link rel="icon" href="assets/images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"AR MOTIONS","url":"https://www.armotions.in/","description":"Premium video editing and post-production: motion graphics, documentary edits, SaaS UI animation and short-form content for global clients.","founder":{"@type":"Person","name":"Arshad Khan"},"email":"arshad@armotions.in","telephone":"+91 93026 87554","address":{"@type":"PostalAddress","addressLocality":"Ratlam","addressCountry":"IN"},"sameAs":["https://youtu.be/Y-AG6qYqFfs"]}
+</script>
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+--color-background:#080808;--color-surface:#101010;--color-surface-elevated:#171717;
+--color-border:rgba(255,255,255,0.12);--color-text-primary:#F5F5F2;--color-text-secondary:#A2A2A2;
+--color-accent:#D7FF3F;--color-accent-ink:#0b0c05;
+--font-display:'Anton','Arial Narrow',sans-serif;
+--font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+--radius:14px;--dur:.5s;--ease:cubic-bezier(.22,.61,.21,1);--wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--color-background);color:var(--color-text-primary);font-family:var(--font-body);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--color-accent);color:var(--color-accent-ink)}
+:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:24px;padding-right:24px}
+section{scroll-margin-top:88px}
+.section{padding:clamp(72px,9vw,120px) 0}
+.kicker{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--color-text-secondary);font-weight:600;margin:0 0 18px}
+.kicker::before{content:"";width:28px;height:2px;background:var(--color-accent);flex:none}
+.h-display{font-family:var(--font-display);text-transform:uppercase;line-height:.94;letter-spacing:.005em;margin:0;font-weight:400}
+.h2{font-family:var(--font-display);text-transform:uppercase;font-weight:400;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1;margin:0 0 16px}
+.lede{color:var(--color-text-secondary);font-size:clamp(1rem,1.6vw,1.15rem);max-width:640px;margin:0}
+.skip{position:absolute;left:-9999px;top:0;background:var(--color-accent);color:var(--color-accent-ink);padding:12px 20px;z-index:300;font-weight:700;border-radius:0 0 8px 0;text-decoration:none}
+.skip:focus{left:0}
+.site-header{position:sticky;top:0;z-index:80;background:rgba(8,8,8,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--color-border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:.14em;font-size:14px}
+.brand img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:13.5px;font-weight:500;letter-spacing:.04em;color:var(--color-text-secondary);padding:6px 2px;position:relative}
+.nav-links a:hover{color:var(--color-text-primary)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--color-accent);transition:width .25s var(--ease)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
+.menu-btn{display:none;background:none;border:1px solid var(--color-border);border-radius:10px;color:var(--color-text-primary);padding:9px 11px;cursor:pointer}
+.menu-btn svg{display:block}
+.hero{padding:clamp(64px,9vh,110px) 0 clamp(56px,7vh,88px);text-align:center;position:relative;overflow:hidden}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--color-border);border-radius:999px;padding:9px 20px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-text-secondary);margin:0 0 30px;background:rgba(255,255,255,.02)}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--color-accent);flex:none}
+.hero h1{font-size:clamp(3.4rem,11vw,9rem);margin:0 0 26px}
+.hero h1 .line{display:block}
+.hero h1 .accent{color:var(--color-accent)}
+.hero-sub{font-size:clamp(1.05rem,2.2vw,1.4rem);color:var(--color-text-secondary);margin:0 0 10px}
+.hero-brandline{font-size:clamp(.95rem,1.8vw,1.1rem);color:var(--color-text-primary);opacity:.85;margin:0 0 38px;font-weight:500;letter-spacing:.02em}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:0 0 64px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s;font-family:inherit}
+.btn-primary{background:var(--color-accent);color:var(--color-accent-ink)}
+.btn-primary:hover{background:#e6ff70;transform:translateY(-2px)}
+.btn-ghost{border-color:var(--color-border);color:var(--color-text-primary);background:transparent}
+.btn-ghost:hover{border-color:var(--color-accent);color:var(--color-accent)}
+.hero-media{max-width:880px;margin:0 auto}
+.frame{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--color-border);background:#0c0c0c}
+.frame-169{aspect-ratio:16/9}
+.poster{position:absolute;inset:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(120% 120% at 50% 18%,#1a1a1a 0%,#0a0a0a 70%);border:0;cursor:pointer;color:var(--color-text-primary);padding:24px;font-family:inherit}
+.poster:hover .play-ring,.poster:focus-visible .play-ring{border-color:var(--color-accent);transform:scale(1.07)}
+.play-ring{width:84px;height:84px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;transition:transform .3s var(--ease),border-color .3s,background .3s;background:rgba(8,8,8,.5);flex:none}
+.play-ring svg{margin-left:4px}
+.poster-title{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-text-secondary)}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.scroll-hint{margin-top:46px;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--color-text-secondary);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+.scroll-hint .sline{width:1px;height:44px;background:var(--color-border);position:relative;overflow:hidden}
+.scroll-hint .sline::after{content:"";position:absolute;left:0;top:-40%;width:100%;height:40%;background:var(--color-accent);animation:drop 2.2s var(--ease) infinite}
+@keyframes drop{0%{top:-40%}60%,100%{top:110%}}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.anim{opacity:0;animation:rise .8s var(--ease) forwards}
+.anim-1{animation-delay:.05s}.anim-2{animation-delay:.18s}.anim-3{animation-delay:.32s}
+.anim-4{animation-delay:.46s}.anim-5{animation-delay:.6s}.anim-6{animation-delay:.78s}
+html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+html.js .reveal.in{opacity:1;transform:none}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:34px 0 40px}
+.filter-btn{background:transparent;border:1px solid var(--color-border);color:var(--color-text-secondary);border-radius:999px;padding:10px 22px;font-size:13px;font-weight:600;letter-spacing:.06em;cursor:pointer;transition:all .25s var(--ease);font-family:inherit}
+.filter-btn:hover{border-color:var(--color-text-secondary);color:var(--color-text-primary)}
+.filter-btn[aria-pressed="true"]{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-accent-ink)}
+.work-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.work-card{grid-column:span 2;min-width:0}
+.work-card.featured{grid-column:span 3}
+.card-open{display:block;width:100%;background:none;border:0;padding:0;cursor:pointer;text-align:left;color:inherit;text-decoration:none;font-family:inherit}
+.card-frame{position:relative;display:block;aspect-ratio:9/16;border-radius:var(--radius);overflow:hidden;border:1px solid var(--color-border);background:#0d0d0d;transition:border-color .3s,transform .3s var(--ease)}
+.card-open:hover .card-frame,.card-open:focus-visible .card-frame{border-color:rgba(215,255,63,.55);transform:translateY(-4px)}
+.card-poster{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:18px;background:linear-gradient(180deg,rgba(10,10,10,.1) 42%,rgba(8,8,8,.9) 100%)}
+.card-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;background:rgba(8,8,8,.55);transition:all .3s var(--ease)}
+.card-open:hover .card-play,.card-open:focus-visible .card-play{background:var(--color-accent);border-color:var(--color-accent)}
+.card-open:hover .card-play svg,.card-open:focus-visible .card-play svg{fill:var(--color-accent-ink)}
+.card-cat{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-accent);font-weight:700}
+.card-title{font-size:16px;font-weight:600;margin:14px 0 4px;line-height:1.35}
+.card-meta{font-size:12.5px;color:var(--color-text-secondary);letter-spacing:.04em;margin:0}
+.empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--color-text-secondary);border:1px dashed var(--color-border);border-radius:var(--radius);margin:0}
+.work-count{font-size:13px;color:var(--color-text-secondary);letter-spacing:.08em;margin:26px 0 0}
+.work-more{margin-top:26px}
+.link-btn{background:none;border:0;border-bottom:1px solid var(--color-border);color:var(--color-text-primary);font-size:14px;font-weight:600;letter-spacing:.03em;cursor:pointer;padding:10px 2px;text-decoration:none;font-family:inherit;display:inline-block}
+.link-btn:hover{color:var(--color-accent);border-color:var(--color-accent)}
+.modal-overlay{position:fixed;inset:0;z-index:120;background:rgba(4,4,4,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s}
+.modal-overlay.open{opacity:1}
+.modal{position:relative;background:var(--color-surface);border:1px solid var(--color-border);border-radius:20px;max-width:1020px;width:100%;max-height:92vh;overflow:auto;transform:translateY(16px) scale(.985);transition:transform .35s var(--ease)}
+.modal-overlay.open .modal{transform:none}
+.modal-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr)}
+.modal-video{background:#000;min-height:320px}
+.modal-video .frame{border:0;border-radius:0;height:100%;min-height:440px}
+.modal-body{padding:34px 32px}
+.modal-cat{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-accent);font-weight:700;margin:0 0 10px}
+.modal-title{font-family:var(--font-display);text-transform:uppercase;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.02;margin:0 0 14px}
+.modal-desc{color:var(--color-text-secondary);font-size:15px;margin:0 0 26px}
+.modal-related h3{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-text-secondary);margin:0 0 12px;font-weight:600}
+.related-list{display:flex;flex-direction:column;gap:8px}
+.related-btn{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--color-surface-elevated);border:1px solid var(--color-border);border-radius:12px;padding:13px 16px;color:var(--color-text-primary);cursor:pointer;font-size:14px;font-weight:500;text-align:left;width:100%;transition:border-color .25s;font-family:inherit}
+.related-btn:hover{border-color:var(--color-accent)}
+.related-btn small{color:var(--color-text-secondary);font-size:12px;flex:none}
+.modal-close{position:absolute;top:12px;right:12px;z-index:2;width:42px;height:42px;border-radius:50%;border:1px solid var(--color-border);background:rgba(8,8,8,.7);color:var(--color-text-primary);font-size:22px;line-height:1;cursor:pointer;transition:all .25s}
+.modal-close:hover{border-color:var(--color-accent);color:var(--color-accent)}
+.showreel{background:var(--color-surface);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+.showreel .frame{max-width:1020px;margin:40px auto 0}
+.showreel-meta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;color:var(--color-text-secondary);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin:24px 0 0}
+.showreel-cta{text-align:center;margin-top:34px}
+.showreel-note{text-align:center;color:var(--color-text-secondary);font-size:14px;max-width:640px;margin:20px auto 0}
+.services-head{margin-bottom:8px}
+.service-list{margin-top:38px;border-top:1px solid var(--color-border)}
+.service-row{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:24px;align-items:center;padding:26px 8px;border-bottom:1px solid var(--color-border);transition:background .25s}
+.service-row:hover{background:rgba(255,255,255,.02)}
+.service-num{font-family:var(--font-display);font-size:1.7rem;color:var(--color-text-secondary);opacity:.65}
+.service-name{font-size:clamp(1.15rem,2.4vw,1.55rem);font-weight:700;margin:0 0 6px;letter-spacing:.01em}
+.service-desc{color:var(--color-text-secondary);font-size:14.5px;margin:0;max-width:660px}
+.service-actions{display:flex;gap:18px;align-items:center}
+.service-note{margin:22px 0 0;color:var(--color-text-secondary);font-size:14px}
+.process{background:var(--color-surface);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);margin-top:52px}
+.step{padding:0 36px 0 0}
+.step+.step{padding-left:36px;border-left:1px solid var(--color-border)}
+.step-num{font-family:var(--font-display);font-size:clamp(3.4rem,6vw,5rem);line-height:1;color:transparent;-webkit-text-stroke:1px var(--color-text-secondary);margin-bottom:20px}
+.step h3{font-size:1.35rem;margin:0 0 10px;letter-spacing:.01em}
+.step p{color:var(--color-text-secondary);font-size:14.5px;margin:0}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start;margin-top:44px}
+.about-copy p{color:var(--color-text-secondary);font-size:16px;margin:0 0 18px}
+.about-copy strong{color:var(--color-text-primary)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat{border:1px solid var(--color-border);border-radius:var(--radius);padding:22px 16px;background:var(--color-surface);text-align:left}
+.stat b{display:block;font-family:var(--font-display);font-weight:400;font-size:2.1rem;margin-bottom:6px}
+.stat b .plus{color:var(--color-accent)}
+.stat span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-secondary)}
+.creators{margin-top:68px}
+.creator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:28px}
+.creator{display:flex;gap:18px;align-items:center;border:1px solid var(--color-border);border-radius:var(--radius);padding:20px;background:var(--color-surface)}
+.creator img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:1px solid var(--color-border);flex:none}
+.creator .mono{width:72px;height:72px;border-radius:50%;background:var(--color-surface-elevated);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.5rem;color:var(--color-accent);flex:none}
+.creator h3{margin:0 0 4px;font-size:16px}
+.creator .handle{font-size:13.5px;color:var(--color-accent);text-decoration:none;font-weight:600}
+.creator .handle:hover{text-decoration:underline}
+.creator .fol{font-size:12.5px;color:var(--color-text-secondary);margin:4px 0 0}
+.faq-band{background:var(--color-surface);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+.faq-list{margin-top:42px;border-top:1px solid var(--color-border);max-width:880px}
+.faq-item{border-bottom:1px solid var(--color-border)}
+.faq-item h3{margin:0}
+.faq-q{width:100%;background:none;border:0;color:var(--color-text-primary);display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:clamp(1rem,2vw,1.18rem);font-weight:600;text-align:left;font-family:inherit}
+.faq-q .icon{flex:none;width:34px;height:34px;border:1px solid var(--color-border);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease);font-size:18px;font-weight:400}
+.faq-q[aria-expanded="true"] .icon{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-accent-ink);transform:rotate(45deg)}
+.faq-a{padding:0 4px 28px;color:var(--color-text-secondary);font-size:15px;max-width:720px}
+.faq-a p{margin:0}
+.contact{background:var(--color-surface);border-top:1px solid var(--color-border)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;margin-top:44px;align-items:start}
+.contact-list{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-direction:column}
+.contact-list a{display:block;padding:16px 4px;border-bottom:1px solid var(--color-border);text-decoration:none;transition:padding .25s var(--ease)}
+.contact-list a:hover{padding-left:12px}
+.contact-list a:hover .cl-val{color:var(--color-accent)}
+.cl-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--color-text-secondary);display:block;margin-bottom:3px}
+.cl-val{font-size:17px;font-weight:600;transition:color .25s}
+.form{background:var(--color-background);border:1px solid var(--color-border);border-radius:20px;padding:clamp(24px,4vw,40px)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text-secondary)}
+.field label .req,.consent .req{color:var(--color-accent)}
+.field label .opt{color:var(--color-text-secondary);opacity:.7;letter-spacing:.02em;text-transform:none;font-weight:500}
+.field input,.field select,.field textarea{background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;color:var(--color-text-primary);padding:13px 15px;font-size:15px;font-family:inherit;width:100%;transition:border-color .25s,box-shadow .25s}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--color-accent)}
+.field.flash input,.field.flash select{border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(215,255,63,.22)}
+.field .error{font-size:13px;color:#ff9a9a;display:none;margin:0}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#ff9a9a}
+.field.invalid .error{display:block}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--color-text-secondary);grid-column:1/-1}
+.consent input{width:18px;height:18px;margin-top:2px;accent-color:var(--color-accent);flex:none}
+.consent .error{font-size:13px;color:#ff9a9a;display:none;margin:6px 0 0}
+.backend-note{margin-top:22px;border:1px solid rgba(215,255,63,.4);background:rgba(215,255,63,.05);border-radius:14px;padding:22px;display:none}
+.backend-note.show{display:block}
+.backend-note h3{margin:0 0 10px;font-size:16px}
+.backend-note p{font-size:14px;color:var(--color-text-secondary);margin:0 0 16px}
+.backend-actions{display:flex;gap:12px;flex-wrap:wrap}
+.backend-note .fine{margin:14px 0 0;font-size:12.5px}
+.form-confirm{margin:16px 0 0;font-size:14px;color:var(--color-accent);display:none}
+.form-confirm.show{display:block}
+.site-footer{border-top:1px solid var(--color-border);padding:72px 0 36px;background:#060606}
+.foot-cta{margin-bottom:52px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border:1px solid var(--color-border);border-radius:20px;padding:clamp(24px,4vw,36px);background:var(--color-surface)}
+.foot-word{font-family:var(--font-display);font-weight:400;font-size:clamp(3rem,10vw,7.5rem);text-transform:uppercase;line-height:.95;margin:0 0 44px}
+.foot-word .lime{color:var(--color-accent)}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-brand p{color:var(--color-text-secondary);font-size:14px;max-width:300px;margin:16px 0 0}
+.foot-col h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--color-text-secondary);margin:0 0 18px;font-weight:600}
+.foot-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.foot-col a{color:var(--color-text-secondary);text-decoration:none;font-size:14.5px}
+.foot-col a:hover{color:var(--color-accent)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--color-border);color:var(--color-text-secondary);font-size:13px}
+.to-top{background:none;border:1px solid var(--color-border);border-radius:999px;color:var(--color-text-primary);padding:10px 22px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .25s}
+.to-top:hover{border-color:var(--color-accent);color:var(--color-accent)}
+.wa-float{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;background:var(--color-surface-elevated);border:1px solid var(--color-border);display:flex;align-items:center;justify-content:center;z-index:70;transition:transform .25s var(--ease),border-color .25s}
+.wa-float:hover{transform:scale(1.08);border-color:var(--color-accent)}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:200;border-radius:50%;display:none}
+@media (hover:hover) and (pointer:fine){
+.cursor-dot{display:block;width:8px;height:8px;background:var(--color-accent)}
+.cursor-ring{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(215,255,63,.55);transition:width .25s,height .25s,background-color .25s,border-color .25s}
+.cursor-ring .cursor-label{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-ink);opacity:0;transition:opacity .2s}
+.cursor-ring.big{width:76px;height:76px;background:var(--color-accent);border-color:var(--color-accent)}
+.cursor-ring.big .cursor-label{opacity:1}
+}
+@media (max-width:960px){
+.nav-links{position:fixed;top:68px;left:0;right:0;background:#0a0a0a;border-bottom:1px solid var(--color-border);flex-direction:column;align-items:stretch;padding:8px 24px 24px;gap:0;display:none;z-index:79;margin:0}
+.nav-links.open{display:flex}
+.nav-links li{list-style:none}
+.nav-links a{display:block;padding:14px 4px;font-size:15px;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-links a::after{display:none}
+.menu-btn{display:block}
+.modal-grid{grid-template-columns:1fr}
+.modal-video .frame{min-height:300px}
+.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+.foot-grid{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:1fr;gap:0}
+.step{padding:0 0 36px}
+.step+.step{padding:36px 0 0;border-left:0;border-top:1px solid var(--color-border)}
+.service-row{grid-template-columns:52px minmax(0,1fr);gap:16px}
+.service-actions{grid-column:2;justify-content:flex-start}
+}
+@media (max-width:720px){
+.work-card,.work-card.featured{grid-column:1/-1}
+.form-grid{grid-template-columns:1fr}
+.creator-grid{grid-template-columns:1fr}
+.foot-grid{grid-template-columns:1fr}
+.hero-ctas .btn{width:100%}
+.backend-actions .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+.anim{opacity:1}
+html.js .reveal{opacity:1;transform:none}
+.scroll-hint{display:none}
+.cursor-dot,.cursor-ring{display:none!important}
+}
+</style>
 </head>
-<body class="antialiased relative">
-
-    <!-- Custom Cursor -->
-    <div class="custom-cursor hidden md:block" id="cursor"></div>
-
-    <!-- Progress Bar -->
-    <div id="progressBar" class="fixed top-0 left-0 h-1 bg-brand-neon z-50 w-0" style="transition: width 0.1s ease-out;"></div>
-
-    <!-- Background Animated Icons Container -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" id="bg-icons" aria-hidden="true"></div>
-
-    <!-- Background Glows -->
-    <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
-        <div class="absolute top-[-5%] left-[-10%] w-[60%] h-[60%] bg-brand-purple rounded-full mix-blend-screen filter blur-[120px] opacity-20 float-slow"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[70%] h-[60%] bg-purple-900 rounded-full mix-blend-screen filter blur-[150px] opacity-20 float-slow" style="animation-delay: -5s;"></div>
-    </div>
-
-    <!-- Header / Navbar -->
-    <header class="relative z-40 border-b border-white/5 bg-brand-dark/80 backdrop-blur-md sticky top-0">
-        <nav class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center" aria-label="Main Navigation">
-            <a href="/" class="flex items-center gap-3 relative z-50" aria-label="AR Motions Home">
-                <img src="assets/images/logo.jpg" alt="AR Motions Official Logo" class="h-8 md:h-10 rounded shadow-[0_0_15px_rgba(139,92,246,0.3)]">
-                <span class="font-display font-bold text-xl md:text-2xl tracking-wider text-white">AR<span class="text-brand-neon text-glow">MOTIONS</span></span>
-            </a>
-            <div class="hidden md:flex gap-6 lg:gap-8 items-center text-sm font-semibold text-gray-300">
-                <a href="/" class="hover:text-white hover:text-glow transition-all" aria-current="page">Home</a> <a href="#latest-work" class="hover:text-white hover:text-glow transition-all">Latest Work</a>
-                <a href="/portfolio" class="hover:text-white hover:text-glow transition-all">Portfolio</a>
-                <a href="/terms" class="hover:text-white hover:text-glow transition-all">Terms</a>
-                <button onclick="openOwnerModal(event)" class="text-brand-light font-semibold text-sm px-4 py-1.5 bg-brand-purple/20 rounded-full border border-brand-purple/50 shadow-sm hover:bg-brand-purple/40 transition-colors cursor-pointer flex items-center gap-2"><i class="fas fa-user-tie text-brand-neon"></i> Know the Owner</button>
-                <a href="#contact" class="px-5 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 transition-all">Contact Me</a>
-            </div>
-            <!-- Hamburger -->
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none relative z-50 p-2" aria-label="Toggle Mobile Menu" aria-expanded="false">
-                <i class="fas fa-bars text-2xl" id="menu-icon" aria-hidden="true"></i>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Mobile Sidebar -->
-    <aside id="mobile-menu" class="fixed inset-y-0 right-0 w-64 sm:w-80 bg-brand-dark/95 backdrop-blur-xl border-l border-white/10 z-40 sidebar-closed flex flex-col p-6 pt-24 shadow-2xl md:hidden" aria-hidden="true">
-        <nav class="flex flex-col">
-            <a href="/" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Home</a>             <a href="#latest-work" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Latest Work</a>
-            <a href="/portfolio" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Portfolio</a>
-            <a href="#services" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Services</a>
-            <a href="#how-it-works" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">How it works</a>
-            <a href="#faq" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">FAQ</a>
-            <a href="/terms" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Terms</a>
-            <button onclick="openOwnerModal(event)" class="text-left text-xl font-semibold mb-6 text-brand-light hover:text-brand-neon transition-colors cursor-pointer flex items-center gap-2"><i class="fas fa-user-tie"></i> Know the Owner</button>
-            <a href="#contact" class="mt-auto px-5 py-3 rounded-full bg-brand-purple text-white text-center font-bold">Contact Me</a>
-        </nav>
-    </aside>
-    
-    <!-- Mobile Overlay -->
-    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 hidden md:hidden" aria-hidden="true"></div>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="relative z-10 min-h-[75vh] flex items-center justify-center pt-10 pb-8 px-4 md:px-6">
-            <div class="max-w-5xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
-                <div class="inline-block px-4 py-1.5 rounded-full liquid-glass text-brand-light text-xs sm:text-sm font-semibold mb-6 box-glow">
-                    Founder-Led &bull; 4+ Years Experience &bull; Global Clients
-                </div>
-                <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight px-2">
-                    Crafting <span class="gradient-text">Masterpieces</span> <br class="hidden sm:block"> Out of Motion.
-                </h1>
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto font-light px-4">
-                    An editor recognised among the rare creative talents of Madhya Pradesh and India, with a distinctive approach to visual storytelling. Handling clients across the world, from documentary edits to SaaS UI animations, I make your brand unforgettable.
-                </p>
-                
-                <!-- Promo Text -->
-                <div class="mb-10 mx-4 p-3 md:p-4 liquid-glass rounded-xl inline-block transform hover:scale-105 transition-all cursor-pointer">
-                    <p class="text-base md:text-lg lg:text-xl font-semibold text-brand-light flex items-center justify-center gap-3">
-                        <i class="fas fa-coffee text-brand-neon" aria-hidden="true"></i> 
-                        <span>Try my service for the first time at a cost lower than Starbucks!</span>
-                    </p>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
-                    <a href="/portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-purple text-white font-bold text-lg hover:bg-brand-neon hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all transform hover:-translate-y-1 text-center" aria-label="View my full portfolio">
-                        View Portfolio
-                    </a>
-                    <a href="#how-it-works" class="w-full sm:w-auto px-8 py-4 rounded-full liquid-glass text-white font-bold text-lg hover:bg-white/10 transition-all text-center" aria-label="Learn how my service works">
-                        See How It Works
-                    </a>
-                </div>
-            </div>
-        </section>
-
-            <!-- Latest Work Section -->     <section id="latest-work" class="relative z-10 py-16 md:py-20 px-4 md:px-6">         <div class="max-w-7xl mx-auto">             <div class="text-center mb-10 md:mb-12" data-aos="fade-up">                 <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Latest <span class="text-brand-neon">Work</span></h2>                 <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">Watch my latest edits and documentaries, hosted on Vimeo.</p>             </div>             <!-- Latest Work Grid -->             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">                 <!-- Latest Work Card 1 -->                 <div>                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="0"><iframe src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Mumbai Investigation Documentary"></iframe></div>                     <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">Mumbai Investigation Documentary</p>                 </div>                 <!-- Latest Work Card 2 -->                 <div>                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="100"><iframe src="https://player.vimeo.com/video/1240103461?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Colgate Animated Ad"></iframe></div>                     <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">Colgate Animated Ad</p>                 </div>                 <!-- Latest Work Card 3 -->                 <div>                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="200"><iframe src="https://player.vimeo.com/video/1240103662?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="India 44 Km Documentary - Part 2"></iframe></div>                     <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">India 44 Km Documentary - Part 2</p>                 </div>                 <!-- Latest Work Card 4 -->                 <div>                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="300"><iframe src="https://player.vimeo.com/video/1240103811?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Rocket Blueprint Documentary - Part 1"></iframe></div>                     <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">Rocket Blueprint Documentary - Part 1</p>                 </div>             </div>         </div>     </section>      <!-- Recent Work / Videos Embedded Section (MOVED HERE) -->
-        <section class="relative z-10 py-16 md:py-20 px-4 md:px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">My <span class="text-brand-neon">Recent Work</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">Take a look at some of the premium edits I've crafted recently.</p>
-                </div>
-                
-                <!-- Video Grid -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">
-                    <!-- Video 1 -->
-                    <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="0">
-                        <iframe src="https://player.vimeo.com/video/1224003113?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 1"></iframe>
-                    </div>
-                    <!-- Video 2 -->
-                    <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="100">
-                        <iframe src="https://player.vimeo.com/video/1224003112?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 2"></iframe>
-                    </div>
-                    <!-- Video 3 -->
-                    <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="200">
-                        <iframe src="https://player.vimeo.com/video/1223935407?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 3"></iframe>
-                    </div>
-                    <!-- Video 4 -->
-                    <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="300">
-                        <iframe src="https://player.vimeo.com/video/1224077827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 4"></iframe>
-                    </div>
-                </div>
-
-                <!-- View More Button -->
-                <div class="text-center" data-aos="fade-up">
-                    <a href="/portfolio" class="inline-block px-10 py-4 rounded-full bg-brand-purple text-white font-bold text-lg hover:bg-brand-neon hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all transform hover:-translate-y-1">
-                        View More Works
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why AR MOTIONS Stats Section -->
-        <section class="relative z-10 py-12 md:py-16 border-y border-white/5 bg-white/[0.01]">
-            <div class="max-w-7xl mx-auto px-4 md:px-6">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/10">
-                    <div data-aos="fade-up" data-aos-delay="0" class="px-2 pb-6 sm:pb-0">
-                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-brand-neon mb-2">3+</h3>
-                        <p class="text-gray-400 font-semibold uppercase tracking-wider text-xs sm:text-sm">Years Experience</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="200" class="px-2 pt-6 sm:pt-0">
-                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-brand-neon mb-2">200+</h3>
-                        <p class="text-gray-400 font-semibold uppercase tracking-wider text-xs sm:text-sm">Projects Delivered</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="300" class="px-2 pt-6 sm:pt-0 border-t border-white/10 sm:border-t-0">
-                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-brand-neon mb-2">75+</h3>
-                        <p class="text-gray-400 font-semibold uppercase tracking-wider text-xs sm:text-sm">Global Clients</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Highlights / Benefits Section -->
-        <section class="relative z-10 py-20 md:py-24 px-4 md:px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Why Choose <span class="text-brand-neon">Me?</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">I bring expertise, speed, and quality to every frame I cut. Ranked top among video editors.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="0">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-star" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Premium Quality</h3><p class="text-gray-400 text-sm">Top-tier visual effects, smooth transitions, and a polished final cut every time.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-rocket" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Fast Turnaround</h3><p class="text-gray-400 text-sm">I value your time. Get your high-quality edits delivered faster than industry standards.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-globe" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Global Experience</h3><p class="text-gray-400 text-sm">Trusted by 75+ clients worldwide, adapting to different cultural styles and trends.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-tag" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Unbeatable Pricing</h3><p class="text-gray-400 text-sm">Premium doesn't mean overpriced. I offer the best value for your investment.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-users" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Dedicated Editor</h3><p class="text-gray-400 text-sm">I work to handle any complex workflow or volume.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="500">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-headset" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">24/7 Support</h3><p class="text-gray-400 text-sm">My support is always available. I am here whenever you need revisions or help.</p></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="relative z-10 py-20 md:py-24 px-4 md:px-6 border-t border-white/5">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">How It <span class="text-brand-neon">Works</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">Hire the best video editor in three simple steps.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-                    <!-- Connecting Line (Desktop) -->
-                    <div class="hidden md:block absolute top-[40px] left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-transparent via-brand-purple to-transparent z-0 opacity-40" aria-hidden="true"></div>
-                    
-                    <div class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col items-center text-center relative z-10 cursor-pointer" data-aos="fade-up" data-aos-delay="0">
-                        <div class="w-16 h-16 rounded-full bg-brand-dark border-2 border-brand-purple flex items-center justify-center text-brand-neon text-2xl font-bold mb-6 box-glow transition-transform hover:scale-110">1</div>
-                        <h3 class="font-bold text-xl md:text-2xl mb-3">Share your brief</h3>
-                        <p class="text-gray-400 text-sm md:text-base">Send me your raw footage, requirements, and vision. I'll analyze and plan the perfect cut.</p>
-                    </div>
-                    
-                    <div class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col items-center text-center relative z-10 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-16 h-16 rounded-full bg-brand-dark border-2 border-brand-purple flex items-center justify-center text-brand-neon text-2xl font-bold mb-6 box-glow transition-transform hover:scale-110">2</div>
-                        <h3 class="font-bold text-xl md:text-2xl mb-3">I edit & create</h3>
-                        <p class="text-gray-400 text-sm md:text-base">I get to work, adding motion graphics, grading, and sound design to bring it alive.</p>
-                    </div>
-                    
-                    <div class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col items-center text-center relative z-10 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-16 h-16 rounded-full bg-brand-dark border-2 border-brand-purple flex items-center justify-center text-brand-neon text-2xl font-bold mb-6 box-glow transition-transform hover:scale-110">3</div>
-                        <h3 class="font-bold text-xl md:text-2xl mb-3">Review & deliver</h3>
-                        <p class="text-gray-400 text-sm md:text-base">You review the draft, I make any requested tweaks instantly, and hand over the masterpiece.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="relative z-10 py-20 md:py-24 px-4 md:px-6 border-t border-white/5">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">My <span class="text-brand-neon">Expertise</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">I offer a wide array of premium editing services tailored to elevate your visual identity.</p>
-                </div>
-                
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-                    <!-- Service Items -->
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="50">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Motion Graphics</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-cut" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Simple Edits</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="150">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-mobile-alt" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Short Videos</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-film" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Long Videos</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="250">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-video" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Documentary Edits</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-music" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Music Videos</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="350">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">SaaS UI Animation</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-microphone-alt" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Podcasts</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="450">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-bolt" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Short Clips</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="500">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Educational</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="550">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-home" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Real Estate Ads</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="600">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-info-circle" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Informational</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="650">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Map Animations</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="700">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-palette" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Color Grading</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-3 col-span-2 sm:col-span-1 lg:col-span-2 cursor-pointer bg-brand-purple/5" data-aos="fade-up" data-aos-delay="750">
-                        <div class="text-brand-neon text-xl md:text-2xl font-bold">+ Many More</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="relative z-10 py-20 md:py-24 px-4 md:px-6 border-t border-white/5">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Frequently Asked <span class="text-brand-neon">Questions</span></h2>
-                </div>
-                
-                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-                    <!-- FAQ 1 -->
-                    <div class="faq-item liquid-glass rounded-xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="p-5 md:p-6 flex justify-between items-center bg-white/5">
-                            <h4 class="font-bold text-base md:text-lg pr-4">What software do you use for video editing?</h4>
-                            <i class="fas fa-chevron-down faq-icon text-brand-neon flex-shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer px-5 md:px-6 text-gray-400 text-sm md:text-base">
-                            <p>I use industry-standard software such as Adobe Premiere Pro, After Effects, DaVinci Resolve, and Final Cut Pro depending on the specific requirements of the project.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ 2 -->
-                    <div class="faq-item liquid-glass rounded-xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="p-5 md:p-6 flex justify-between items-center bg-white/5">
-                            <h4 class="font-bold text-base md:text-lg pr-4">How long does it take to get a video edited?</h4>
-                            <i class="fas fa-chevron-down faq-icon text-brand-neon flex-shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer px-5 md:px-6 text-gray-400 text-sm md:text-base">
-                            <p>Turnaround times vary based on the project's complexity and length. Short videos can be delivered within 24-48 hours, while larger projects like documentaries might take a week or more. I offer fast turnarounds tailored to your needs.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ 3 -->
-                    <div class="faq-item liquid-glass rounded-xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="p-5 md:p-6 flex justify-between items-center bg-white/5">
-                            <h4 class="font-bold text-base md:text-lg pr-4">Do you provide source files?</h4>
-                            <i class="fas fa-chevron-down faq-icon text-brand-neon flex-shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer px-5 md:px-6 text-gray-400 text-sm md:text-base">
-                            <p>Yes, project source files can be provided upon request. This might involve an additional fee depending on the contract agreement.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ 4 -->
-                    <div class="faq-item liquid-glass rounded-xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="p-5 md:p-6 flex justify-between items-center bg-white/5">
-                            <h4 class="font-bold text-base md:text-lg pr-4">How do revisions work?</h4>
-                            <i class="fas fa-chevron-down faq-icon text-brand-neon flex-shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer px-5 md:px-6 text-gray-400 text-sm md:text-base">
-                            <p>I ensure you are 100% satisfied. Standard packages include 2-3 rounds of revisions, and my 24/7 support is always available to discuss any required tweaks.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact" class="relative z-10 border-t border-white/10 bg-black pt-16 pb-8 px-4 md:px-6 text-center sm:text-left">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
-            <div class="flex flex-col items-center sm:items-start">
-                <a href="/" class="flex items-center gap-3 mb-4" aria-label="AR Motions Home">
-                    <img src="assets/images/logo.jpg" alt="AR Motions Logo" class="h-10 rounded shadow-lg">
-                    <span class="font-display font-bold text-2xl tracking-wider text-white">AR<span class="text-brand-neon">MOTIONS</span></span>
-                </a>
-                <p class="text-gray-400 text-sm mb-3">Founder-Led &bull; 4+ Years Experience &bull; Global Clients</p>
-                <button onclick="openOwnerModal(event)" class="text-brand-light font-semibold text-sm px-3 py-1 bg-white/5 rounded-full border border-white/10 shadow-sm mb-4 hover:bg-white/10 transition-colors cursor-pointer">Know more about The Owner</button>
-                <div class="inline-block bg-brand-purple/20 border border-brand-purple/50 px-4 py-2 rounded-lg text-sm text-brand-light font-semibold shadow-[0_0_15px_rgba(139,92,246,0.2)]">
-                    <i class="fas fa-clock mr-2 text-brand-neon" aria-hidden="true"></i> 24/7 Support Available
-                </div>
-            </div>
-            
-            <div class="flex flex-col items-center sm:items-start">
-                <h4 class="font-bold text-lg mb-4 text-white">Sitemap</h4>
-                <nav>
-                    <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><a href="/" class="hover:text-brand-neon transition-colors">Home</a></li>                         <li><a href="#latest-work" class="hover:text-brand-neon transition-colors">Latest Work</a></li>
-                        <li><a href="#services" class="hover:text-brand-neon transition-colors">Services</a></li>
-                        <li><a href="#how-it-works" class="hover:text-brand-neon transition-colors">How It Works</a></li>
-                        <li><a href="#faq" class="hover:text-brand-neon transition-colors">FAQ</a></li>
-                        <li><a href="/portfolio" class="hover:text-brand-neon transition-colors">Portfolio</a></li>
-                        <li><a href="/terms" class="hover:text-brand-neon transition-colors">Terms & Conditions</a></li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <div class="flex flex-col items-center sm:items-start">
-                <h4 class="font-bold text-lg mb-4 text-white">Contact Me</h4>
-                <address class="not-italic">
-                    <ul class="space-y-4 text-gray-400 text-sm flex flex-col items-center sm:items-start">
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon"><i class="fas fa-phone" aria-hidden="true"></i></div>
-                            <a href="tel:+919302687554" class="hover:text-white transition-colors font-semibold">+91 93026 87554</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-                            <a href="mailto:arshad@armotions.in" class="hover:text-white transition-colors">arshad@armotions.in</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon"><i class="fas fa-headset" aria-hidden="true"></i></div>
-                            <a href="mailto:support@armotions.in" class="hover:text-white transition-colors">support@armotions.in</a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col items-center justify-center gap-3 text-gray-500 text-sm">
-            <p class="font-medium text-gray-400">Made with ❤️ by <span class="text-brand-light font-bold">AR MOTIONS</span></p>
-            <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-center">
-                <p>&copy; 2026 AR MOTIONS. All rights reserved.</p>
-                <p class="hidden sm:block">•</p>
-                <p>armotions.in</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Button -->
-    <button id="wa-btn-trigger" class="whatsapp-btn cursor-pointer" aria-label="Chat with me on WhatsApp">
-        <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>
-        <span class="hidden sm:inline">Chat Now</span>
-    </button>
-
-    <!-- Owner Modal -->
-    <div id="owner-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center px-4 opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="owner-modal-title">
-        <div class="bg-brand-dark border border-brand-purple/30 p-8 rounded-2xl max-w-md w-full shadow-[0_0_40px_rgba(139,92,246,0.3)] transform scale-95 transition-transform duration-300 relative" id="owner-modal-content">
-            <button onclick="closeOwnerModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-full transition-all cursor-pointer" aria-label="Close modal">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="w-16 h-16 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-3xl mx-auto mb-4">
-                <i class="fas fa-user-tie" aria-hidden="true"></i>
-            </div>
-            <h3 id="owner-modal-title" class="font-bold text-2xl mb-2 text-center text-white">Founder &mdash; Arshad Khan</h3>
-            <p class="text-gray-300 text-center text-sm leading-relaxed mb-6">
-                One of the rare editors across Madhya Pradesh, India (Ratlam), ranked among the most sought-after editors in the industry.
-            </p>
-            <div class="bg-brand-purple/10 border border-brand-purple/30 rounded-xl p-4 mb-6">
-                <h4 class="text-brand-neon font-semibold text-sm mb-2 text-center"><i class="fas fa-star mr-2"></i>Speciality</h4>
-                <p class="text-gray-200 text-sm text-center leading-relaxed">Motion designing / premium UI / SaaS designing / Documentary Scenes designing</p>
-            </div>
-            <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-4">
-                <i class="fas fa-users text-brand-light mt-1"></i>
-                <p class="text-gray-400 text-sm">2 additional editors available for handling urgent projects when required.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- WhatsApp Terms Modal -->
-    <div id="wa-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center px-4 opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="bg-brand-dark border border-brand-purple/30 p-8 rounded-2xl max-w-md w-full shadow-[0_0_40px_rgba(139,92,246,0.3)] transform scale-95 transition-transform duration-300 relative" id="wa-modal-content">
-            <div class="w-16 h-16 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-3xl mx-auto mb-4">
-                <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            </div>
-            <h3 id="modal-title" class="font-bold text-2xl mb-4 text-center text-white">Hold on!</h3>
-            <p class="text-gray-400 text-center mb-8">
-                You must agree to the <a href="/terms" class="text-brand-neon underline hover:text-white transition-colors">terms and conditions</a> to proceed further.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <button id="wa-cancel" class="flex-1 px-4 py-3 rounded-xl border border-white/10 text-white font-semibold hover:bg-white/5 transition-colors cursor-pointer" aria-label="Cancel and close modal">
-                    Cancel
-                </button>
-                <a href="https://wa.me/919303881879" target="_blank" id="wa-proceed" class="flex-1 px-4 py-3 rounded-xl bg-brand-purple text-white font-semibold text-center hover:bg-brand-neon transition-colors shadow-[0_0_15px_rgba(168,85,247,0.4)] cursor-pointer" aria-label="Agree to terms and proceed to WhatsApp">
-                    Agree & Proceed
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Force scroll to top on page refresh/load
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-        window.addEventListener('load', function() {
-            // Check if there is no hash in the URL to avoid breaking actual anchor links
-            if (!window.location.hash) {
-                window.scrollTo(0, 0);
-            }
-        });
-
-        // Init AOS
-        AOS.init({ once: true, offset: 50, duration: 800 });
-
-        // Custom Cursor Logic
-        const cursor = document.getElementById('cursor');
-        
-        // Only run cursor logic on desktop devices
-        if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            });
-
-            // Add hover effect to interactive elements
-            const interactiveElements = document.querySelectorAll('a, button, .cursor-pointer, .faq-item, .liquid-glass, .whatsapp-btn');
-            
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-                el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
-            });
-        }
-
-        // Scroll Progress Bar
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-        });
-
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const overlay = document.getElementById('mobile-overlay');
-
-        function toggleMenu() {
-            const isOpen = !mobileMenu.classList.contains('sidebar-closed');
-            
-            if (isOpen) {
-                mobileMenu.classList.add('sidebar-closed');
-                mobileMenu.classList.remove('sidebar-open');
-                overlay.classList.add('hidden');
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-                menuBtn.setAttribute('aria-expanded', 'false');
-            } else {
-                mobileMenu.classList.remove('sidebar-closed');
-                mobileMenu.classList.add('sidebar-open');
-                overlay.classList.remove('hidden');
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-times');
-                menuBtn.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        menuBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-        
-        // Close menu on link click
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if(!mobileMenu.classList.contains('sidebar-closed')) toggleMenu();
-            });
-        });
-
-        // Generate Floating Background Icons
-        const iconsContainer = document.getElementById('bg-icons');
-        const iconClasses = ['fa-film', 'fa-cut', 'fa-video', 'fa-clapperboard', 'fa-music', 'fa-tv', 'fa-play'];
-        
-        for (let i = 0; i < 15; i++) {
-            const icon = document.createElement('i');
-            const randomClass = iconClasses[Math.floor(Math.random() * iconClasses.length)];
-            icon.className = `fas ${randomClass} floating-icon`;
-            
-            // Random styling
-            const left = Math.random() * 100;
-            const duration = 15 + Math.random() * 20;
-            const delay = Math.random() * 20;
-            const size = 1 + Math.random() * 1.5;
-            
-            icon.style.left = `${left}vw`;
-            icon.style.animationDuration = `${duration}s`;
-            icon.style.animationDelay = `-${delay}s`; // negative delay to start immediately
-            icon.style.fontSize = `${size}rem`;
-            
-            iconsContainer.appendChild(icon);
-        }
-
-        // FAQ Toggle
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all other FAQs
-                document.querySelectorAll('.faq-item').forEach(other => {
-                    other.classList.remove('active');
-                    other.setAttribute('aria-expanded', 'false');
-                });
-                
-                // Toggle current FAQ
-                if (!isActive) {
-                    item.classList.add('active');
-                    item.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
-
-        // WhatsApp Modal Logic
-        const waBtn = document.getElementById('wa-btn-trigger');
-        const waModal = document.getElementById('wa-modal');
-        const waModalContent = document.getElementById('wa-modal-content');
-        const waCancel = document.getElementById('wa-cancel');
-        const waProceed = document.getElementById('wa-proceed');
-
-        waBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            waModal.classList.remove('hidden');
-            // Trigger reflow for transition
-            void waModal.offsetWidth;
-            waModal.classList.remove('opacity-0');
-            waModalContent.classList.remove('scale-95');
-        });
-
-        function closeWaModal() {
-            waModal.classList.add('opacity-0');
-            waModalContent.classList.add('scale-95');
-            setTimeout(() => {
-                waModal.classList.add('hidden');
-            }, 300);
-        }
-
-        waCancel.addEventListener('click', closeWaModal);
-        waProceed.addEventListener('click', closeWaModal);
-        
-        waModal.addEventListener('click', (e) => {
-            if (e.target === waModal) closeWaModal();
-        });
-
-        // Owner Modal Logic
-        const ownerModal = document.getElementById('owner-modal');
-        const ownerModalContent = document.getElementById('owner-modal-content');
-
-        function openOwnerModal(e) {
-            e.preventDefault();
-            ownerModal.classList.remove('hidden');
-            void ownerModal.offsetWidth;
-            ownerModal.classList.remove('opacity-0');
-            ownerModalContent.classList.remove('scale-95');
-        }
-
-        function closeOwnerModal() {
-            ownerModal.classList.add('opacity-0');
-            ownerModalContent.classList.add('scale-95');
-            setTimeout(() => ownerModal.classList.add('hidden'), 300);
-        }
-
-        ownerModal.addEventListener('click', (e) => {
-            if (e.target === ownerModal) closeOwnerModal();
-        });
-    </script>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap nav-inner">
+<a class="brand" href="#top" aria-label="AR MOTIONS — home"><img src="assets/images/logo.jpg" alt="AR MOTIONS logo" width="30" height="30"><span>AR&nbsp;MOTIONS</span></a>
+<nav aria-label="Primary">
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+<ul class="nav-links" id="navLinks">
+<li><a href="#top">Home</a></li>
+<li><a href="#work">Selected Work</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero" id="top" aria-label="Introduction">
+<div class="wrap">
+<p class="hero-badge anim anim-1"><span class="dot" aria-hidden="true"></span>Founder-Led &bull; 3+ Years Experience &bull; Global Clients</p>
+<h1 class="h-display anim anim-2"><span class="line">We Turn</span><span class="line">Frames</span><span class="line">Into <span class="accent">Feeling.</span></span></h1>
+<p class="hero-sub anim anim-3">Precision editing. Cinematic storytelling. Motion that moves people.</p>
+<p class="hero-brandline anim anim-4">Crafting Masterpieces Out of Motion.</p>
+<div class="hero-ctas anim anim-5">
+<a class="btn btn-primary magnetic" href="#work">Explore Selected Work</a>
+<a class="btn btn-ghost magnetic" href="#contact">Start a Project</a>
+</div>
+<div class="hero-media anim anim-6">
+<div class="frame frame-169">
+<button class="poster" data-vimeo="1240103124" data-title="Mumbai Investigation Documentary" aria-label="Play Mumbai Investigation Documentary">
+<span class="play-ring" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span>
+<span class="poster-title">Mumbai Investigation Documentary &mdash; Play</span>
+</button>
+</div>
+</div>
+<div class="scroll-hint anim anim-6" aria-hidden="true"><span>Scroll</span><span class="sline"></span></div>
+</div>
+</section>
+<section class="section" id="work" aria-labelledby="workTitle">
+<div class="wrap">
+<p class="kicker reveal">Selected Work</p>
+<h2 class="h2 reveal" id="workTitle">Proof, frame by frame.</h2>
+<p class="lede reveal">Recent edits, documentaries and animations &mdash; every project below is real AR MOTIONS work, hosted on Vimeo. Select a project to watch it.</p>
+<div class="filters reveal" role="group" aria-label="Filter projects by category">
+<button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+<button class="filter-btn" data-filter="documentary" aria-pressed="false">Documentary</button>
+<button class="filter-btn" data-filter="ui" aria-pressed="false">Premium UI Animation</button>
+<button class="filter-btn" data-filter="motion" aria-pressed="false">Motion Graphics</button>
+</div>
+<div class="work-grid" id="workGrid">
+<article class="work-card featured reveal" data-cat="documentary">
+<a class="card-open" href="https://vimeo.com/1240103124" data-vimeo="1240103124" data-title="Mumbai Investigation Documentary" data-cat="documentary" aria-label="Open Mumbai Investigation Documentary in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Documentary</span></span></span>
+</a>
+<h3 class="card-title">Mumbai Investigation Documentary</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card featured reveal" data-cat="motion">
+<a class="card-open" href="https://vimeo.com/1240103461" data-vimeo="1240103461" data-title="Colgate Animated Ad" data-cat="motion" aria-label="Open Colgate Animated Ad in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Motion Graphics</span></span></span>
+</a>
+<h3 class="card-title">Colgate Animated Ad</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card featured reveal" data-cat="documentary">
+<a class="card-open" href="https://vimeo.com/1240103662" data-vimeo="1240103662" data-title="India 44 Km Documentary - Part 2" data-cat="documentary" aria-label="Open India 44 Km Documentary Part 2 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Documentary</span></span></span>
+</a>
+<h3 class="card-title">India 44 Km Documentary &ndash; Part 2</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card featured reveal" data-cat="documentary">
+<a class="card-open" href="https://vimeo.com/1240103811" data-vimeo="1240103811" data-title="Rocket Blueprint Documentary - Part 1" data-cat="documentary" aria-label="Open Rocket Blueprint Documentary Part 1 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Documentary</span></span></span>
+</a>
+<h3 class="card-title">Rocket Blueprint Documentary &ndash; Part 1</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="ui">
+<a class="card-open" href="https://vimeo.com/1224003113" data-vimeo="1224003113" data-title="Copy of lembo.mp4" data-cat="ui" aria-label="Open Copy of lembo.mp4 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Premium UI Animation</span></span></span>
+</a>
+<h3 class="card-title">Copy of lembo.mp4</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="ui">
+<a class="card-open" href="https://vimeo.com/1224003112" data-vimeo="1224003112" data-title="#Finance.mp4" data-cat="ui" aria-label="Open Finance.mp4 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Premium UI Animation</span></span></span>
+</a>
+<h3 class="card-title">#Finance.mp4</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="documentary">
+<a class="card-open" href="https://vimeo.com/1223935407" data-vimeo="1223935407" data-title="jewellery Documantary" data-cat="documentary" aria-label="Open jewellery Documantary in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Documentary</span></span></span>
+</a>
+<h3 class="card-title">jewellery Documantary</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="motion">
+<a class="card-open" href="https://vimeo.com/1224077827" data-vimeo="1224077827" data-title="Showcase" data-cat="motion" aria-label="Open Showcase in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Motion Graphics</span></span></span>
+</a>
+<h3 class="card-title">Showcase</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="ui">
+<a class="card-open" href="https://vimeo.com/1224004197" data-vimeo="1224004197" data-title="UI Animation 3" data-cat="ui" aria-label="Open UI Animation 3 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Premium UI Animation</span></span></span>
+</a>
+<h3 class="card-title">UI Animation 3</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="ui">
+<a class="card-open" href="https://vimeo.com/1224004513" data-vimeo="1224004513" data-title="UI Animation 4" data-cat="ui" aria-label="Open UI Animation 4 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Premium UI Animation</span></span></span>
+</a>
+<h3 class="card-title">UI Animation 4</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="documentary">
+<a class="card-open" href="https://vimeo.com/1223937877" data-vimeo="1223937877" data-title="Documentary 2" data-cat="documentary" aria-label="Open Documentary 2 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Documentary</span></span></span>
+</a>
+<h3 class="card-title">Documentary 2</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="documentary">
+<a class="card-open" href="https://vimeo.com/1223942287" data-vimeo="1223942287" data-title="Documentary 3" data-cat="documentary" aria-label="Open Documentary 3 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Documentary</span></span></span>
+</a>
+<h3 class="card-title">Documentary 3</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="documentary">
+<a class="card-open" href="https://vimeo.com/1224207996" data-vimeo="1224207996" data-title="Documentary 4" data-cat="documentary" aria-label="Open Documentary 4 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Documentary</span></span></span>
+</a>
+<h3 class="card-title">Documentary 4</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="motion">
+<a class="card-open" href="https://vimeo.com/1224009882" data-vimeo="1224009882" data-title="Motion Graphics 1" data-cat="motion" aria-label="Open Motion Graphics 1 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Motion Graphics</span></span></span>
+</a>
+<h3 class="card-title">Motion Graphics 1</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="motion">
+<a class="card-open" href="https://vimeo.com/1224009873" data-vimeo="1224009873" data-title="Motion Graphics 2" data-cat="motion" aria-label="Open Motion Graphics 2 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Motion Graphics</span></span></span>
+</a>
+<h3 class="card-title">Motion Graphics 2</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+<article class="work-card reveal" data-cat="motion">
+<a class="card-open" href="https://vimeo.com/1224003107" data-vimeo="1224003107" data-title="Motion Graphics 3" data-cat="motion" aria-label="Open Motion Graphics 3 in the project viewer">
+<span class="card-frame"><span class="card-poster"><span class="card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span><span class="card-cat">Motion Graphics</span></span></span>
+</a>
+<h3 class="card-title">Motion Graphics 3</h3>
+<p class="card-meta">9:16 &middot; Vimeo</p>
+</article>
+</div>
+<p class="empty-state" id="workEmpty" hidden>No projects in this category yet &mdash; try another filter.</p>
+<p class="work-count" id="workCount" role="status" aria-live="polite"></p>
+<p class="work-more"><a class="link-btn" href="/portfolio">View the full portfolio &rarr;</a></p>
+</div>
+</section>
+<section class="section showreel" id="showreel" aria-labelledby="reelTitle">
+<div class="wrap">
+<p class="kicker reveal">Showreel</p>
+<h2 class="h2 reveal" id="reelTitle" style="text-align:center">One cut. Many stories.</h2>
+<p class="lede reveal" style="margin:0 auto;text-align:center">A featured cut from recent work &mdash; a curated selection of actual AR MOTIONS projects. No stock footage, no filler.</p>
+<div class="frame frame-169 reveal">
+<button class="poster" data-vimeo="1240103124" data-title="Mumbai Investigation Documentary &mdash; featured cut" aria-label="Play featured cut: Mumbai Investigation Documentary">
+<span class="play-ring" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span>
+<span class="poster-title">Mumbai Investigation Documentary &mdash; Featured Cut &mdash; Play</span>
+</button>
+</div>
+<div class="showreel-meta reveal"><span>Documentary</span><span aria-hidden="true">&middot;</span><span>Featured cut</span><span aria-hidden="true">&middot;</span><span>Vimeo</span></div>
+<div class="showreel-cta reveal"><a class="btn btn-primary magnetic" href="#contact">Start a Project</a></div>
+</div>
+</section>
+<section class="section" id="services" aria-labelledby="servicesTitle">
+<div class="wrap">
+<div class="services-head">
+<p class="kicker reveal">Services</p>
+<h2 class="h2 reveal" id="servicesTitle">Everything your footage needs.</h2>
+<p class="lede reveal">Fourteen specialized editing services, one dedicated editor. Choose a service to start an enquiry &mdash; the contact form fills itself in.</p>
+</div>
+<div class="service-list">
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">01</span><div><h3 class="service-name">Motion Graphics</h3><p class="service-desc">Animated titles, logo stings and graphic overlays that give footage a polished, branded finish.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Motion Graphics">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">02</span><div><h3 class="service-name">Simple Edits</h3><p class="service-desc">Clean cuts, pacing and structure for footage that needs a sharp, professional assembly.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Simple Edits">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">03</span><div><h3 class="service-name">Short Videos</h3><p class="service-desc">Tight, scroll-ready edits built for short-form platforms and fast attention spans.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Short Videos">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">04</span><div><h3 class="service-name">Long Videos</h3><p class="service-desc">Structured long-form edits with clear narrative flow &mdash; from vlogs to full episodes.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Long Videos">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">05</span><div><h3 class="service-name">Documentary Edits</h3><p class="service-desc">Story-driven documentary cutting &mdash; interviews, b-roll and archival woven into a compelling narrative.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Documentary Edits">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">06</span><div><h3 class="service-name">Music Videos</h3><p class="service-desc">Beat-matched cuts, rhythm-driven pacing and stylized grading for music visuals.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Music Videos">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">07</span><div><h3 class="service-name">SaaS UI Animation</h3><p class="service-desc">Premium screen recordings and UI walkthroughs, animated to explain product flows clearly.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="SaaS UI Animation">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">08</span><div><h3 class="service-name">Podcasts</h3><p class="service-desc">Multi-cam podcast edits with clean cuts, captions-ready pacing and highlight clips.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Podcasts">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">09</span><div><h3 class="service-name">Short Clips</h3><p class="service-desc">Repurposed highlight clips cut from longer content for reels and shorts.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Short Clips">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">10</span><div><h3 class="service-name">Educational</h3><p class="service-desc">Clear, well-paced educational edits with on-screen graphics that aid learning.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Educational">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">11</span><div><h3 class="service-name">Real Estate Ads</h3><p class="service-desc">Property showcases with smooth walkthrough pacing and detail-focused cutaways.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Real Estate Ads">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">12</span><div><h3 class="service-name">Informational</h3><p class="service-desc">Explainer-style edits that turn complex topics into clear visual stories.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Informational">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">13</span><div><h3 class="service-name">Map Animations</h3><p class="service-desc">Animated map routes and location graphics for travel and documentary storytelling.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Map Animations">Enquire &rarr;</button></div></div>
+<div class="service-row reveal"><span class="service-num" aria-hidden="true">14</span><div><h3 class="service-name">Color Grading</h3><p class="service-desc">Cinematic color correction and grading for a consistent, filmic look.</p></div><div class="service-actions"><a class="link-btn" href="#work">View work</a><button class="link-btn" data-service="Color Grading">Enquire &rarr;</button></div></div>
+</div>
+<p class="service-note reveal">+ Many more &mdash; if your project does not fit a label, describe it in the enquiry form below.</p>
+</div>
+</section>
+<section class="section process" id="process" aria-labelledby="processTitle">
+<div class="wrap">
+<p class="kicker reveal">Process</p>
+<h2 class="h2 reveal" id="processTitle">Three steps. Zero friction.</h2>
+<p class="lede reveal">The same working process behind every project &mdash; simple by design.</p>
+<div class="steps">
+<div class="step reveal"><div class="step-num" aria-hidden="true">01</div><h3>Share your brief</h3><p>Send me your raw footage, requirements, and vision. I&rsquo;ll analyze and plan the perfect cut.</p></div>
+<div class="step reveal"><div class="step-num" aria-hidden="true">02</div><h3>I edit &amp; create</h3><p>I get to work, adding motion graphics, grading, and sound design to bring it alive.</p></div>
+<div class="step reveal"><div class="step-num" aria-hidden="true">03</div><h3>Review &amp; deliver</h3><p>You review the draft, I make any requested tweaks, and hand over the masterpiece.</p></div>
+</div>
+</div>
+</section>
+<section class="section" id="about" aria-labelledby="aboutTitle">
+<div class="wrap">
+<p class="kicker reveal">About</p>
+<h2 class="h2 reveal" id="aboutTitle">One editor. Every frame.</h2>
+<div class="about-grid">
+<div class="about-copy reveal">
+<p><strong>Arshad Khan</strong> is the founder of <strong>AR MOTIONS</strong> &mdash; a founder-led video production and editing studio based in Ratlam, India, working with clients across the globe.</p>
+<p>Every project is cut, graded and finished by Arshad himself: from premium UI and SaaS animations to long-form documentary edits and motion graphics. No hand-offs &mdash; just a direct line between your vision and the final cut.</p>
+<p>Support comes standard: revisions, questions and tweaks are handled personally, whenever you need them.</p>
+</div>
+<div class="reveal">
+<div class="stats" role="list" aria-label="Studio statistics">
+<div class="stat" role="listitem"><b>3<span class="plus">+</span></b><span>Years experience</span></div>
+<div class="stat" role="listitem"><b>200<span class="plus">+</span></b><span>Projects delivered</span></div>
+<div class="stat" role="listitem"><b>75<span class="plus">+</span></b><span>Global clients</span></div>
+</div>
+</div>
+</div>
+<div class="creators">
+<p class="kicker reveal">Recently worked with</p>
+<div class="creator-grid">
+<div class="creator reveal">
+<img src="assets/images/krish.jpg" alt="Krish Chakraborty" loading="lazy" width="72" height="72">
+<div><h3>Krish Chakraborty</h3><a class="handle" href="https://www.instagram.com/theproudindiankrish" target="_blank" rel="noopener">@theproudindiankrish</a><p class="fol">33.5K followers</p></div>
+</div>
+<div class="creator reveal">
+<span class="mono" aria-hidden="true">AW</span>
+<div><h3>Akshay Wadhwa</h3><a class="handle" href="https://www.instagram.com/thegenzskool" target="_blank" rel="noopener">@thegenzskool</a><p class="fol">44.1K followers</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section faq-band" id="faq" aria-labelledby="faqTitle">
+<div class="wrap">
+<p class="kicker reveal">FAQ</p>
+<h2 class="h2 reveal" id="faqTitle">Questions, answered.</h2>
+<div class="faq-list">
+<div class="faq-item reveal">
+<h3><button class="faq-q" aria-expanded="false" aria-controls="faqA1" id="faqQ1"><span>What software do you use for video editing?</span><span class="icon" aria-hidden="true">+</span></button></h3>
+<div class="faq-a" id="faqA1" role="region" aria-labelledby="faqQ1" hidden><p>I use industry-standard software such as Adobe Premiere Pro, After Effects, DaVinci Resolve, and Final Cut Pro depending on the specific requirements of the project.</p></div>
+</div>
+<div class="faq-item reveal">
+<h3><button class="faq-q" aria-expanded="false" aria-controls="faqA2" id="faqQ2"><span>How long does it take to get a video edited?</span><span class="icon" aria-hidden="true">+</span></button></h3>
+<div class="faq-a" id="faqA2" role="region" aria-labelledby="faqQ2" hidden><p>Turnaround times vary based on the project&rsquo;s complexity and length. Short videos can be delivered within 24&ndash;48 hours, while larger projects like documentaries might take a week or more. I offer fast turnarounds tailored to your needs.</p></div>
+</div>
+<div class="faq-item reveal">
+<h3><button class="faq-q" aria-expanded="false" aria-controls="faqA3" id="faqQ3"><span>Do you provide source files?</span><span class="icon" aria-hidden="true">+</span></button></h3>
+<div class="faq-a" id="faqA3" role="region" aria-labelledby="faqQ3" hidden><p>Yes, project source files can be provided upon request. This might involve an additional fee depending on the contract agreement.</p></div>
+</div>
+<div class="faq-item reveal">
+<h3><button class="faq-q" aria-expanded="false" aria-controls="faqA4" id="faqQ4"><span>How do revisions work?</span><span class="icon" aria-hidden="true">+</span></button></h3>
+<div class="faq-a" id="faqA4" role="region" aria-labelledby="faqQ4" hidden><p>I ensure you are 100% satisfied. Standard packages include 2&ndash;3 rounds of revisions, and my 24/7 support is always available to discuss any required tweaks.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section contact" id="contact" aria-labelledby="contactTitle">
+<div class="wrap">
+<p class="kicker reveal">Contact</p>
+<h2 class="h2 reveal" id="contactTitle">Let&rsquo;s cut something great.</h2>
+<p class="lede reveal">Tell me about your project below &mdash; or reach me directly. I reply personally to every enquiry.</p>
+<div class="contact-grid">
+<div class="reveal">
+<ul class="contact-list">
+<li><a href="tel:+919302687554"><span class="cl-label">Phone</span><span class="cl-val">+91 93026 87554</span></a></li>
+<li><a href="mailto:arshad@armotions.in"><span class="cl-label">Email</span><span class="cl-val">arshad@armotions.in</span></a></li>
+<li><a href="mailto:support@armotions.in"><span class="cl-label">Support</span><span class="cl-val">support@armotions.in</span></a></li>
+<li><a href="https://wa.me/919303881879" target="_blank" rel="noopener"><span class="cl-label">WhatsApp</span><span class="cl-val">Chat now &rarr;</span></a></li>
+</ul>
+</div>
+<form class="form reveal" id="enquiryForm" novalidate aria-label="Project enquiry form">
+<div class="form-grid">
+<div class="field"><label for="fName">Full name <span class="req" aria-hidden="true">*</span></label><input id="fName" name="name" type="text" autocomplete="name" required aria-describedby="eName"><p class="error" id="eName">Please enter your full name.</p></div>
+<div class="field"><label for="fEmail">Email <span class="req" aria-hidden="true">*</span></label><input id="fEmail" name="email" type="email" autocomplete="email" required aria-describedby="eEmail"><p class="error" id="eEmail">Please enter a valid email address.</p></div>
+<div class="field"><label for="fCompany">Company / brand <span class="opt">(optional)</span></label><input id="fCompany" name="company" type="text" autocomplete="organization"></div>
+<div class="field"><label for="fService">Service required <span class="req" aria-hidden="true">*</span></label><select id="fService" name="service" required aria-describedby="eService"><option value="">Select a service&hellip;</option><option>Motion Graphics</option><option>Simple Edits</option><option>Short Videos</option><option>Long Videos</option><option>Documentary Edits</option><option>Music Videos</option><option>SaaS UI Animation</option><option>Podcasts</option><option>Short Clips</option><option>Educational</option><option>Real Estate Ads</option><option>Informational</option><option>Map Animations</option><option>Color Grading</option><option>Other</option></select><p class="error" id="eService">Please choose a service.</p></div>
+<div class="field full"><label for="fDesc">Project description <span class="req" aria-hidden="true">*</span></label><textarea id="fDesc" name="description" required aria-describedby="eDesc" placeholder="What are we making? Footage length, style references, links &mdash; anything useful."></textarea><p class="error" id="eDesc">Please describe your project (at least 10 characters).</p></div>
+<div class="field"><label for="fBudget">Budget range <span class="opt">(optional)</span></label><select id="fBudget" name="budget"><option value="">Prefer not to say</option><option>Under &#8377;5,000</option><option>&#8377;5,000 &ndash; &#8377;15,000</option><option>&#8377;15,000 &ndash; &#8377;50,000</option><option>&#8377;50,000+</option></select></div>
+<div class="field"><label for="fDeadline">Expected deadline <span class="opt">(optional)</span></label><input id="fDeadline" name="deadline" type="date"></div>
+<div class="field full"><label for="fRef">Reference link <span class="opt">(optional)</span></label><input id="fRef" name="reference" type="url" inputmode="url" placeholder="https://"></div>
+<div class="consent"><input type="checkbox" id="fConsent" required aria-describedby="eConsent"><label for="fConsent">I agree to be contacted about my enquiry. <span class="req" aria-hidden="true">*</span></label></div>
+<p class="error" id="eConsent" style="grid-column:1/-1">Please accept so I can reply to your enquiry.</p>
+<div class="field full"><button type="submit" class="btn btn-primary" style="width:100%">Review enquiry</button></div>
+</div>
+<div class="backend-note" id="backendNote" role="status">
+<h3>Almost there &mdash; choose how to send</h3>
+<p>This website is fully static: there is no server backend, so your enquiry can&rsquo;t be submitted to a server here. Send it directly instead &mdash; everything you typed is prefilled for you:</p>
+<div class="backend-actions">
+<button type="button" class="btn btn-primary" id="sendEmail">Send via Email</button>
+<button type="button" class="btn btn-ghost" id="sendWa">Send via WhatsApp</button>
+</div>
+<p class="fine">WhatsApp opens externally at wa.me/919303881879. Email opens your mail app addressed to arshad@armotions.in.</p>
+</div>
+<p class="form-confirm" id="formConfirm" role="status"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="foot-cta reveal">
+<div><h2 class="h2" style="margin:0 0 8px">Have footage? Let&rsquo;s talk.</h2><p class="lede">One message is all it takes to start.</p></div>
+<a class="btn btn-primary magnetic" href="#contact">Start a Project</a>
+</div>
+<p class="foot-word reveal" aria-hidden="true">AR MOTI<span class="lime">ONS</span></p>
+<div class="foot-grid">
+<div class="foot-brand">
+<a class="brand" href="#top" aria-label="AR MOTIONS — back to top"><img src="assets/images/logo.jpg" alt="AR MOTIONS logo" width="30" height="30"><span>AR&nbsp;MOTIONS</span></a>
+<p>Founder-led video production &amp; editing. Cinematic edits, motion graphics and documentaries for clients worldwide.</p>
+</div>
+<div class="foot-col"><h4>Explore</h4><ul>
+<li><a href="#top">Home</a></li><li><a href="#work">Selected Work</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
+</ul></div>
+<div class="foot-col"><h4>Work &amp; Services</h4><ul>
+<li><a href="#work">Selected Work</a></li><li><a href="/portfolio">Full Portfolio</a></li><li><a href="#services">Documentary Edits</a></li><li><a href="#services">SaaS UI Animation</a></li><li><a href="#services">Motion Graphics</a></li>
+</ul></div>
+<div class="foot-col"><h4>Connect</h4><ul>
+<li><a href="tel:+919302687554">+91 93026 87554</a></li>
+<li><a href="mailto:arshad@armotions.in">arshad@armotions.in</a></li>
+<li><a href="mailto:support@armotions.in">support@armotions.in</a></li>
+<li><a href="https://wa.me/919303881879" target="_blank" rel="noopener">WhatsApp</a></li>
+<li><a href="https://youtu.be/Y-AG6qYqFfs" target="_blank" rel="noopener">YouTube</a></li>
+<li><a href="/terms">Terms &amp; Conditions</a></li>
+</ul></div>
+</div>
+<div class="foot-bottom">
+<span>&copy; <span id="year">2026</span> AR MOTIONS &middot; armotions.in &middot; All rights reserved.</span>
+<button class="to-top" id="toTop">Back to top &uarr;</button>
+</div>
+</div>
+</footer>
+<a class="wa-float" href="https://wa.me/919303881879" target="_blank" rel="noopener" aria-label="Chat with AR MOTIONS on WhatsApp">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D7FF3F" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5z"/><circle cx="9" cy="11.5" r="1" fill="#D7FF3F" stroke="none"/><circle cx="13" cy="11.5" r="1" fill="#D7FF3F" stroke="none"/><circle cx="17" cy="11.5" r="1" fill="#D7FF3F" stroke="none"/></svg>
+</a>
+<div class="modal-overlay" id="modalOverlay" hidden>
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<button class="modal-close" id="modalClose" aria-label="Close project viewer">&times;</button>
+<div class="modal-grid">
+<div class="modal-video"><div class="frame" id="modalFrame"></div></div>
+<div class="modal-body">
+<p class="modal-cat" id="modalCat"></p>
+<h2 class="modal-title" id="modalTitle"></h2>
+<p class="modal-desc" id="modalDesc"></p>
+<div class="modal-related"><h3>Related projects</h3><div class="related-list" id="relatedList"></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cursor-dot" id="cDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cRing" aria-hidden="true"><span class="cursor-label" id="cLabel"></span></div>
+<script>
+(function(){
+"use strict";
+var REDUCED=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var FINE=window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+document.getElementById("year").textContent=new Date().getFullYear();
+var menuBtn=document.getElementById("menuBtn"),navLinks=document.getElementById("navLinks");
+function setMenu(open,focusBtn){
+menuBtn.setAttribute("aria-expanded",open?"true":"false");
+menuBtn.setAttribute("aria-label",open?"Close menu":"Open menu");
+navLinks.classList.toggle("open",open);
+if(open){var f=navLinks.querySelector("a");if(f)f.focus();}
+else if(focusBtn){menuBtn.focus();}
+}
+menuBtn.addEventListener("click",function(){setMenu(!navLinks.classList.contains("open"));});
+navLinks.addEventListener("click",function(e){if(e.target.closest("a")&&navLinks.classList.contains("open"))setMenu(false,false);});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});},{threshold:.12,rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
+var pauseIO=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting&&en.target.contentWindow){try{en.target.contentWindow.postMessage("{\"method\":\"pause\"}","*");}catch(e){}}});},{threshold:0});
+function vimeoURL(id){return "https://player.vimeo.com/video/"+id+"?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&playsinline=1";}
+function loadVimeo(frame,id,title){
+frame.innerHTML="";
+var f=document.createElement("iframe");
+f.src=vimeoURL(id);f.title=title||"Vimeo video player";
+f.setAttribute("allow","autoplay; fullscreen; picture-in-picture; clipboard-write");
+f.setAttribute("allowfullscreen","");f.setAttribute("loading","lazy");
+frame.appendChild(f);pauseIO.observe(f);return f;
+}
+document.querySelectorAll(".poster[data-vimeo]").forEach(function(btn){
+btn.addEventListener("click",function(){
+var frame=btn.closest(".frame");
+if(frame)loadVimeo(frame,btn.getAttribute("data-vimeo"),btn.getAttribute("data-title"));
+});
+});
+var overlay=document.getElementById("modalOverlay"),mFrame=document.getElementById("modalFrame"),
+mCat=document.getElementById("modalCat"),mTitle=document.getElementById("modalTitle"),
+mDesc=document.getElementById("modalDesc"),mRelated=document.getElementById("relatedList"),
+mClose=document.getElementById("modalClose"),lastFocus=null;
+var CATLABEL={documentary:"Documentary",ui:"Premium UI Animation",motion:"Motion Graphics"};
+function playSVG(){return '<span class="play-ring" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="#F5F5F2"><path d="M8 5v14l11-7z"/></svg></span>';}
+function openModal(a){
+var id=a.getAttribute("data-vimeo"),title=a.getAttribute("data-title"),cat=a.getAttribute("data-cat");
+lastFocus=a;mCat.textContent=CATLABEL[cat]||"Selected Work";mTitle.textContent=title;
+mDesc.textContent="A recent AR MOTIONS project \u2014 real client and studio work, presented as delivered.";
+mFrame.innerHTML="";
+var b=document.createElement("button");b.className="poster";b.setAttribute("aria-label","Play "+title);
+b.appendChild((function(){var t=document.createElement("div");t.innerHTML=playSVG();return t.firstChild;})());
+var cap=document.createElement("span");cap.className="poster-title";cap.textContent=title+" \u2014 Play";b.appendChild(cap);
+b.addEventListener("click",function(){loadVimeo(mFrame,id,title);});
+mFrame.appendChild(b);
+mRelated.innerHTML="";
+var rel=Array.prototype.filter.call(document.querySelectorAll(".card-open"),function(x){return x.getAttribute("data-cat")===cat&&x!==a;}).slice(0,3);
+if(!rel.length){var p=document.createElement("p");p.style.cssText="color:var(--color-text-secondary);font-size:14px;margin:0";p.textContent="More projects coming soon.";mRelated.appendChild(p);}
+rel.forEach(function(x){
+var rb=document.createElement("button");rb.className="related-btn";rb.type="button";
+var nm=document.createElement("span");nm.textContent=x.getAttribute("data-title");
+var vw=document.createElement("small");vw.textContent="View \u2192";
+rb.appendChild(nm);rb.appendChild(vw);
+rb.addEventListener("click",function(){openModal(x);});
+mRelated.appendChild(rb);
+});
+overlay.hidden=false;
+requestAnimationFrame(function(){overlay.classList.add("open");});
+document.body.style.overflow="hidden";
+mClose.focus();bindCursor();
+}
+function closeModal(){
+if(overlay.hidden)return;
+overlay.classList.remove("open");document.body.style.overflow="";mFrame.innerHTML="";
+var done=function(){overlay.hidden=true;};
+if(REDUCED){done();}else{setTimeout(done,300);}
+if(lastFocus)lastFocus.focus();
+}
+mClose.addEventListener("click",closeModal);
+overlay.addEventListener("click",function(e){if(e.target===overlay)closeModal();});
+document.addEventListener("keydown",function(e){
+if(e.key==="Escape"){
+if(navLinks.classList.contains("open"))setMenu(false,true);
+closeModal();
+}
+});
+overlay.addEventListener("keydown",function(e){
+if(e.key!=="Tab")return;
+var f=Array.prototype.filter.call(overlay.querySelectorAll("button, a[href]"),function(el){return el.offsetParent!==null;});
+if(!f.length)return;
+var first=f[0],last=f[f.length-1];
+if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
+document.querySelectorAll(".card-open").forEach(function(a){
+a.addEventListener("click",function(e){e.preventDefault();openModal(a);});
+});
+var filterBtns=document.querySelectorAll(".filter-btn"),cards=document.querySelectorAll(".work-card"),
+workEmpty=document.getElementById("workEmpty"),workCount=document.getElementById("workCount");
+function applyFilter(f){
+var n=0;
+cards.forEach(function(c){var show=(f==="all"||c.getAttribute("data-cat")===f);c.hidden=!show;if(show)n++;});
+workEmpty.hidden=(n!==0);
+var label=(f==="all")?"all categories":(CATLABEL[f]||f);
+workCount.textContent="Showing "+n+" project"+(n===1?"":"s")+" \u2014 "+label+".";
+}
+filterBtns.forEach(function(b){b.addEventListener("click",function(){
+filterBtns.forEach(function(x){x.setAttribute("aria-pressed","false");});
+b.setAttribute("aria-pressed","true");applyFilter(b.getAttribute("data-filter"));
+});});
+applyFilter("all");
+var serviceSelect=document.getElementById("fService");
+document.querySelectorAll("[data-service]").forEach(function(b){
+b.addEventListener("click",function(){
+var s=b.getAttribute("data-service");
+for(var i=0;i<serviceSelect.options.length;i++){if(serviceSelect.options[i].text===s){serviceSelect.selectedIndex=i;break;}}
+var field=serviceSelect.closest(".field");
+document.getElementById("contact").scrollIntoView({behavior:REDUCED?"auto":"smooth"});
+setTimeout(function(){serviceSelect.focus({preventScroll:true});},REDUCED?0:500);
+if(field){field.classList.add("flash");setTimeout(function(){field.classList.remove("flash");},1800);}
+});
+});
+document.querySelectorAll(".faq-q").forEach(function(q){
+q.addEventListener("click",function(){
+var open=q.getAttribute("aria-expanded")==="true";
+q.setAttribute("aria-expanded",open?"false":"true");
+document.getElementById(q.getAttribute("aria-controls")).hidden=open;
+});
+});
+var form=document.getElementById("enquiryForm");
+function mark(el,bad){var field=el.closest(".field");if(field)field.classList.toggle("invalid",bad);el.setAttribute("aria-invalid",bad?"true":"false");return !bad;}
+form.addEventListener("submit",function(e){
+e.preventDefault();
+var name=document.getElementById("fName"),email=document.getElementById("fEmail"),
+service=document.getElementById("fService"),desc=document.getElementById("fDesc"),
+consent=document.getElementById("fConsent"),eConsent=document.getElementById("eConsent");
+var ok=true;
+ok=mark(name,name.value.trim().length<2)&&ok;
+ok=mark(email,!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()))&&ok;
+ok=mark(service,!service.value)&&ok;
+ok=mark(desc,desc.value.trim().length<10)&&ok;
+var consentBad=!consent.checked;
+eConsent.style.display=consentBad?"block":"none";
+consent.setAttribute("aria-invalid",consentBad?"true":"false");
+ok=!consentBad&&ok;
+if(!ok){var bad=form.querySelector(".field.invalid input,.field.invalid select,.field.invalid textarea");if(bad)bad.focus();return;}
+var note=document.getElementById("backendNote");
+note.classList.add("show");
+note.scrollIntoView({behavior:REDUCED?"auto":"smooth",block:"nearest"});
+});
+function val(id){return document.getElementById(id).value.trim();}
+function enquiryText(){
+return ["New project enquiry from the AR MOTIONS website:","",
+"Name: "+val("fName"),"Email: "+val("fEmail"),
+"Company/Brand: "+(val("fCompany")||"-"),"Service required: "+val("fService"),
+"Project description: "+val("fDesc"),"Budget range: "+(val("fBudget")||"Not specified"),
+"Expected deadline: "+(val("fDeadline")||"Not specified"),"Reference link: "+(val("fRef")||"-")].join("\n");
+}
+function confirmSend(kind){
+var c=document.getElementById("formConfirm");
+c.textContent=(kind==="email")
+?"Opening your email app with the enquiry prefilled to arshad@armotions.in."
+:"Opening WhatsApp with your enquiry prefilled (opens externally at wa.me/919303881879).";
+c.classList.add("show");
+}
+document.getElementById("sendEmail").addEventListener("click",function(){
+var subject="Project enquiry \u2014 "+val("fService")+" \u2014 "+val("fName");
+window.location.href="mailto:arshad@armotions.in?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(enquiryText());
+confirmSend("email");
+});
+document.getElementById("sendWa").addEventListener("click",function(){
+var msg="Hello AR MOTIONS! I am "+val("fName")+" ("+val("fEmail")+"). I need: "+val("fService")+". "+val("fDesc");
+window.open("https://wa.me/919303881879?text="+encodeURIComponent(msg),"_blank","noopener");
+confirmSend("whatsapp");
+});
+document.getElementById("toTop").addEventListener("click",function(){window.scrollTo({top:0,behavior:REDUCED?"auto":"smooth"});});
+function bindCursor(){
+if(!FINE||REDUCED)return;
+document.querySelectorAll("a,button").forEach(function(el){
+if(el.dataset.cbound)return;el.dataset.cbound="1";
+el.addEventListener("mouseenter",function(){
+var t="Explore";
+if(el.classList.contains("card-open"))t="View";
+else if(el.classList.contains("poster"))t="Play";
+else if(el.classList.contains("btn-primary"))t="Go";
+document.getElementById("cLabel").textContent=t;
+document.getElementById("cRing").classList.add("big");
+});
+el.addEventListener("mouseleave",function(){document.getElementById("cRing").classList.remove("big");});
+});
+}
+bindCursor();
+if(FINE&&!REDUCED){
+var dot=document.getElementById("cDot"),ring=document.getElementById("cRing");
+var mx=window.innerWidth/2,my=window.innerHeight/2,rx=mx,ry=my;
+window.addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;});
+(function loop(){
+rx+=(mx-rx)*.16;ry+=(my-ry)*.16;
+dot.style.transform="translate("+(mx-4)+"px,"+(my-4)+"px)";
+var s=ring.classList.contains("big")?38:19;
+ring.style.transform="translate("+(rx-s)+"px,"+(ry-s)+"px)";
+requestAnimationFrame(loop);
+})();
+document.querySelectorAll(".magnetic").forEach(function(el){
+el.addEventListener("mousemove",function(e){
+var r=el.getBoundingClientRect();
+el.style.transform="translate("+((e.clientX-r.left-r.width/2)*.12).toFixed(1)+"px,"+((e.clientY-r.top-r.height/2)*.18).toFixed(1)+"px)";
+});
+el.addEventListener("mouseleave",function(){el.style.transform="";});
+});
+}
+})();
+</script>
 </body>
 </html>
