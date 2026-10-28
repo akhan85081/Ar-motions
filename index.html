@@ -22,9 +22,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f3efe6; --ink:#0d0d10; --dark:#08080b; --dark2:#101016;
-  --cream:#f5f2e9; --muted:rgba(13,13,16,.62); --line:rgba(13,13,16,.14);
-  --dline:rgba(255,255,255,.1); --accent:#8b5cf6; --accent2:#c4b5fd;
+--paper:#f3efe6;--ink:#0d0d10;--dark:#08080b;--dark2:#101016;
+--cream:#f5f2e9;--muted:rgba(13,13,16,.62);--line:rgba(13,13,16,.14);
+--dline:rgba(255,255,255,.1);--accent:#8b5cf6;--accent2:#c4b5fd;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -62,42 +62,42 @@ section{scroll-margin-top:70px}
 @media(max-width:640px){.nav-links a:not(:last-child){display:none}}
 /* ---------- HERO ---------- */
 #hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 5vw 90px;position:relative;overflow:hidden}
-.corner{position:absolute;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.55;font-weight:500}
+.corner{position:absolute;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.55;font-weight:600}
 .c-tl{top:96px;left:26px}.c-tr{top:96px;right:26px}.c-bl{bottom:26px;left:26px}.c-br{bottom:26px;right:26px}
 @media(max-width:640px){.c-bl,.c-br{display:none}}
 .hero-sub{font-size:clamp(1rem,2.2vw,1.35rem);opacity:.72;margin:26px 0 8px;max-width:640px}
-.hero-visual{width:min(330px,62vw);margin:38px auto;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px rgba(13,13,16,.22);border:1px solid var(--line)}
+.hero-visual{width:min(330px,62vw);margin:38px auto;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px rgba(13,13,16,.22)}
 .frame916{position:relative;aspect-ratio:9/16;background:#000}
 .frame916 iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:0}
 .frame169{position:relative;aspect-ratio:16/9;background:#000}
 .frame169 iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 .hero-btns{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.05em;padding:11px 24px;border-radius:999px;text-decoration:none;transition:transform .2s ease,background .2s ease}
+.btn{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.05em;padding:11px 24px;border-radius:999px;text-decoration:none;transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
 .btn-solid{background:var(--ink);color:var(--cream)}
 .btn-ghost{border:1px solid rgba(13,13,16,.32);color:var(--ink)}
 .hero-note{font-size:12px;opacity:.5;margin-top:20px}
 /* ---------- ABOUT ---------- */
 #about{overflow:hidden}
-.swirl{position:absolute;border-radius:50%;filter:blur(100px);opacity:.5;pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
-.s1{width:46vw;height:46vw;min-width:340px;min-height:340px;background:radial-gradient(circle,#7c3aed,transparent 70%);top:-12%;left:-12%}
-.s2{width:40vw;height:40vw;min-width:300px;min-height:300px;background:radial-gradient(circle,#4338ca,transparent 70%);bottom:-14%;right:-10%;animation-delay:-6s}
-.s3{width:26vw;height:26vw;min-width:220px;min-height:220px;background:radial-gradient(circle,#a855f7,transparent 70%);top:38%;left:56%;animation-delay:-11s;opacity:.35}
+.swirl{position:absolute;border-radius:50%;filter:blur(100px);opacity:.5;pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.s1{width:46vw;height:46vw;min-width:340px;min-height:340px;background:radial-gradient(circle,#7c3aed55,transparent 70%);top:-8%;left:-6%}
+.s2{width:40vw;height:40vw;min-width:300px;min-height:300px;background:radial-gradient(circle,#4338ca66,transparent 70%);bottom:-10%;right:-4%;animation-delay:-5s}
+.s3{width:26vw;height:26vw;min-width:220px;min-height:220px;background:radial-gradient(circle,#a855f744,transparent 70%);top:30%;left:60%;animation-delay:-9s}
 @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(6vw,4vh) scale(1.15)}}
-.about-card{position:relative;max-width:640px;margin:0 auto;background:rgba(16,16,22,.85);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:clamp(38px,6vw,72px);text-align:center;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 40px 100px rgba(0,0,0,.5)}
-.about-card h2{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.04em;margin:0 0 24px}
+.about-card{position:relative;max-width:640px;margin:0 auto;background:rgba(16,16,22,.85);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:clamp(36px,5vw,64px);text-align:center;backdrop-filter:blur(8px)}
+.about-card h2{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.04em;margin:0 0 22px}
 .about-card p{font-size:15px;line-height:1.75;opacity:.78;margin:0 0 16px}
 .stats{display:flex;justify-content:center;gap:clamp(26px,6vw,70px);margin-top:38px;flex-wrap:wrap}
 .stat b{display:block;font-family:'Archivo Black',sans-serif;font-size:clamp(1.9rem,4.5vw,3rem);font-weight:400}
 .stat span{font-size:11px;letter-spacing:.22em;opacity:.6;text-transform:uppercase}
 /* ---------- JOURNEY MARQUEE ---------- */
 #journey{height:480vh;position:relative;padding:0}
-.journey-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:1vh}
+.journey-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2vh}
 .journey-head{position:absolute;top:clamp(80px,10vh,110px);left:5vw;z-index:2}
 .mrow{white-space:nowrap;will-change:transform;display:flex;align-items:baseline;gap:3vw;padding:0 4vw}
-.mrow .big{font-family:'Archivo Black',sans-serif;font-size:clamp(2.6rem,9vw,7.5rem);text-transform:uppercase;line-height:1.05;letter-spacing:-.01em}
+.mrow .big{font-family:'Archivo Black',sans-serif;font-size:clamp(2.6rem,9vw,7.5rem);text-transform:uppercase;line-height:1;letter-spacing:-.01em}
 .mrow .hollow{color:transparent;-webkit-text-stroke:1.5px rgba(245,242,233,.85)}
-.mrow .desc{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.02em;opacity:.55;white-space:normal;max-width:230px;line-height:1.5}
+.mrow .desc{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.02em;opacity:.55;white-space:normal;max-width:280px;line-height:1.5}
 @media(max-width:640px){.mrow .desc{display:none}}
 /* ---------- FEATURED / RIBBON ---------- */
 #featured{padding-bottom:0}
@@ -106,30 +106,30 @@ section{scroll-margin-top:70px}
 .ribbon-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
 .ribbon-track{display:flex;gap:3.2vw;padding:0 9vw;will-change:transform;align-items:center}
 .rcard{flex:none;width:clamp(180px,23vw,290px);will-change:transform}
-.rcard .frame916{border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(13,13,16,.18);border:1px solid var(--line)}
+.rcard .frame916{border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(13,13,16,.18);border:1px solid rgba(13,13,16,.1)}
 .rcard .frame916 iframe{border-radius:18px}
 .rlabel{font-size:13px;font-weight:700;margin:14px 4px 2px;letter-spacing:.02em}
 .rtag{font-size:10.5px;letter-spacing:.24em;opacity:.5;margin:0 4px;text-transform:uppercase}
-.ribbon-hint{text-align:center;font-size:11.5px;letter-spacing:.2em;opacity:.45;text-transform:uppercase;padding:26px 0 0}
+.ribbon-hint{text-align:center;font-size:11.5px;letter-spacing:.2em;opacity:.45;text-transform:uppercase;margin:26px 0 0}
 /* ---------- WORKS GRID ---------- */
 .works-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:56px}
-.wcard .frame916{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 40px rgba(13,13,16,.1)}
+.wcard .frame916{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 44px rgba(13,13,16,.12)}
 .wcard .frame916 iframe{border-radius:16px}
 .wlabel{font-size:12.5px;font-weight:700;margin:12px 2px 2px}
 .wtag{font-size:10px;letter-spacing:.22em;opacity:.5;margin:0 2px;text-transform:uppercase}
 .yt-card{grid-column:span 2}
-.yt-card .frame169{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 40px rgba(13,13,16,.1)}
+.yt-card .frame169{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 44px rgba(13,13,16,.12)}
 .yt-meta{display:flex;align-items:center;gap:10px;margin:12px 2px 0}
 .yt-meta .t{font-size:13px;font-weight:700}
-.dur{font-size:10.5px;font-weight:700;background:var(--ink);color:var(--cream);border-radius:6px;padding:3px 8px;letter-spacing:.06em}
+.dur{font-size:10.5px;font-weight:700;background:var(--ink);color:var(--cream);border-radius:6px;padding:3px 8px}
 @media(max-width:900px){.works-grid{grid-template-columns:repeat(2,1fr)}.yt-card{grid-column:span 2}}
 /* ---------- CREATORS ---------- */
-.creator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,400px));gap:28px;justify-content:center;margin-top:60px}
+.creator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,400px));gap:28px;justify-content:center;margin-top:56px}
 @media(max-width:700px){.creator-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}}
-.creator{background:#fff;border:1px solid var(--line);border-radius:26px;padding:44px 32px;text-align:center;box-shadow:0 24px 60px rgba(13,13,16,.07)}
-.creator img{width:118px;height:118px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:3px solid var(--ink)}
+.creator{background:#fff;border:1px solid var(--line);border-radius:26px;padding:44px 32px;text-align:center;box-shadow:0 20px 50px rgba(13,13,16,.08)}
+.creator img{width:118px;height:118px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:3px solid rgba(13,13,16,.9)}
 .creator h3{margin:0 0 4px;font-size:21px;font-weight:700}
-.creator .handle{display:inline-block;font-size:13px;color:#6d28d9;text-decoration:none;font-weight:600;margin-bottom:8px}
+.creator .handle{display:inline-block;font-size:13px;color:#6d28d9;text-decoration:none;font-weight:600;margin-bottom:10px}
 .creator .fol{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
 .verified{display:inline-block;font-size:12px;color:#fff;background:#6d28d9;border-radius:50%;width:18px;height:18px;line-height:18px;text-align:center;margin-left:6px;vertical-align:2px}
 /* ---------- SERVICES / WHY / HOW / FAQ ---------- */
@@ -142,7 +142,7 @@ section{scroll-margin-top:70px}
 @media(max-width:640px){.svc{grid-template-columns:44px 1fr}.svc p{display:none}}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
 @media(max-width:900px){.why-grid{grid-template-columns:1fr}}
-.why-card{background:rgba(255,255,255,.045);border:1px solid var(--dline);border-radius:20px;padding:30px 28px}
+.why-card{background:rgba(255,255,255,.045);border:1px solid var(--dline);border-radius:20px;padding:30px 26px}
 .why-card h4{margin:0 0 10px;font-size:15.5px;letter-spacing:.02em}
 .why-card p{margin:0;font-size:13.5px;line-height:1.65;opacity:.62}
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:54px}
@@ -155,380 +155,361 @@ details.faq{background:rgba(255,255,255,.045);border:1px solid var(--dline);bord
 details.faq summary{padding:20px 24px;font-weight:700;cursor:pointer;list-style:none;font-size:15px}
 details.faq summary::-webkit-details-marker{display:none}
 details.faq summary::after{content:'+';float:right;opacity:.6;font-weight:400}
-details.faq[open] summary::after{content:'–'}
+details.faq[open] summary::after{content:'\2013'}
 details.faq p{padding:0 24px 24px;margin:0;font-size:14px;line-height:1.75;opacity:.68}
 /* ---------- FOOTER ---------- */
 #contact{background:#060608;color:var(--cream);text-align:center;padding:clamp(90px,12vw,160px) 5vw 40px}
-.lets-talk{font-family:'Archivo Black',sans-serif;font-size:clamp(3.2rem,15.5vw,13rem);line-height:.92;margin:0;letter-spacing:-.01em}
+.lets-talk{font-family:'Archivo Black',sans-serif;font-size:clamp(3.2rem,15.5vw,13rem);line-height:.95;margin:0;text-transform:uppercase}
 .lets-talk .stroke{color:transparent;-webkit-text-stroke:2px var(--cream)}
 .pills{display:flex;gap:10px;justify-content:center;margin:40px 0 8px;flex-wrap:wrap}
-.pill{font-size:12.5px;font-weight:600;letter-spacing:.05em;padding:10px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:var(--cream);text-decoration:none;background:transparent;cursor:pointer;transition:background .2s}
+.pill{font-size:12.5px;font-weight:600;letter-spacing:.05em;padding:10px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:var(--cream);text-decoration:none;background:transparent;cursor:pointer;transition:background .2s}
 .pill:hover{background:rgba(255,255,255,.1)}
 .contact-lines{margin:34px 0 10px;font-size:14px;line-height:2.1;opacity:.75}
 .contact-lines a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
 .owner-row{margin:26px 0 0}
-.foot-base{margin-top:70px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:11.5px;letter-spacing:.12em;opacity:.45;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.foot-base{margin-top:70px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:11.5px;letter-spacing:.08em;opacity:.5;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 /* ---------- MODAL ---------- */
-#owner-modal{position:fixed;inset:0;z-index:150;display:none;align-items:center;justify-content:center;background:rgba(4,4,6,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:20px}
+#owner-modal{position:fixed;inset:0;z-index:150;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);padding:20px}
 #owner-modal.open{display:flex}
-.modal-card{background:#101016;border:1px solid rgba(255,255,255,.14);border-radius:26px;max-width:450px;width:100%;padding:44px 38px;text-align:center;color:var(--cream);position:relative;box-shadow:0 40px 100px rgba(0,0,0,.6)}
+.modal-card{background:#101016;border:1px solid rgba(255,255,255,.14);border-radius:26px;max-width:440px;width:100%;padding:44px 36px;position:relative;text-align:left}
 .modal-card h3{font-family:'Archivo Black',sans-serif;font-size:1.6rem;margin:0 0 14px}
 .modal-card p{font-size:14px;line-height:1.7;opacity:.75;margin:0 0 14px}
-.modal-card .spec{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);border-radius:16px;padding:16px;font-size:13px}
-.modal-x{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--cream);font-size:20px;cursor:pointer;opacity:.6}
+.modal-card .spec{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);border-radius:14px;padding:14px 16px}
+.modal-x{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--cream);font-size:26px;cursor:pointer;line-height:1}
 /* ---------- ROBOT WIDGET ---------- */
-.robot-wrap{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;flex-direction:column;align-items:center;gap:10px}
-.wa-float{width:40px;height:40px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(37,211,102,.45);transition:transform .2s}
+.robot-wrap{position:fixed;right:18px;bottom:18px;z-index:90;display:flex;flex-direction:column;align-items:center;gap:8px}
+.wa-float{width:40px;height:40px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:transform .2s}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:22px;height:22px;fill:#fff}
-.robot{position:relative;width:48px;height:48px;border-radius:50%;background:rgba(18,18,26,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.3);box-shadow:0 0 22px rgba(139,92,246,.5),inset 0 1px 0 rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;animation:patrol 7s ease-in-out infinite;text-decoration:none}
-.robot::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid rgba(139,92,246,.55);animation:echo 3.2s ease-out infinite;pointer-events:none}
+.robot{position:relative;width:48px;height:48px;border-radius:50%;background:rgba(18,18,26,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(139,92,246,.35);display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(139,92,246,.35);animation:patrol 7s ease-in-out infinite}
+.robot::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid rgba(139,92,246,.5);animation:echo 2.4s ease-out infinite}
 @keyframes patrol{0%,100%{transform:translateX(0)}50%{transform:translateX(-16px)}}
 @keyframes echo{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.9);opacity:0}}
 .robot svg{width:30px;height:30px}
-.robot-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:rgba(8,8,11,.62);color:#fff;padding:4px 10px;border-radius:999px;backdrop-filter:blur(8px)}
+.robot-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:rgba(8,8,11,.62);color:#f5f3ec;padding:4px 8px;border-radius:999px;backdrop-filter:blur(8px)}
 /* ---------- REDUCED MOTION ---------- */
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  #intro{display:none!important}
-  .intro-svg path{animation:none}
-  .swirl,.robot,.robot::after{animation:none!important}
-  .ribbon-sticky{overflow-x:auto}
+html{scroll-behavior:auto}
+#intro{display:none!important}
+.intro-svg path{animation:none}
+.swirl,.robot,.robot::after{animation:none!important}
+.ribbon-sticky{overflow-x:auto}
 }
 </style>
 </head>
 <body id="top">
-
 <!-- 1) INTRO -->
 <div id="intro" aria-hidden="true">
-  <svg class="intro-svg" viewBox="0 0 800 380" preserveAspectRatio="xMidYMid meet">
-    <path pathLength="1" d="M110,80 C190,30 330,38 430,32 C560,25 690,55 715,130 C740,210 680,300 560,325 C430,352 260,345 160,305 C70,270 45,170 95,105 C105,92 100,88 110,80 Z"/>
-    <path class="p2" pathLength="1" d="M150,330 C260,360 420,362 540,340 C640,322 700,280 705,220"/>
-  </svg>
-  <h1 class="intro-title">AR MOTIONS</h1>
-  <p class="intro-tag">Portfolio &mdash; V6</p>
+<svg class="intro-svg" viewBox="0 0 800 380" preserveAspectRatio="xMidYMid meet">
+<path pathLength="1" d="M110,80 C190,30 330,38 430,32 C560,25 690,55 715,130 C740,210 680,300 560,325 C440,350 250,345 150,300 C80,265 70,180 110,80"/>
+<path class="p2" pathLength="1" d="M150,330 C260,360 420,362 540,340 C640,322 700,280 705,220"/>
+</svg>
+<h1 class="intro-title">AR MOTIONS</h1>
+<p class="intro-tag">Portfolio &mdash; V6</p>
 </div>
-
 <!-- NAV -->
 <nav id="site-nav" aria-label="Main">
-  <div class="nav-inner">
-    <a class="nav-brand" href="#top"><img src="assets/images/logo.jpg" alt="AR MOTIONS logo"><span>AR&nbsp;MOTIONS</span></a>
-    <div class="nav-links">
-      <a href="#featured">Work</a>
-      <a href="#works">Works</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+<div class="nav-inner">
+<a class="nav-brand" href="#top"><img src="assets/images/logo.jpg" alt="AR MOTIONS logo"><span>AR&nbsp;MOTIONS</span></a>
+<div class="nav-links">
+<a href="#featured">Work</a>
+<a href="#works">Works</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
 </nav>
-
 <!-- 2) HERO -->
 <header id="hero" class="light">
-  <span class="corner c-tl">Founder-Led &bull; 4+ Years Experience &bull; Global Clients</span>
-  <span class="corner c-tr">Ratlam, India</span>
-  <span class="corner c-bl">Video Production &amp; Editing</span>
-  <span class="corner c-br">Scroll to explore &darr;</span>
-  <h1 class="mega">Explore My<br><span class="outline-txt">Work</span></h1>
-  <p class="hero-sub">Crafting Masterpieces Out of Motion.</p>
-  <div class="hero-visual">
-    <div class="frame916">
-      <iframe src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" title="Mumbai Investigation Documentary — Showreel" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe>
-    </div>
-  </div>
-  <div class="hero-btns">
-    <a class="btn btn-solid" href="#featured">View Portfolio</a>
-    <a class="btn btn-ghost" href="#how">See How It Works</a>
-  </div>
-  <p class="hero-note">Try my service for the first time at a cost lower than Starbucks!</p>
+<span class="corner c-tl">Founder-Led &bull; 4+ Years Experience &bull; Global Clients</span>
+<span class="corner c-tr">Ratlam, India</span>
+<span class="corner c-bl">Video Production &amp; Editing</span>
+<span class="corner c-br">Scroll to explore &darr;</span>
+<h1 class="mega">Explore My<br><span class="outline-txt">Work</span></h1>
+<p class="hero-sub">Crafting Masterpieces Out of Motion.</p>
+<div class="hero-visual">
+<div class="frame916">
+<iframe src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" title="Mumbai Investigation Documentary &mdash; Showreel" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe>
+</div>
+</div>
+<div class="hero-btns">
+<a class="btn btn-solid" href="#featured">View Portfolio</a>
+<a class="btn btn-ghost" href="#how">See How It Works</a>
+</div>
+<p class="hero-note">Try my service for the first time at a cost lower than Starbucks!</p>
 </header>
-
 <!-- 3) ABOUT -->
 <section id="about" class="sec dark">
-  <div class="swirl s1"></div><div class="swirl s2"></div><div class="swirl s3"></div>
-  <div class="wrap">
-    <div class="about-card">
-      <h2>About Me</h2>
-      <p>I&rsquo;m <strong>Arshad Khan</strong>, Founder of <strong>AR MOTIONS</strong> &mdash; a founder-led video production &amp; editing studio based in Ratlam, India, serving global clients.</p>
-      <p>An editor recognised among the rare creative talents of Madhya Pradesh and India, with a distinctive approach to visual storytelling. Handling clients across the world, from documentary edits to SaaS UI animations, I make your brand unforgettable.</p>
-      <div class="stats">
-        <div class="stat"><b>3+</b><span>Years Experience</span></div>
-        <div class="stat"><b>200+</b><span>Projects Delivered</span></div>
-        <div class="stat"><b>75+</b><span>Global Clients</span></div>
-      </div>
-    </div>
-  </div>
+<div class="swirl s1"></div><div class="swirl s2"></div><div class="swirl s3"></div>
+<div class="wrap">
+<div class="about-card">
+<h2>About Me</h2>
+<p>I&rsquo;m <strong>Arshad Khan</strong>, Founder of <strong>AR MOTIONS</strong> &mdash; a founder-led video production &amp; editing studio based in Ratlam, India, serving global clients.</p>
+<p>An editor recognised among the rare creative talents of Madhya Pradesh and India, with a distinctive approach to visual storytelling. Handling clients across the world, from documentary edits to SaaS UI animations, I make your brand unforgettable.</p>
+<div class="stats">
+<div class="stat"><b>3+</b><span>Years Experience</span></div>
+<div class="stat"><b>200+</b><span>Projects Delivered</span></div>
+<div class="stat"><b>75+</b><span>Global Clients</span></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- 4) JOURNEY / SERVICES MARQUEE -->
 <section id="journey" class="dark" aria-label="Services marquee">
-  <div class="journey-sticky">
-    <div class="journey-head"><p class="kicker">The Journey &mdash; Scroll</p></div>
-    <div class="mrow" data-speed="1.2" data-dir="1"><span class="big">Where I&rsquo;ve Been</span><span class="desc">From Ratlam to the world &mdash; 3+ years of cuts that travel across borders.</span></div>
-    <div class="mrow" data-speed="0.8" data-dir="-1"><span class="big hollow">Motion Graphics</span><span class="desc">Kinetic type, logo stings &amp; animated UI.</span></div>
-    <div class="mrow" data-speed="1.4" data-dir="1"><span class="big">Simple Edits</span><span class="desc">Clean cuts, pacing &amp; story flow.</span></div>
-    <div class="mrow" data-speed="0.7" data-dir="-1"><span class="big hollow">Short Videos</span><span class="desc">Reels, Shorts &amp; ads that hook in seconds.</span></div>
-    <div class="mrow" data-speed="1.1" data-dir="1"><span class="big">Long Videos</span><span class="desc">Long-form YouTube, fully produced.</span></div>
-    <div class="mrow" data-speed="0.9" data-dir="-1"><span class="big hollow">Documentary Edits</span><span class="desc">Investigations &amp; docu-series, cinematic.</span></div>
-    <div class="mrow" data-speed="1.3" data-dir="1"><span class="big">Music Videos</span><span class="desc">Beat-synced cuts with attitude.</span></div>
-    <div class="mrow" data-speed="0.75" data-dir="-1"><span class="big hollow">SaaS UI Animation</span><span class="desc">Product walkthroughs &amp; interface motion.</span></div>
-    <div class="mrow" data-speed="1.15" data-dir="1"><span class="big">Podcasts</span><span class="desc">Video podcasts cut for retention.</span></div>
-    <div class="mrow" data-speed="0.85" data-dir="-1"><span class="big hollow">Short Clips</span><span class="desc">Snackable cuts from long footage.</span></div>
-    <div class="mrow" data-speed="1.25" data-dir="1"><span class="big">Educational</span><span class="desc">Explainers &amp; course content.</span></div>
-    <div class="mrow" data-speed="0.7" data-dir="-1"><span class="big hollow">Real Estate Ads</span><span class="desc">Property films that sell.</span></div>
-    <div class="mrow" data-speed="1.1" data-dir="1"><span class="big">Informational</span><span class="desc">News-style &amp; info edits.</span></div>
-    <div class="mrow" data-speed="0.9" data-dir="-1"><span class="big hollow">Map Animations</span><span class="desc">Geographic storytelling in motion.</span></div>
-    <div class="mrow" data-speed="1.3" data-dir="1"><span class="big">Color Grading</span><span class="desc">Cinematic color, DaVinci-grade.</span></div>
-    <div class="mrow" data-speed="0.8" data-dir="-1"><span class="big hollow">And Many More</span><span class="desc">If it moves, I can cut it.</span></div>
-  </div>
+<div class="journey-sticky">
+<div class="journey-head"><p class="kicker">The Journey &mdash; Scroll</p></div>
+<div class="mrow" data-speed="1.2" data-dir="1"><span class="big">Where I&rsquo;ve Been</span><span class="desc">From Ratlam to the world &mdash; 3+ years of cuts that travel across borders.</span></div>
+<div class="mrow" data-speed="0.8" data-dir="-1"><span class="big hollow">Motion Graphics</span><span class="desc">Kinetic type, logo stings &amp; animated UI.</span></div>
+<div class="mrow" data-speed="1.4" data-dir="1"><span class="big">Simple Edits</span><span class="desc">Clean cuts, pacing &amp; story flow.</span></div>
+<div class="mrow" data-speed="0.7" data-dir="-1"><span class="big hollow">Short Videos</span><span class="desc">Reels, Shorts &amp; ads that hook in seconds.</span></div>
+<div class="mrow" data-speed="1.1" data-dir="1"><span class="big">Long Videos</span><span class="desc">Long-form YouTube, fully produced.</span></div>
+<div class="mrow" data-speed="0.9" data-dir="-1"><span class="big hollow">Documentary Edits</span><span class="desc">Investigations &amp; docu-series, cinematic.</span></div>
+<div class="mrow" data-speed="1.3" data-dir="1"><span class="big">Music Videos</span><span class="desc">Beat-synced cuts with attitude.</span></div>
+<div class="mrow" data-speed="0.75" data-dir="-1"><span class="big hollow">SaaS UI Animation</span><span class="desc">Product walkthroughs &amp; interface motion.</span></div>
+<div class="mrow" data-speed="1.15" data-dir="1"><span class="big">Podcasts</span><span class="desc">Video podcasts cut for retention.</span></div>
+<div class="mrow" data-speed="0.85" data-dir="-1"><span class="big hollow">Short Clips</span><span class="desc">Snackable cuts from long footage.</span></div>
+<div class="mrow" data-speed="1.25" data-dir="1"><span class="big">Educational</span><span class="desc">Explainers &amp; course content.</span></div>
+<div class="mrow" data-speed="0.7" data-dir="-1"><span class="big hollow">Real Estate Ads</span><span class="desc">Property films that sell.</span></div>
+<div class="mrow" data-speed="1.1" data-dir="1"><span class="big">Informational</span><span class="desc">News-style &amp; info edits.</span></div>
+<div class="mrow" data-speed="0.9" data-dir="-1"><span class="big hollow">Map Animations</span><span class="desc">Geographic storytelling in motion.</span></div>
+<div class="mrow" data-speed="1.3" data-dir="1"><span class="big">Color Grading</span><span class="desc">Cinematic color, DaVinci-grade.</span></div>
+<div class="mrow" data-speed="0.8" data-dir="-1"><span class="big hollow">And Many More</span><span class="desc">If it moves, I can cut it.</span></div>
+</div>
 </section>
-
 <!-- 5) FEATURED WORK RIBBON -->
 <section id="featured" class="sec light">
-  <div class="feat-head">
-    <p class="kicker">Selected Projects &mdash; Docs, Ads &amp; Edits</p>
-    <h2 class="mega">Featured<br><span class="outline-txt">Work</span></h2>
-    <p class="ribbon-hint">Scroll &mdash; the ribbon bends as you move</p>
-  </div>
-  <div id="ribbon-zone">
-    <div class="ribbon-sticky">
-      <div class="ribbon-track" id="ribbon-track">
-        <div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" title="Mumbai Investigation Documentary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Mumbai Investigation Documentary</p><p class="rtag">Documentary</p></div>
-        <div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1240103461?badge=0&autopause=0&player_id=0&app_id=58479" title="Colgate Animated Ad" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Colgate Animated Ad</p><p class="rtag">Animated Ad</p></div>
-        <div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1240103662?badge=0&autopause=0&player_id=0&app_id=58479" title="India 44 Km Documentary - Part 2" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">India 44 Km Documentary - Part 2</p><p class="rtag">Documentary</p></div>
-        <div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1240103811?badge=0&autopause=0&player_id=0&app_id=58479" title="Rocket Blueprint Documentary - Part 1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Rocket Blueprint Documentary - Part 1</p><p class="rtag">Documentary</p></div>
-        <div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1224003113?badge=0&autopause=0&player_id=0&app_id=58479" title="Copy of lembo.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Copy of lembo.mp4</p><p class="rtag">Edit</p></div>
-        <div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1224003112?badge=0&autopause=0&player_id=0&app_id=58479" title="#Finance.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">#Finance.mp4</p><p class="rtag">Edit</p></div>
-        <div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1223935407?badge=0&autopause=0&player_id=0&app_id=58479" title="jewellery Documantary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">jewellery Documantary</p><p class="rtag">Documentary</p></div>
-        <div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1224077827?badge=0&autopause=0&player_id=0&app_id=58479" title="Showcase" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Showcase</p><p class="rtag">Showcase</p></div>
-      </div>
-    </div>
-  </div>
+<div class="feat-head">
+<p class="kicker">Selected Projects &mdash; Docs, Ads &amp; Edits</p>
+<h2 class="mega">Featured<br><span class="outline-txt">Work</span></h2>
+<p class="ribbon-hint">Scroll &mdash; the ribbon bends as you move</p>
+</div>
+<div id="ribbon-zone">
+<div class="ribbon-sticky">
+<div class="ribbon-track" id="ribbon-track">
+<div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" title="Mumbai Investigation Documentary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Mumbai Investigation Documentary</p><p class="rtag">Documentary</p></div>
+<div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1240103461?badge=0&autopause=0&player_id=0&app_id=58479" title="Colgate Animated Ad" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Colgate Animated Ad</p><p class="rtag">Animated Ad</p></div>
+<div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1240103662?badge=0&autopause=0&player_id=0&app_id=58479" title="India 44 Km Documentary - Part 2" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">India 44 Km Documentary - Part 2</p><p class="rtag">Documentary</p></div>
+<div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1240103811?badge=0&autopause=0&player_id=0&app_id=58479" title="Rocket Blueprint Documentary - Part 1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Rocket Blueprint Documentary - Part 1</p><p class="rtag">Documentary</p></div>
+<div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1224003113?badge=0&autopause=0&player_id=0&app_id=58479" title="Copy of lembo.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Copy of lembo.mp4</p><p class="rtag">Edit</p></div>
+<div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1224003112?badge=0&autopause=0&player_id=0&app_id=58479" title="#Finance.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">#Finance.mp4</p><p class="rtag">Edit</p></div>
+<div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1223935407?badge=0&autopause=0&player_id=0&app_id=58479" title="jewellery Documantary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">jewellery Documantary</p><p class="rtag">Documentary</p></div>
+<div class="rcard"><div class="frame916"><iframe src="https://player.vimeo.com/video/1224077827?badge=0&autopause=0&player_id=0&app_id=58479" title="Showcase" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="rlabel">Showcase</p><p class="rtag">Edit</p></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- 6) WORKS GRID -->
 <section id="works" class="sec light">
-  <div class="wrap">
-    <p class="kicker">The Vault &mdash; Everything, Directly Playable</p>
-    <h2 class="mega">Works</h2>
-    <div class="works-grid">
-      <div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" title="Mumbai Investigation Documentary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Mumbai Investigation Documentary</p><p class="wtag">Documentary</p></div>
-      <div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1240103461?badge=0&autopause=0&player_id=0&app_id=58479" title="Colgate Animated Ad" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Colgate Animated Ad</p><p class="wtag">Animated Ad</p></div>
-      <div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1240103662?badge=0&autopause=0&player_id=0&app_id=58479" title="India 44 Km Documentary - Part 2" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">India 44 Km Documentary - Part 2</p><p class="wtag">Documentary</p></div>
-      <div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1240103811?badge=0&autopause=0&player_id=0&app_id=58479" title="Rocket Blueprint Documentary - Part 1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Rocket Blueprint Documentary - Part 1</p><p class="wtag">Documentary</p></div>
-      <div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1224003113?badge=0&autopause=0&player_id=0&app_id=58479" title="Copy of lembo.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Copy of lembo.mp4</p><p class="wtag">Edit</p></div>
-      <div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1224003112?badge=0&autopause=0&player_id=0&app_id=58479" title="#Finance.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">#Finance.mp4</p><p class="wtag">Edit</p></div>
-      <div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1223935407?badge=0&autopause=0&player_id=0&app_id=58479" title="jewellery Documantary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">jewellery Documantary</p><p class="wtag">Documentary</p></div>
-      <div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1224077827?badge=0&autopause=0&player_id=0&app_id=58479" title="Showcase" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Showcase</p><p class="wtag">Showcase</p></div>
-      <div class="yt-card"><div class="frame169"><iframe loading="lazy" src="https://www.youtube.com/embed/Y-AG6qYqFfs" title="Why Hindus Are Targeted? The Political Truth Nobody Explains" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="yt-meta"><span class="t">Why Hindus Are Targeted? The Political Truth Nobody Explains</span><span class="dur">16:44</span></div></div>
-      <div class="yt-card"><div class="frame169"><iframe loading="lazy" src="https://www.youtube.com/embed/2MyTrl8KihQ" title="The Network Marketing(MLM) Scam || Ravi Sharma" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="yt-meta"><span class="t">The Network Marketing(MLM) Scam || Ravi Sharma</span><span class="dur">6:10</span></div></div>
-    </div>
-  </div>
+<div class="wrap">
+<p class="kicker">The Vault &mdash; Everything, Directly Playable</p>
+<h2 class="mega">Works</h2>
+<div class="works-grid">
+<div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" title="Mumbai Investigation Documentary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Mumbai Investigation Documentary</p><p class="wtag">Documentary</p></div>
+<div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1240103461?badge=0&autopause=0&player_id=0&app_id=58479" title="Colgate Animated Ad" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Colgate Animated Ad</p><p class="wtag">Animated Ad</p></div>
+<div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1240103662?badge=0&autopause=0&player_id=0&app_id=58479" title="India 44 Km Documentary - Part 2" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">India 44 Km Documentary - Part 2</p><p class="wtag">Documentary</p></div>
+<div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1240103811?badge=0&autopause=0&player_id=0&app_id=58479" title="Rocket Blueprint Documentary - Part 1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Rocket Blueprint Documentary - Part 1</p><p class="wtag">Documentary</p></div>
+<div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1224003113?badge=0&autopause=0&player_id=0&app_id=58479" title="Copy of lembo.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Copy of lembo.mp4</p><p class="wtag">Edit</p></div>
+<div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1224003112?badge=0&autopause=0&player_id=0&app_id=58479" title="#Finance.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">#Finance.mp4</p><p class="wtag">Edit</p></div>
+<div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1223935407?badge=0&autopause=0&player_id=0&app_id=58479" title="jewellery Documantary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">jewellery Documantary</p><p class="wtag">Documentary</p></div>
+<div class="wcard"><div class="frame916"><iframe loading="lazy" src="https://player.vimeo.com/video/1224077827?badge=0&autopause=0&player_id=0&app_id=58479" title="Showcase" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><p class="wlabel">Showcase</p><p class="wtag">Edit</p></div>
+<div class="yt-card"><div class="frame169"><iframe loading="lazy" src="https://www.youtube.com/embed/Y-AG6qYqFfs" title="Why Hindus Are Targeted? The Political Truth Nobody Explains" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><div class="yt-meta"><span class="t">Why Hindus Are Targeted? The Political Truth Nobody Explains</span><span class="dur">16:44</span></div></div>
+<div class="yt-card"><div class="frame169"><iframe loading="lazy" src="https://www.youtube.com/embed/2MyTrl8KihQ" title="The Network Marketing(MLM) Scam || Ravi Sharma" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" allowfullscreen></iframe></div><div class="yt-meta"><span class="t">The Network Marketing(MLM) Scam || Ravi Sharma</span><span class="dur">6:10</span></div></div>
+</div>
+</div>
 </section>
-
 <!-- 7) RECENTLY WORKED WITH -->
 <section id="creators" class="sec light">
-  <div class="wrap">
-    <p class="kicker">Social Proof</p>
-    <h2 class="mega">Recently<br><span class="outline-txt">Worked With</span></h2>
-    <div class="creator-grid">
-      <div class="creator">
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/7QCEUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAGgcAigAYkZCTUQwYTAwMGFiNDAxMDAwMGNkMDMwMDAwMmIwNjAwMDBlYzA3MDAwMDY1MDkwMDAwNGEwYjAwMDA3MjBmMDAwMGNiMGYwMDAwM2YxMTAwMDA1YjEyMDAwMGI2MTcwMDAwAP/bAIQABQYGCwgLCwsLCw0LCwsNDg4NDQ4ODw0ODg4NDxAQEBEREBAQEA8TEhMPEBETFBQTERMWFhYTFhUVFhkWGRYWEgEFBQUKBwoICQkICwgKCAsKCgkJCgoMCQoJCgkMDQsKCwsKCw0MCwsICwsMDAwNDQwMDQoLCg0MDQ0MExQTExOc/8IAEQgAlgCWAwEiAAIRAQMRAf/EAH8AAAEFAQEAAAAAAAAAAAAAAAUCAwQGBwEAEAABAwEFAgoIBAMJAAAAAAABAAIDEQQQEiExQVEFEyAiMmFxgZGhFTBCUnKxwfAUI4LRM5LhBjRDU2KissLxEQABAwIFBAMBAQAAAAAAAAABABEhMUEQUWFxgZGh0fCxweEg8f/aAAwDAQACAAMAAAABJPJdolrSnrPeTJUYLJRLCDB10gnFB48uHbjmdGR0y1RJfaQSCMEhst0g6xJj9VAnwEJNK9xDTbCkOKl04/VLi1XkktCer+Pv7YKSvJS82rPtaTaMv0UcbSBsIKtzpcuPMbVweTGNcOM8j9b460Sc8GouhVq4tX0znUiLA0IbmlhWiZkmw5A4zJ0nL9FcIPjnmaoTlkhRplHA9oq7cfSPMzLjXFP8cdTT6DogN+zZTrUQgPHZ3aCcv3ZNCtwlvrFkr1pmTySH5EevcJIffb9kmt5ItOjS2Xm1POMrWkDnWvZB6xBIM4a2NsPSoVt2wNsyG3e6DUbnKeYnplcA9V1DiVZHqeWc9pjrL6FLVxSueot9RyXg4bTKuwTHPNEVw5pMWZZfXf8APurm6P2lSHBVljhn0xZ2caBn/m5SqPJYAW5NSb41ceU1PvXBkcRhXoGoeQKtEL5CvUmG8xJ92MFH2riJWdRtNrrZGpimXowapKiK5X3Eee931lmXsZZq8PvdPsHQ54PcJjRcuL8y0U8iJzzKKnMf5c+x5LHaBW9ZyZo5RlK7EpHbRWNKHFbVYwRg1LE1PRw0tutWBk4l/g7xD0ZdcahOeFEgMpfbkZrx5vysj03MkdqnrX4TXKpp9b8PO68/jXrI7sdez33XLx6j+V6zWHOPONXmsDfK7Ogd9ztptOW+57S8095nv//aAAgBAQABBQIcgXPtLQnTkrE5cc5R2lB1biEQhqLxcbgrRMnOohNQmTGuOXHZxSYUDVUTwto5JQRdhBdRPfidKs0CnOUNoUUmFDNS3N5JKCtDlM8Kz2V1oMXBjQvR0YTrCxWrg7CtFZZFZjUTXN5BKKarQizjJImBoDU9qKndQF2EwZvsykNbmoXEqqAqmxuVqaQrOBHKeFE62uI/HSgw2txT2YxOzC6zdNjqJ1zUxpK4pyqqIC7hPR45rga/g6QusElYLA4rBhVps3GTCFjRYW1UjQUI2prAhcEL+EujZQKfkxH8aE+1liFtxJ0lU7XCWiwaFNCAvCF9vbWMmgdJkxripJnNjidQAlB1F/ELGcW2iA5A5Dm4hKxNgxmIvJdFzYysSa3mWHplNF9Vi5Vugo6UOYWlCRMGbUdLH/EDVRVRcqrEhySKq02biy9lALo7m2R5TZ5I0OEHL8aChaGlVQC9LFelXr0nIvScq9JSr0nKncISPRuqmOVlsyCfE16/BRJ3BzVJYXtUdpLF6TchdVVWJVUUKk0dIobO+RWeAMUbMPKtVkD05tVVVVbgFFZ6KODGJ4GkshY1RjEoIqcid9FG9a3W6HC6t7RVQ2fArPZFajROzWMVs7aKZ7mpsjnIKR1BLJjUcqa659ORYY6qyw3WppcrSwxqyxOYoJCTI2qn/Lc91FM7IuoWgAQuWwGqpfZmcx9WplaKZoc6WFoADWBs3PlFWxuJFskoq1ijkq5mrCnnAaKiorN0TrdLJzo4HcZa8ZdJJImSEsMuFS/mKxS4k1nOifkwpkomX//aAAgBAwABPwG7DiKmtYZVoq7syHivxZ6x+oqz2quufzH7hAocm0u4qFztr+a378UyEuz2IWeu1EGM7lBJjZiHeNxUeiJuAT3AbVb2Y4ISNMeZ/mWKoy2Jh2K1DRcGMrFJ8X7IBPNFxzfeHjfDnYW/FT/eSmxUQi3U+qeytAd6mbhsklMqubpltasZG0+Kc6vI4Nfxlmmj2xnGOzU/I+KLs86mqBoU3nED7zXDUmExwDJjAHdpP35lE8mw2w2Z+MZjRw3j91a7I0gTwmsbtR7hP0rl1FCNNOHPdn4K22UW52OKZtcIBYdcvMa7k/gmdv8Ah1+Eg/18k6BzMnNLe0UufapPf+S46Q+27xXGSf5jvFcDwyQ2WYzmgkzYHHPTdsqaU2oygKS0k5DJVTLbM3SV/wDMT5FRcIiccVaRUHSQZFp37vvMK18DW5kjhF+az2X8xtR2E6hFiA2AVqrFweyyATWgYpNY4t3WevyHarTbnzOq45DRo0H9VQu5Nm4bMbGsMePDlXFTLZsKquBog+bEdIhi79B4aqeUyuLjt8hsTRmnkU0102aXhFYSqrgPpS/B9bohUqV5dSv7XBbUViIX/9oACAECAAE/ASUFYLA+2yCNmW1ztjW7+3cNpUPB9jsmkXHuHtSGo8Oj/t70ZoXdOyRO/S2vyVu4ChtTXPso4qUZ8V7Luz3Tupzd4CzYSCKEZEHYR9U01CN4XAUXEWZ8vtTnL4W5D/sfBOlDctqMtNiimpRzTmF/aCyNlj/FsFHAgSjfsDu0Gg6wVBon3BqwnYCVYqixw1GbcWX6nLCRrtThtVnOq4Q/uk43lv8AyamCgUg3Lin+47+UoZoJ7vyu/wCqc+qL011KqI/lOrnU/ssIJ0TW0uFzzVpCARzVETkANAmtuqhc5tUybPC7I/NFy2oPwdJp7VxzUZVUovO9Y3byqu94ozY5WBpxEa/VNjJQgDMzmdl3Fj3R4J0Xu+CJfvVFosb7W4siyYOnJ+33mrFweyFvN1Orjqf6Loo55qiw5IhGCudfK7hJ5EeEayHD9/JWezCCNjBsGfWdpTZKZImqGVE1tEU4XVVv/wAL4wjsQQ1VLynChX//2gAIAQEABj8C5W9blqVqucsvW4R33VXSWZXUVXZ6yqqbsuRQrq9WBdzcm71nmetHJdFVbpdhKpu9UFg3lBrcgOSUCnep0KbUJ7zoG/Nc1mSBaumFzqG4oI8jRaHks7Sj3L6JrPapmesroE9iqRgu3DDUrJoHXtTu5aLQeC0HLb2/ROxLmtFdUMXksQ6N5+GioU7t9V8Jrc4e0cuxalYMyhcTuQoNdiA9URvRG0J28CvJK7j6zFsPzRc3aqrVZC4ruPrKHRb2nRZBacioFQqVPYVm0LQha39AeK6LfNez4LZ4LUeC1HgsJpQ9XIyVXeF3OAK6PmsiR5rLnDqWYxL+GPHl1PhfuG9Za79vLxN6Xz5dTqq6Dehmclp43V9Ri2O+fIoFn0lif4IXfZXRPyTcNNaUKyDesZ5eSzWWp07VWvRAJPVt718OV+enILu4LEe64UWlVnuyb9Vvrt6l3g+BTZP0u7Dt7rq9ZFP9Qzb8vNV9lwJ8c/HYhTZy2df1QA2aLPW5uWZPkM01g9o/++S2AKhyDuj1ohYjsd4gL9Q8XaHuXV1/faqaa/Tls7ByMtjPmaKpfnSqa1tN+e9DFh7tR2IHejloQUWdTm1+HnV+iwkVEmfkD9UcOXSy2a/ei8kE7/SaL//aAAgBAQEBPyFBg+EKIDnpTqqd0V6ptLPkAiiA5HhAFycIjDaxATIMQwuPQuz02QYmrFuA6dXQwOykUEWvVNBDkZC/PdEAIIgcH3VEMBJVGYQxBEgo4N0JDAfwPOQd0O8RrzdUQDAn98prBROCU9wG6qINMKH6T3M6+QoIoUDBGuAJv4q1BmyeECGJYvXJFpgFn6WCByaugEhlUxBEMukZIuPxZ" alt="Krish Chakraborty">
-        <h3>Krish Chakraborty</h3>
-        <a class="handle" href="https://www.instagram.com/theproudindiankrish" target="_blank" rel="noopener">@theproudindiankrish</a>
-        <p class="fol">33.5K followers</p>
-      </div>
-      <div class="creator">
-        <img src="data:image/jpeg;base64,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" alt="Akshay Wadhwa">
-        <h3>Akshay Wadhwa<span class="verified" title="Verified">&#10003;</span></h3>
-        <a class="handle" href="https://www.instagram.com/thegenzskool" target="_blank" rel="noopener">@thegenzskool</a>
-        <p class="fol">44.1K followers</p>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<p class="kicker">Social Proof</p>
+<h2 class="mega">Recently<br><span class="outline-txt">Worked With</span></h2>
+<div class="creator-grid">
+<div class="creator">
+<img src="data:image/jpeg;base64,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" alt="Krish Chakraborty">
+<h3>Krish Chakraborty</h3>
+<a class="handle" href="https://www.instagram.com/theproudindiankrish" target="_blank" rel="noopener">@theproudindiankrish</a>
+<p class="fol">33.5K followers</p>
+</div>
+<div class="creator">
+<img src="data:image/jpeg;base64,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" alt="Akshay Wadhwa">
+<h3>Akshay Wadhwa<span class="verified" title="Verified">&#10003;</span></h3>
+<a class="handle" href="https://www.instagram.com/thegenzskool" target="_blank" rel="noopener">@thegenzskool</a>
+<p class="fol">44.1K followers</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- 8) SERVICES -->
 <section id="services" class="sec dark">
-  <div class="wrap">
-    <p class="kicker">What I Do</p>
-    <h2 class="mega-sm">The Services<br>We Provide</h2>
-    <div class="svc-list">
-      <div class="svc"><span class="n">01</span><h3>Motion Graphics</h3><p>Kinetic type, logo stings &amp; animated UI.</p></div>
-      <div class="svc"><span class="n">02</span><h3>Simple Edits</h3><p>Clean cuts, pacing &amp; story flow.</p></div>
-      <div class="svc"><span class="n">03</span><h3>Short Videos</h3><p>Reels, Shorts &amp; ads that hook in seconds.</p></div>
-      <div class="svc"><span class="n">04</span><h3>Long Videos</h3><p>Long-form YouTube, fully produced.</p></div>
-      <div class="svc"><span class="n">05</span><h3>Documentary Edits</h3><p>Investigations &amp; docu-series, cinematic.</p></div>
-      <div class="svc"><span class="n">06</span><h3>Music Videos</h3><p>Beat-synced cuts with attitude.</p></div>
-      <div class="svc"><span class="n">07</span><h3>SaaS UI Animation</h3><p>Product walkthroughs &amp; interface motion.</p></div>
-      <div class="svc"><span class="n">08</span><h3>Podcasts</h3><p>Video podcasts cut for retention.</p></div>
-      <div class="svc"><span class="n">09</span><h3>Short Clips</h3><p>Snackable cuts from long footage.</p></div>
-      <div class="svc"><span class="n">10</span><h3>Educational</h3><p>Explainers &amp; course content.</p></div>
-      <div class="svc"><span class="n">11</span><h3>Real Estate Ads</h3><p>Property films that sell.</p></div>
-      <div class="svc"><span class="n">12</span><h3>Informational</h3><p>News-style &amp; info edits.</p></div>
-      <div class="svc"><span class="n">13</span><h3>Map Animations</h3><p>Geographic storytelling in motion.</p></div>
-      <div class="svc"><span class="n">14</span><h3>Color Grading</h3><p>Cinematic color, DaVinci-grade.</p></div>
-      <div class="svc"><span class="n">+</span><h3>Many More</h3><p>If it moves, I can cut it.</p></div>
-    </div>
-  </div>
+<div class="wrap">
+<p class="kicker">What I Do</p>
+<h2 class="mega-sm">The Services<br>We Provide</h2>
+<div class="svc-list">
+<div class="svc"><span class="n">01</span><h3>Motion Graphics</h3><p>Kinetic type, logo stings &amp; animated UI.</p></div>
+<div class="svc"><span class="n">02</span><h3>Simple Edits</h3><p>Clean cuts, pacing &amp; story flow.</p></div>
+<div class="svc"><span class="n">03</span><h3>Short Videos</h3><p>Reels, Shorts &amp; ads that hook in seconds.</p></div>
+<div class="svc"><span class="n">04</span><h3>Long Videos</h3><p>Long-form YouTube, fully produced.</p></div>
+<div class="svc"><span class="n">05</span><h3>Documentary Edits</h3><p>Investigations &amp; docu-series, cinematic.</p></div>
+<div class="svc"><span class="n">06</span><h3>Music Videos</h3><p>Beat-synced cuts with attitude.</p></div>
+<div class="svc"><span class="n">07</span><h3>SaaS UI Animation</h3><p>Product walkthroughs &amp; interface motion.</p></div>
+<div class="svc"><span class="n">08</span><h3>Podcasts</h3><p>Video podcasts cut for retention.</p></div>
+<div class="svc"><span class="n">09</span><h3>Short Clips</h3><p>Snackable cuts from long footage.</p></div>
+<div class="svc"><span class="n">10</span><h3>Educational</h3><p>Explainers &amp; course content.</p></div>
+<div class="svc"><span class="n">11</span><h3>Real Estate Ads</h3><p>Property films that sell.</p></div>
+<div class="svc"><span class="n">12</span><h3>Informational</h3><p>News-style &amp; info edits.</p></div>
+<div class="svc"><span class="n">13</span><h3>Map Animations</h3><p>Geographic storytelling in motion.</p></div>
+<div class="svc"><span class="n">14</span><h3>Color Grading</h3><p>Cinematic color, DaVinci-grade.</p></div>
+<div class="svc"><span class="n">+</span><h3>Many More</h3><p>If it moves, I can cut it.</p></div>
+</div>
+</div>
 </section>
-
 <!-- WHY CHOOSE ME -->
 <section id="why" class="sec dark">
-  <div class="wrap">
-    <p class="kicker">The Difference</p>
-    <h2 class="mega-sm">Why Choose Me?</h2>
-    <div class="why-grid">
-      <div class="why-card"><h4>Premium Quality</h4><p>Top-tier visual effects, smooth transitions, and a polished final cut every time.</p></div>
-      <div class="why-card"><h4>Fast Turnaround</h4><p>I value your time. Get your high-quality edits delivered faster than industry standards.</p></div>
-      <div class="why-card"><h4>Global Experience</h4><p>Trusted by 75+ clients worldwide, adapting to different cultural styles and trends.</p></div>
-      <div class="why-card"><h4>Unbeatable Pricing</h4><p>Premium doesn&rsquo;t mean overpriced. I offer the best value for your investment.</p></div>
-      <div class="why-card"><h4>Dedicated Editor</h4><p>I work to handle any complex workflow or volume.</p></div>
-      <div class="why-card"><h4>24/7 Support</h4><p>My support is always available. I am here whenever you need revisions or help.</p></div>
-    </div>
-  </div>
+<div class="wrap">
+<p class="kicker">The Difference</p>
+<h2 class="mega-sm">Why Choose Me?</h2>
+<div class="why-grid">
+<div class="why-card"><h4>Premium Quality</h4><p>Top-tier visual effects, smooth transitions, and a polished final cut every time.</p></div>
+<div class="why-card"><h4>Fast Turnaround</h4><p>I value your time. Get your high-quality edits delivered faster than industry standards.</p></div>
+<div class="why-card"><h4>Global Experience</h4><p>Trusted by 75+ clients worldwide, adapting to different cultural styles and trends.</p></div>
+<div class="why-card"><h4>Unbeatable Pricing</h4><p>Premium doesn&rsquo;t mean overpriced. I offer the best value for your investment.</p></div>
+<div class="why-card"><h4>Dedicated Editor</h4><p>I work to handle any complex workflow or volume.</p></div>
+<div class="why-card"><h4>24/7 Support</h4><p>My support is always available. I am here whenever you need revisions or help.</p></div>
+</div>
+</div>
 </section>
-
 <!-- HOW IT WORKS -->
 <section id="how" class="sec dark">
-  <div class="wrap">
-    <p class="kicker">Simple Process</p>
-    <h2 class="mega-sm">How It Works</h2>
-    <div class="how-grid">
-      <div class="how-step"><div class="num">01</div><h4>Share your brief</h4><p>Send me your raw footage, requirements, and vision. I&rsquo;ll analyze and plan the perfect cut.</p></div>
-      <div class="how-step"><div class="num">02</div><h4>I edit &amp; create</h4><p>I get to work, adding motion graphics, grading, and sound design to bring it alive.</p></div>
-      <div class="how-step"><div class="num">03</div><h4>Review &amp; deliver</h4><p>You review the draft, I make any requested tweaks instantly, and hand over the masterpiece.</p></div>
-    </div>
-  </div>
+<div class="wrap">
+<p class="kicker">Simple Process</p>
+<h2 class="mega-sm">How It Works</h2>
+<div class="how-grid">
+<div class="how-step"><div class="num">01</div><h4>Share your brief</h4><p>Send me your raw footage, requirements, and vision. I&rsquo;ll analyze and plan the perfect cut.</p></div>
+<div class="how-step"><div class="num">02</div><h4>I edit &amp; create</h4><p>I get to work, adding motion graphics, grading, and sound design to bring it alive.</p></div>
+<div class="how-step"><div class="num">03</div><h4>Review &amp; deliver</h4><p>You review the draft, I make any requested tweaks instantly, and hand over the masterpiece.</p></div>
+</div>
+</div>
 </section>
-
 <!-- FAQ -->
 <section id="faq" class="sec dark">
-  <div class="wrap">
-    <p class="kicker">Good To Know</p>
-    <h2 class="mega-sm">Frequently Asked<br>Questions</h2>
-    <div class="faq-list">
-      <details class="faq"><summary>What software do you use for video editing?</summary><p>I use industry-standard software such as Adobe Premiere Pro, After Effects, DaVinci Resolve, and Final Cut Pro depending on the specific requirements of the project.</p></details>
-      <details class="faq"><summary>How long does it take to get a video edited?</summary><p>Turnaround times vary based on the project&rsquo;s complexity and length. Short videos can be delivered within 24-48 hours, while larger projects like documentaries might take a week or more. I offer fast turnarounds tailored to your needs.</p></details>
-      <details class="faq"><summary>Do you provide source files?</summary><p>Yes, project source files can be provided upon request. This might involve an additional fee depending on the contract agreement.</p></details>
-      <details class="faq"><summary>How do revisions work?</summary><p>I ensure you are 100% satisfied. Standard packages include 2-3 rounds of revisions, and my 24/7 support is always available to discuss any required tweaks.</p></details>
-    </div>
-  </div>
+<div class="wrap">
+<p class="kicker">Good To Know</p>
+<h2 class="mega-sm">Frequently Asked<br>Questions</h2>
+<div class="faq-list">
+<details class="faq"><summary>What software do you use for video editing?</summary><p>I use industry-standard software such as Adobe Premiere Pro, After Effects, DaVinci Resolve, and Final Cut Pro depending on the specific requirements of the project.</p></details>
+<details class="faq"><summary>How long does it take to get a video edited?</summary><p>Turnaround times vary based on the project&rsquo;s complexity and length. Short videos can be delivered within 24-48 hours, while larger projects like documentaries might take a week or more. I offer fast turnarounds tailored to your needs.</p></details>
+<details class="faq"><summary>Do you provide source files?</summary><p>Yes, project source files can be provided upon request. This might involve an additional fee depending on the contract agreement.</p></details>
+<details class="faq"><summary>How do revisions work?</summary><p>I ensure you are 100% satisfied. Standard packages include 2-3 rounds of revisions, and my 24/7 support is always available to discuss any required tweaks.</p></details>
+</div>
+</div>
 </section>
-
 <!-- FOOTER -->
 <footer id="contact">
-  <div class="wrap">
-    <p class="kicker" style="opacity:.5">Got a project in mind?</p>
-    <h2 class="lets-talk">Let&rsquo;s <span class="stroke">Talk</span></h2>
-    <div class="pills">
-      <a class="pill" href="https://youtu.be/Y-AG6qYqFfs" target="_blank" rel="noopener">YouTube</a>
-      <a class="pill" href="https://wa.me/919303881879" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="pill" href="mailto:arshad@armotions.in">Email</a>
-    </div>
-    <div class="contact-lines">
-      <a href="tel:+919302687554">+91 93026 87554</a><br>
-      <a href="mailto:arshad@armotions.in">arshad@armotions.in</a> &nbsp;&middot;&nbsp; <a href="mailto:support@armotions.in">support@armotions.in</a>
-    </div>
-    <div class="owner-row">
-      <button class="pill" data-open-owner>Know the Owner</button>
-    </div>
-    <div class="foot-base">
-      <span>&copy; 2026 AR MOTIONS &middot; armotions.in</span>
-      <span>Founder-Led &bull; 4+ Years Experience &bull; Global Clients</span>
-    </div>
-  </div>
+<div class="wrap">
+<p class="kicker" style="opacity:.5">Got a project in mind?</p>
+<h2 class="lets-talk">Let&rsquo;s <span class="stroke">Talk</span></h2>
+<div class="pills">
+<a class="pill" href="https://youtu.be/Y-AG6qYqFfs" target="_blank" rel="noopener">YouTube</a>
+<a class="pill" href="https://wa.me/919303881879" target="_blank" rel="noopener">WhatsApp</a>
+<a class="pill" href="mailto:arshad@armotions.in">Email</a>
+</div>
+<div class="contact-lines">
+<a href="tel:+919302687554">+91 93026 87554</a><br>
+<a href="mailto:arshad@armotions.in">arshad@armotions.in</a> &nbsp;&middot;&nbsp; <a href="mailto:support@armotions.in">support@armotions.in</a>
+</div>
+<div class="owner-row">
+<button class="pill" data-open-owner>Know the Owner</button>
+</div>
+<div class="foot-base">
+<span>&copy; 2026 AR MOTIONS &middot; armotions.in</span>
+<span>Founder-Led &bull; 4+ Years Experience &bull; Global Clients</span>
+</div>
+</div>
 </footer>
-
 <!-- OWNER MODAL -->
 <div id="owner-modal" role="dialog" aria-modal="true" aria-label="About the owner">
-  <div class="modal-card">
-    <button class="modal-x" data-close-owner aria-label="Close">&times;</button>
-    <h3>Founder &mdash; Arshad Khan</h3>
-    <p>One of the rare editors across Madhya Pradesh, India (Ratlam), ranked among the most sought-after editors in the industry.</p>
-    <p class="spec"><strong>Speciality:</strong><br>Motion designing / premium UI / SaaS designing / Documentary Scenes designing</p>
-    <p>2 additional editors available for handling urgent projects when required.</p>
-  </div>
+<div class="modal-card">
+<button class="modal-x" data-close-owner aria-label="Close">&times;</button>
+<h3>Founder &mdash; Arshad Khan</h3>
+<p>One of the rare editors across Madhya Pradesh, India (Ratlam), ranked among the most sought-after editors in the industry.</p>
+<p class="spec"><strong>Speciality:</strong><br>Motion designing / premium UI / SaaS designing / Documentary Scenes designing</p>
+<p>2 additional editors available for handling urgent projects when required.</p>
 </div>
-
+</div>
 <!-- ROBOT CONTACT WIDGET -->
 <div class="robot-wrap">
-  <a class="wa-float" href="https://wa.me/919303881879" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
-  </a>
-  <a class="robot" href="#contact" aria-label="Contact Me">
-    <svg viewBox="0 0 48 48"><rect x="10" y="15" width="28" height="21" rx="9" fill="rgba(255,255,255,.16)" stroke="rgba(255,255,255,.55)" stroke-width="2"/><circle cx="19.5" cy="24.5" r="3" fill="#fff"/><circle cx="28.5" cy="24.5" r="3" fill="#fff"/><path d="M19.5 31.5q4.5 3.6 9 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="24" y1="15" x2="24" y2="9" stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="7" r="2.6" fill="#a855f7"/></svg>
-  </a>
-  <span class="robot-label">Contact Me</span>
+<a class="wa-float" href="https://wa.me/919303881879" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+</a>
+<a class="robot" href="#contact" aria-label="Contact Me">
+<svg viewBox="0 0 48 48"><rect x="10" y="15" width="28" height="21" rx="9" fill="rgba(255,255,255,.12)" stroke="rgba(196,181,253,.8)" stroke-width="2"/><circle cx="19" cy="24" r="3.4" fill="#c4b5fd"/><circle cx="29" cy="24" r="3.4" fill="#c4b5fd"/><rect x="21" y="30" width="6" height="2.6" rx="1.3" fill="#c4b5fd"/><line x1="24" y1="15" x2="24" y2="8" stroke="rgba(196,181,253,.8)" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="6.5" r="2.4" fill="#c4b5fd"/></svg>
+</a>
+<span class="robot-label">Contact Me</span>
 </div>
-
 <script>
 (function(){
-  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (RM) { document.documentElement.classList.add('rm'); }
-  function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
-
-  /* Intro */
-  var intro = document.getElementById('intro');
-  if (intro) {
-    if (RM) { intro.remove(); }
-    else {
-      var done = false;
-      var kill = function(){ if(done) return; done = true; intro.classList.add('done'); setTimeout(function(){ intro.remove(); }, 1000); };
-      var t = setTimeout(kill, 2700);
-      intro.addEventListener('click', function(){ clearTimeout(t); kill(); });
-    }
-  }
-
-  /* Owner modal */
-  var modal = document.getElementById('owner-modal');
-  function openModal(){ modal.classList.add('open'); }
-  function closeModal(){ modal.classList.remove('open'); }
-  document.querySelectorAll('[data-open-owner]').forEach(function(b){ b.addEventListener('click', openModal); });
-  document.querySelectorAll('[data-close-owner]').forEach(function(b){ b.addEventListener('click', closeModal); });
-  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
-
-  /* Scroll-driven marquee + ribbon */
-  var journey = document.getElementById('journey');
-  var mrows = Array.prototype.slice.call(document.querySelectorAll('.mrow'));
-  var ribbonZone = document.getElementById('ribbon-zone');
-  var ribbonTrack = document.getElementById('ribbon-track');
-  var rcards = Array.prototype.slice.call(document.querySelectorAll('.rcard'));
-  function update(){
-    var vh = window.innerHeight;
-    if (journey && mrows.length) {
-      var r = journey.getBoundingClientRect();
-      var total = journey.offsetHeight - vh;
-      var p = total > 0 ? clamp(-r.top / total, 0, 1) : 0;
-      mrows.forEach(function(row){
-        var sp = parseFloat(row.getAttribute('data-speed') || '1');
-        var dir = row.getAttribute('data-dir') === '-1' ? -1 : 1;
-        var x = (0.5 - p) * sp * dir * 560;
-        row.style.transform = 'translate3d(' + x.toFixed(1) + 'px,0,0)';
-      });
-    }
-    if (ribbonZone && ribbonTrack) {
-      var r2 = ribbonZone.getBoundingClientRect();
-      var total2 = ribbonZone.offsetHeight - vh;
-      var p2 = total2 > 0 ? clamp(-r2.top / total2, 0, 1) : 0;
-      var maxX = Math.max(0, ribbonTrack.scrollWidth - window.innerWidth);
-      ribbonTrack.style.transform = 'translate3d(' + (-p2 * maxX).toFixed(1) + 'px,0,0)';
-      rcards.forEach(function(c, i){
-        var y = Math.sin(i * 0.85 + p2 * Math.PI * 2.2) * 64;
-        var rot = Math.cos(i * 0.85 + p2 * Math.PI * 2.2) * 5;
-        c.style.transform = 'translate3d(0,' + y.toFixed(1) + 'px,0) rotate(' + rot.toFixed(2) + 'deg)';
-      });
-    }
-  }
-  if (!RM) {
-    var tick = false;
-    var onScroll = function(){ if(!tick){ tick = true; requestAnimationFrame(function(){ update(); tick = false; }); } };
-    window.addEventListener('scroll', onScroll, {passive:true});
-    window.addEventListener('resize', onScroll);
-    update();
-  }
+var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (RM) { document.documentElement.classList.add('rm'); }
+function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+/* Intro */
+var intro = document.getElementById('intro');
+if (intro) {
+if (RM) { intro.remove(); }
+else {
+var done = false;
+var kill = function(){ if(done) return; done = true; intro.classList.add('done'); setTimeout(function(){ intro.remove(); }, 1000); };
+var t = setTimeout(kill, 2700);
+intro.addEventListener('click', function(){ clearTimeout(t); kill(); });
+}
+}
+/* Owner modal */
+var modal = document.getElementById('owner-modal');
+function openModal(){ modal.classList.add('open'); }
+function closeModal(){ modal.classList.remove('open'); }
+document.querySelectorAll('[data-open-owner]').forEach(function(b){ b.addEventListener('click', openModal); });
+document.querySelectorAll('[data-close-owner]').forEach(function(b){ b.addEventListener('click', closeModal); });
+modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+/* Scroll-driven marquee + ribbon */
+var journey = document.getElementById('journey');
+var mrows = Array.prototype.slice.call(document.querySelectorAll('.mrow'));
+var ribbonZone = document.getElementById('ribbon-zone');
+var ribbonTrack = document.getElementById('ribbon-track');
+var rcards = Array.prototype.slice.call(document.querySelectorAll('.rcard'));
+function update(){
+var vh = window.innerHeight;
+if (journey && mrows.length) {
+var r = journey.getBoundingClientRect();
+var total = journey.offsetHeight - vh;
+var p = total > 0 ? clamp(-r.top / total, 0, 1) : 0;
+mrows.forEach(function(row){
+var sp = parseFloat(row.getAttribute('data-speed') || '1');
+var dir = row.getAttribute('data-dir') === '-1' ? -1 : 1;
+var x = (0.5 - p) * sp * dir * 560;
+row.style.transform = 'translate3d(' + x.toFixed(1) + 'px,0,0)';
+});
+}
+if (ribbonZone && ribbonTrack) {
+var r2 = ribbonZone.getBoundingClientRect();
+var total2 = ribbonZone.offsetHeight - vh;
+var p2 = total2 > 0 ? clamp(-r2.top / total2, 0, 1) : 0;
+var maxX = Math.max(0, ribbonTrack.scrollWidth - window.innerWidth);
+ribbonTrack.style.transform = 'translate3d(' + (-p2 * maxX).toFixed(1) + 'px,0,0)';
+rcards.forEach(function(c, i){
+var y = Math.sin(i * 0.85 + p2 * Math.PI * 2.2) * 64;
+var rot = Math.cos(i * 0.85 + p2 * Math.PI * 2.2) * 5;
+c.style.transform = 'translate3d(0,' + y.toFixed(1) + 'px,0) rotate(' + rot.toFixed(2) + 'deg)';
+});
+}
+}
+if (!RM) {
+var tick = false;
+var onScroll = function(){ if(!tick){ tick = true; requestAnimationFrame(function(){ update(); tick = false; }); } };
+window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('resize', onScroll);
+update();
+}
 })();
 </script>
 </body>
