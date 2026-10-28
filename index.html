@@ -1,770 +1,454 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR MOTIONS | Premium Video Production & Editing</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="AR MOTIONS provides top-tier video editing and post-production. I specialize in premium motion graphics, documentary edits, SaaS UI animations, and short-form content for global clients.">
-    <meta name="keywords" content="video editing, premium video editing, professional video editors, motion graphics, documentary editing, YouTube editor, SaaS UI animation, real estate video ads, short form content editing, post-production, AR MOTIONS, fast turnaround video editing, hire video editor">
-    <meta name="author" content="Arshad Khan - AR MOTIONS">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://armotions.in/">
-    <meta property="og:title" content="AR MOTIONS | Premium Video Production & Editing">
-    <meta property="og:description" content="Elevate your brand with AR MOTIONS. I deliver premium video editing, motion graphics, and post-production services globally.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://armotions.in/">
-    <meta property="twitter:title" content="AR MOTIONS | Premium Video Production & Editing">
-    <meta property="twitter:description" content="Elevate your brand with AR MOTIONS. I deliver premium video editing, motion graphics, and post-production services globally.">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#03000a',
-                            purple: '#8B5CF6',
-                            neon: '#a855f7',
-                            light: '#f3e8ff'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #03000a; color: #ffffff; overflow-x: hidden; cursor: none; }
-        
-        /* Custom Cursor */
-        .custom-cursor {
-            position: fixed; top: 0; left: 0; width: 24px; height: 24px;
-            border-radius: 50%; background: rgba(168, 85, 247, 0.9);
-            box-shadow: 0 0 25px 12px rgba(168, 85, 247, 0.6);
-            pointer-events: none; z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
-            mix-blend-mode: screen;
-        }
-        .custom-cursor.hovering { 
-            width: 60px; height: 60px; 
-            background: rgba(139, 92, 246, 0.2); 
-            border: 2px solid rgba(168, 85, 247, 0.8); 
-            box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
-        }
-        /* Hide custom cursor on mobile */
-        @media (hover: none) and (pointer: coarse) { 
-            body { cursor: auto; } 
-            .custom-cursor { display: none !important; } 
-        }
-
-        .text-glow { text-shadow: 0 0 20px rgba(168, 85, 247, 0.5); }
-        .box-glow { box-shadow: 0 0 25px rgba(139, 92, 246, 0.2); }
-        .gradient-text {
-            background: linear-gradient(to right, #c084fc, #a855f7, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: shine 3s linear infinite;
-        }
-        @keyframes shine { to { background-position: 200% center; } }
-        
-        /* Liquid Glassmorphism Effect */
-        .liquid-glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 0 15px rgba(255,255,255,0.02), 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .liquid-glass:hover {
-            background: rgba(139, 92, 246, 0.08);
-            border-color: rgba(168, 85, 247, 0.3);
-            box-shadow: inset 0 0 20px rgba(168, 85, 247, 0.1), 0 15px 40px rgba(0, 0, 0, 0.5);
-            transform: translateY(-8px);
-        }
-        
-        .whatsapp-btn {
-            position: fixed; bottom: 30px; right: 30px;
-            background: linear-gradient(135deg, #25D366, #128C7E); color: white;
-            border-radius: 50px; padding: 12px 24px; display: flex; align-items: center; gap: 10px;
-            font-weight: 600; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 50; transition: all 0.3s ease; text-decoration: none;
-        }
-        .whatsapp-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6); }
-        @media (max-width: 640px) {
-            .whatsapp-btn { bottom: 20px; right: 20px; padding: 10px 18px; }
-        }
-        
-        .float-slow { animation: float 10s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
-
-        /* Floating Icons Background */
-        .floating-icon {
-            position: absolute; color: #a855f7; font-size: 2rem; opacity: 0;
-            animation: floatIcon linear infinite; z-index: 0; pointer-events: none;
-        }
-        @keyframes floatIcon {
-            0% { transform: translateY(110vh) rotate(0deg) scale(0.8); opacity: 0; }
-            10% { opacity: 0.15; }
-            90% { opacity: 0.15; }
-            100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
-        }
-
-        /* Sidebar transition */
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        .sidebar-open { transform: translateX(0); }
-        .sidebar-closed { transform: translateX(100%); }
-        
-        /* FAQ Accordion */
-        .faq-answer { transition: max-height 0.3s ease, padding 0.3s ease; max-height: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; }
-        .faq-item.active .faq-answer { max-height: 400px; padding-top: 1rem; padding-bottom: 1rem; }
-        .faq-item.active .faq-icon { transform: rotate(180deg); }
-        .faq-icon { transition: transform 0.3s ease; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR MOTIONS | Premium Video Production & Editing</title>
+<meta name="description" content="AR MOTIONS provides top-tier video editing and post-production. I specialize in premium motion graphics, documentary edits, SaaS UI animations, and short-form content for global clients.">
+<meta name="keywords" content="video editing, premium video editing, professional video editors, motion graphics, documentary editing, YouTube editor, SaaS UI animation, real estate video ads, short form content editing, post-production, AR MOTIONS, fast turnaround video editing, hire video editor">
+<meta name="author" content="Arshad Khan - AR MOTIONS">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://armotions.in/">
+<meta property="og:title" content="AR MOTIONS | Premium Video Production & Editing">
+<meta property="og:description" content="Elevate your brand with AR MOTIONS. I deliver premium video editing, motion graphics, and post-production services globally.">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://armotions.in/">
+<meta property="twitter:title" content="AR MOTIONS | Premium Video Production & Editing">
+<meta property="twitter:description" content="Elevate your brand with AR MOTIONS. I deliver premium video editing, motion graphics, and post-production services globally.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e11d2e'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='bold' text-anchor='middle' fill='white'%3EAR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fafaf9;--card:#ffffff;--ink:#111214;--muted:#62666b;--line:#e8e8e4;--accent:#e11d2e;--accent-d:#b3121f;--max:1140px;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:88px 0;scroll-margin-top:80px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent);border-radius:2px}
+h2.sec{font-size:clamp(1.75rem,3.4vw,2.5rem);font-weight:800;letter-spacing:-.025em;line-height:1.15;margin-bottom:12px}
+.sub{color:var(--muted);font-size:15.5px;max-width:640px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(250,250,249,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:15px;letter-spacing:.14em;text-decoration:none}
+.logo b{color:var(--accent);font-weight:800}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a.nl{font-size:13.5px;font-weight:500;color:#3c3f44;text-decoration:none;transition:color .15s}
+.nav-links a.nl:hover{color:var(--accent)}
+.btn{display:inline-block;font-size:13px;font-weight:600;padding:.62rem 1.25rem;border-radius:999px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .18s ease,background .18s ease,color .18s ease}
+.btn-solid{background:var(--ink);color:#fff}
+.btn-solid:hover{background:var(--accent);transform:translateY(-1px)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-d);transform:translateY(-1px)}
+.btn-ghost{border-color:#d9d9d5;color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.btn-sm{font-size:12.5px;padding:.52rem 1.1rem}
+.burger{display:none;background:none;border:0;font-size:22px;cursor:pointer;color:var(--ink);line-height:1}
+.hero{padding:152px 0 84px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:999px;padding:.44rem .95rem;color:#3c3f44;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+h1{font-size:clamp(2.7rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.035em;font-weight:800;margin:22px 0 18px}
+h1 .accent{color:var(--accent)}
+.lead{font-size:16.5px;color:var(--muted);max-width:480px;margin-bottom:30px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:30px;margin-top:46px}
+.hero-mini b{display:block;font-size:21px;letter-spacing:-.01em}
+.hero-mini b i{font-style:normal;color:var(--accent)}
+.hero-mini span{font-size:12.5px;color:var(--muted)}
+.hero-stage{perspective:1200px;display:flex;flex-direction:column;align-items:center}
+.hero-tilt{transform-style:preserve-3d;will-change:transform;transition:transform .25s ease-out}
+.hero-float{animation:floaty 7s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-frame{position:relative;width:min(300px,70vw);aspect-ratio:9/16;border-radius:24px;overflow:hidden;background:#0b0b0c;box-shadow:0 40px 80px -20px rgba(17,18,20,.35),0 0 0 1px rgba(0,0,0,.06),0 0 90px -18px rgba(225,29,46,.35)}
+.hero-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hero-cap{font-size:12.5px;color:var(--muted);margin-top:16px;text-align:center}
+.stats{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-in{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:46px 0;text-align:center}
+.stat b{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;letter-spacing:-.02em;display:block}
+.stat b i{font-style:normal;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 26px;margin-top:42px}
+.vwrap{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#101012;box-shadow:0 18px 44px -18px rgba(17,18,20,.28);border:1px solid rgba(0,0,0,.05)}
+.vwrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:16px}
+.work-card h3{font-size:15px;font-weight:600;margin-top:13px}
+.work-card p{font-size:12.5px;color:var(--muted)}
+.more-row{margin-top:40px;text-align:center}
+.more-link{font-size:13.5px;font-weight:600;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px}
+.yt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 26px;margin-top:42px}
+.yt{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#0d0d0e;cursor:pointer;box-shadow:0 18px 44px -18px rgba(17,18,20,.28);border:1px solid rgba(0,0,0,.05)}
+.yt img{width:100%;height:100%;object-fit:cover}
+.yt iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.yt .play{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .18s ease}
+.yt:hover .play{transform:scale(1.08)}
+.yt .time{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.78);color:#fff;font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px}
+.yt-card h3{font-size:15px;font-weight:600;margin-top:13px;line-height:1.45}
+.yt-card p{font-size:12.5px;color:var(--muted)}
+.creators-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:42px;max-width:880px}
+.creator{display:flex;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 6px 24px -12px rgba(17,18,20,.12)}
+.creator img{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:none;background:#f0f0ee;border:3px solid #fff;box-shadow:0 0 0 2px var(--accent),0 8px 20px rgba(0,0,0,.12)}
+.creator h3{font-size:16.5px;font-weight:700;display:flex;align-items:center;gap:6px}
+.creator .vbadge{display:inline-flex;width:17px;height:17px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:800;align-items:center;justify-content:center;line-height:1}
+.creator .handle{font-size:13px;color:var(--accent);text-decoration:none;font-weight:600}
+.creator .handle:hover{text-decoration:underline}
+.creator .fol{font-size:12.5px;color:var(--muted);margin-top:2px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.why{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:transform .18s ease,box-shadow .18s ease}
+.why:hover{transform:translateY(-3px);box-shadow:0 14px 30px -14px rgba(17,18,20,.18)}
+.why .ico{width:40px;height:40px;border-radius:12px;background:rgba(225,29,46,.09);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;margin-bottom:16px}
+.why h3{font-size:15px;font-weight:700;margin-bottom:7px}
+.why p{font-size:13.5px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 24px}
+.step .n{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.12em;margin-bottom:12px}
+.step h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.step p{font-size:13.5px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.tag{font-size:13px;font-weight:500;background:#fff;border:1px solid var(--line);padding:.52rem 1.05rem;border-radius:999px;color:#3c3f44}
+.tag.more{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:600}
+.faq{max-width:780px;margin-top:36px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{color:var(--accent);font-size:20px;font-weight:400;flex:none;transition:transform .2s}
+.faq details[open] summary .pm{transform:rotate(45deg)}
+.faq .ans{padding:0 22px 22px;font-size:14.5px;color:var(--muted)}
+footer{background:#101012;color:#e9e9e9}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;padding:70px 0 44px}
+.foot-brand .logo{color:#fff}
+.foot-brand p{font-size:13.5px;color:#9a9a9e;margin:14px 0 20px;max-width:300px}
+.foot-h{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8b8b90;margin-bottom:16px}
+.foot-links{list-style:none}
+.foot-links li{margin-bottom:10px}
+.foot-links a{font-size:13.5px;color:#c9c9cd;text-decoration:none}
+.foot-links a:hover{color:#fff}
+.foot-contact p{font-size:13.5px;color:#c9c9cd;margin-bottom:10px}
+.foot-contact a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
+.foot-contact a:hover{border-color:var(--accent)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#8b8b90}
+.foot-bottom a{color:#b9b9bd;text-decoration:none}
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal .ov{position:absolute;inset:0;background:rgba(15,15,15,.55);backdrop-filter:blur(4px)}
+.modal .card{position:relative;background:#fff;border-radius:20px;max-width:430px;width:100%;padding:36px 32px;box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.modal .x{position:absolute;top:14px;right:16px;background:none;border:0;font-size:22px;cursor:pointer;color:var(--muted)}
+.modal .who{width:64px;height:64px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.modal h3{font-size:20px;font-weight:800;letter-spacing:-.01em}
+.modal .role{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:14px}
+.modal p{font-size:14px;color:var(--muted)}
+#robot{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;animation:patrol 7s ease-in-out infinite}
+@keyframes patrol{0%,100%{transform:translate(0,0)}25%{transform:translate(-10px,-6px)}50%{transform:translate(-4px,5px)}75%{transform:translate(-12px,-2px)}}
+.robot-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3c3f44;background:rgba(255,255,255,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:3px 10px;border-radius:999px;border:1px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,.08);white-space:nowrap}
+.robot-btn{position:relative;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.85);box-shadow:0 8px 24px rgba(17,18,20,.18),0 0 22px rgba(225,29,46,.35);display:flex;align-items:center;justify-content:center;transition:transform .18s ease}
+#robot:hover .robot-btn{transform:scale(1.1)}
+.robot-btn::before,.robot-btn::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(225,29,46,.5);animation:ring 2.8s ease-out infinite;pointer-events:none}
+.robot-btn::after{animation-delay:1.4s}
+@keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+.robot-btn svg{width:26px;height:26px;display:block}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:64px}.hero{padding-top:130px}.why-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr;max-width:560px}.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){section{padding:64px 0}.work-grid,.yt-grid{grid-template-columns:1fr}.creators-grid{grid-template-columns:1fr}.stats-in{gap:16px}.nav-links{position:fixed;top:64px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:10px 24px 22px;gap:0;border-bottom:1px solid var(--line);display:none;box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.nav-links.open{display:flex}
+.nav-links a.nl{padding:11px 0;font-size:14px;width:100%;border-bottom:1px solid #f1f1ee}
+.nav-links .btn{margin-top:14px}
+.burger{display:block}.why-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.robot-btn{width:40px;height:40px}.robot-btn svg{width:22px;height:22px}#robot{right:16px;bottom:16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
 </head>
-<body class="antialiased relative">
-
-    <!-- Custom Cursor -->
-    <div class="custom-cursor hidden md:block" id="cursor"></div>
-
-    <!-- Progress Bar -->
-    <div id="progressBar" class="fixed top-0 left-0 h-1 bg-brand-neon z-50 w-0" style="transition: width 0.1s ease-out;"></div>
-
-    <!-- Background Animated Icons Container -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" id="bg-icons" aria-hidden="true"></div>
-
-    <!-- Background Glows -->
-    <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
-        <div class="absolute top-[-5%] left-[-10%] w-[60%] h-[60%] bg-brand-purple rounded-full mix-blend-screen filter blur-[120px] opacity-20 float-slow"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[70%] h-[60%] bg-purple-900 rounded-full mix-blend-screen filter blur-[150px] opacity-20 float-slow" style="animation-delay: -5s;"></div>
-    </div>
-
-    <!-- Header / Navbar -->
-    <header class="relative z-40 border-b border-white/5 bg-brand-dark/80 backdrop-blur-md sticky top-0">
-        <nav class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center" aria-label="Main Navigation">
-            <a href="/" class="flex items-center gap-3 relative z-50" aria-label="AR Motions Home">
-                <img src="assets/images/logo.jpg" alt="AR Motions Official Logo" class="h-8 md:h-10 rounded shadow-[0_0_15px_rgba(139,92,246,0.3)]">
-                <span class="font-display font-bold text-xl md:text-2xl tracking-wider text-white">AR<span class="text-brand-neon text-glow">MOTIONS</span></span>
-            </a>
-            <div class="hidden md:flex gap-6 lg:gap-8 items-center text-sm font-semibold text-gray-300">
-                <a href="/" class="hover:text-white hover:text-glow transition-all" aria-current="page">Home</a> <a href="#latest-work" class="hover:text-white hover:text-glow transition-all">Latest Work</a>
-                <a href="/portfolio" class="hover:text-white hover:text-glow transition-all">Portfolio</a>
-                <a href="/terms" class="hover:text-white hover:text-glow transition-all">Terms</a>
-                <button onclick="openOwnerModal(event)" class="text-brand-light font-semibold text-sm px-4 py-1.5 bg-brand-purple/20 rounded-full border border-brand-purple/50 shadow-sm hover:bg-brand-purple/40 transition-colors cursor-pointer flex items-center gap-2"><i class="fas fa-user-tie text-brand-neon"></i> Know the Owner</button>
-                <a href="#contact" class="px-5 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 transition-all">Contact Me</a>
-            </div>
-            <!-- Hamburger -->
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none relative z-50 p-2" aria-label="Toggle Mobile Menu" aria-expanded="false">
-                <i class="fas fa-bars text-2xl" id="menu-icon" aria-hidden="true"></i>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Mobile Sidebar -->
-    <aside id="mobile-menu" class="fixed inset-y-0 right-0 w-64 sm:w-80 bg-brand-dark/95 backdrop-blur-xl border-l border-white/10 z-40 sidebar-closed flex flex-col p-6 pt-24 shadow-2xl md:hidden" aria-hidden="true">
-        <nav class="flex flex-col">
-            <a href="/" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Home</a>             <a href="#latest-work" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Latest Work</a>
-            <a href="/portfolio" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Portfolio</a>
-            <a href="#services" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Services</a>
-            <a href="#how-it-works" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">How it works</a>
-            <a href="#faq" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">FAQ</a>
-            <a href="/terms" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Terms</a>
-            <button onclick="openOwnerModal(event)" class="text-left text-xl font-semibold mb-6 text-brand-light hover:text-brand-neon transition-colors cursor-pointer flex items-center gap-2"><i class="fas fa-user-tie"></i> Know the Owner</button>
-            <a href="#contact" class="mt-auto px-5 py-3 rounded-full bg-brand-purple text-white text-center font-bold">Contact Me</a>
-        </nav>
-    </aside>
-    
-    <!-- Mobile Overlay -->
-    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 hidden md:hidden" aria-hidden="true"></div>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="relative z-10 min-h-[75vh] flex items-center justify-center pt-10 pb-8 px-4 md:px-6">
-            <div class="max-w-5xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
-                <div class="inline-block px-4 py-1.5 rounded-full liquid-glass text-brand-light text-xs sm:text-sm font-semibold mb-6 box-glow">
-                    Founder-Led &bull; 4+ Years Experience &bull; Global Clients
-                </div>
-                <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight px-2">
-                    Crafting <span class="gradient-text">Masterpieces</span> <br class="hidden sm:block"> Out of Motion.
-                </h1>
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto font-light px-4">
-                    An editor recognised among the rare creative talents of Madhya Pradesh and India, with a distinctive approach to visual storytelling. Handling clients across the world, from documentary edits to SaaS UI animations, I make your brand unforgettable.
-                </p>
-                
-                <!-- Promo Text -->
-                <div class="mb-10 mx-4 p-3 md:p-4 liquid-glass rounded-xl inline-block transform hover:scale-105 transition-all cursor-pointer">
-                    <p class="text-base md:text-lg lg:text-xl font-semibold text-brand-light flex items-center justify-center gap-3">
-                        <i class="fas fa-coffee text-brand-neon" aria-hidden="true"></i> 
-                        <span>Try my service for the first time at a cost lower than Starbucks!</span>
-                    </p>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
-                    <a href="/portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-purple text-white font-bold text-lg hover:bg-brand-neon hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all transform hover:-translate-y-1 text-center" aria-label="View my full portfolio">
-                        View Portfolio
-                    </a>
-                    <a href="#how-it-works" class="w-full sm:w-auto px-8 py-4 rounded-full liquid-glass text-white font-bold text-lg hover:bg-white/10 transition-all text-center" aria-label="Learn how my service works">
-                        See How It Works
-                    </a>
-                </div>
-            </div>
-        </section>
-
-            <!-- Latest Work Section -->     <section id="latest-work" class="relative z-10 py-16 md:py-20 px-4 md:px-6">         <div class="max-w-7xl mx-auto">             <div class="text-center mb-10 md:mb-12" data-aos="fade-up">                 <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Latest <span class="text-brand-neon">Work</span></h2>                 <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">Watch my latest edits and documentaries, hosted on Vimeo.</p>             </div>             <!-- Latest Work Grid -->             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">                 <!-- Latest Work Card 1 -->                 <div>                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="0"><iframe src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Mumbai Investigation Documentary"></iframe></div>                     <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">Mumbai Investigation Documentary</p>                 </div>                 <!-- Latest Work Card 2 -->                 <div>                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="100"><iframe src="https://player.vimeo.com/video/1240103461?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Colgate Animated Ad"></iframe></div>                     <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">Colgate Animated Ad</p>                 </div>                 <!-- Latest Work Card 3 -->                 <div>                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="200"><iframe src="https://player.vimeo.com/video/1240103662?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="India 44 Km Documentary - Part 2"></iframe></div>                     <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">India 44 Km Documentary - Part 2</p>                 </div>                 <!-- Latest Work Card 4 -->                 <div>                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="300"><iframe src="https://player.vimeo.com/video/1240103811?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Rocket Blueprint Documentary - Part 1"></iframe></div>                     <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">Rocket Blueprint Documentary - Part 1</p>                 </div>             </div>         </div>     </section>      <!-- Recent Work / Videos Embedded Section (MOVED HERE) -->
-        <section class="relative z-10 py-16 md:py-20 px-4 md:px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">My <span class="text-brand-neon">Recent Work</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">Take a look at some of the premium edits I've crafted recently.</p>
-                </div>
-                
-                <!-- Video Grid -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">
-                    <!-- Video 1 -->
-                    <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="0">
-                        <iframe src="https://player.vimeo.com/video/1224003113?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 1"></iframe>
-                    </div>
-                    <!-- Video 2 -->
-                    <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="100">
-                        <iframe src="https://player.vimeo.com/video/1224003112?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 2"></iframe>
-                    </div>
-                    <!-- Video 3 -->
-                    <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="200">
-                        <iframe src="https://player.vimeo.com/video/1223935407?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 3"></iframe>
-                    </div>
-                    <!-- Video 4 -->
-                    <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="300">
-                        <iframe src="https://player.vimeo.com/video/1224077827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 4"></iframe>
-                    </div>
-                </div>
-
-                <!-- View More Button -->
-                <div class="text-center" data-aos="fade-up">
-                    <a href="/portfolio" class="inline-block px-10 py-4 rounded-full bg-brand-purple text-white font-bold text-lg hover:bg-brand-neon hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all transform hover:-translate-y-1">
-                        View More Works
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why AR MOTIONS Stats Section -->
-        <section class="relative z-10 py-12 md:py-16 border-y border-white/5 bg-white/[0.01]">
-            <div class="max-w-7xl mx-auto px-4 md:px-6">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/10">
-                    <div data-aos="fade-up" data-aos-delay="0" class="px-2 pb-6 sm:pb-0">
-                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-brand-neon mb-2">3+</h3>
-                        <p class="text-gray-400 font-semibold uppercase tracking-wider text-xs sm:text-sm">Years Experience</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="200" class="px-2 pt-6 sm:pt-0">
-                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-brand-neon mb-2">200+</h3>
-                        <p class="text-gray-400 font-semibold uppercase tracking-wider text-xs sm:text-sm">Projects Delivered</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="300" class="px-2 pt-6 sm:pt-0 border-t border-white/10 sm:border-t-0">
-                        <h3 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-brand-neon mb-2">75+</h3>
-                        <p class="text-gray-400 font-semibold uppercase tracking-wider text-xs sm:text-sm">Global Clients</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Highlights / Benefits Section -->
-        <section class="relative z-10 py-20 md:py-24 px-4 md:px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Why Choose <span class="text-brand-neon">Me?</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">I bring expertise, speed, and quality to every frame I cut. Ranked top among video editors.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="0">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-star" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Premium Quality</h3><p class="text-gray-400 text-sm">Top-tier visual effects, smooth transitions, and a polished final cut every time.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-rocket" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Fast Turnaround</h3><p class="text-gray-400 text-sm">I value your time. Get your high-quality edits delivered faster than industry standards.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-globe" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Global Experience</h3><p class="text-gray-400 text-sm">Trusted by 75+ clients worldwide, adapting to different cultural styles and trends.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-tag" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Unbeatable Pricing</h3><p class="text-gray-400 text-sm">Premium doesn't mean overpriced. I offer the best value for your investment.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-users" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">Dedicated Editor</h3><p class="text-gray-400 text-sm">I work to handle any complex workflow or volume.</p></div>
-                    </article>
-                    <article class="liquid-glass p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5" data-aos="fade-up" data-aos-delay="500">
-                        <div class="w-14 h-14 rounded-xl bg-brand-purple/20 flex-shrink-0 flex items-center justify-center text-brand-neon text-2xl"><i class="fas fa-headset" aria-hidden="true"></i></div>
-                        <div><h3 class="font-bold text-xl mb-2 text-white">24/7 Support</h3><p class="text-gray-400 text-sm">My support is always available. I am here whenever you need revisions or help.</p></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="relative z-10 py-20 md:py-24 px-4 md:px-6 border-t border-white/5">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">How It <span class="text-brand-neon">Works</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">Hire the best video editor in three simple steps.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-                    <!-- Connecting Line (Desktop) -->
-                    <div class="hidden md:block absolute top-[40px] left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-transparent via-brand-purple to-transparent z-0 opacity-40" aria-hidden="true"></div>
-                    
-                    <div class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col items-center text-center relative z-10 cursor-pointer" data-aos="fade-up" data-aos-delay="0">
-                        <div class="w-16 h-16 rounded-full bg-brand-dark border-2 border-brand-purple flex items-center justify-center text-brand-neon text-2xl font-bold mb-6 box-glow transition-transform hover:scale-110">1</div>
-                        <h3 class="font-bold text-xl md:text-2xl mb-3">Share your brief</h3>
-                        <p class="text-gray-400 text-sm md:text-base">Send me your raw footage, requirements, and vision. I'll analyze and plan the perfect cut.</p>
-                    </div>
-                    
-                    <div class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col items-center text-center relative z-10 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-16 h-16 rounded-full bg-brand-dark border-2 border-brand-purple flex items-center justify-center text-brand-neon text-2xl font-bold mb-6 box-glow transition-transform hover:scale-110">2</div>
-                        <h3 class="font-bold text-xl md:text-2xl mb-3">I edit & create</h3>
-                        <p class="text-gray-400 text-sm md:text-base">I get to work, adding motion graphics, grading, and sound design to bring it alive.</p>
-                    </div>
-                    
-                    <div class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col items-center text-center relative z-10 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-16 h-16 rounded-full bg-brand-dark border-2 border-brand-purple flex items-center justify-center text-brand-neon text-2xl font-bold mb-6 box-glow transition-transform hover:scale-110">3</div>
-                        <h3 class="font-bold text-xl md:text-2xl mb-3">Review & deliver</h3>
-                        <p class="text-gray-400 text-sm md:text-base">You review the draft, I make any requested tweaks instantly, and hand over the masterpiece.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="relative z-10 py-20 md:py-24 px-4 md:px-6 border-t border-white/5">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">My <span class="text-brand-neon">Expertise</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">I offer a wide array of premium editing services tailored to elevate your visual identity.</p>
-                </div>
-                
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-                    <!-- Service Items -->
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="50">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Motion Graphics</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-cut" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Simple Edits</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="150">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-mobile-alt" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Short Videos</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-film" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Long Videos</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="250">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-video" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Documentary Edits</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-music" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Music Videos</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="350">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">SaaS UI Animation</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-microphone-alt" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Podcasts</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="450">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-bolt" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Short Clips</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="500">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Educational</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="550">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-home" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Real Estate Ads</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="600">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-info-circle" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Informational</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="650">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Map Animations</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center text-center gap-3 cursor-pointer" data-aos="fade-up" data-aos-delay="700">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-lg md:text-xl"><i class="fas fa-palette" aria-hidden="true"></i></div>
-                        <h3 class="font-semibold text-sm md:text-base">Color Grading</h3>
-                    </div>
-                    <div class="liquid-glass p-4 md:p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-3 col-span-2 sm:col-span-1 lg:col-span-2 cursor-pointer bg-brand-purple/5" data-aos="fade-up" data-aos-delay="750">
-                        <div class="text-brand-neon text-xl md:text-2xl font-bold">+ Many More</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="relative z-10 py-20 md:py-24 px-4 md:px-6 border-t border-white/5">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Frequently Asked <span class="text-brand-neon">Questions</span></h2>
-                </div>
-                
-                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-                    <!-- FAQ 1 -->
-                    <div class="faq-item liquid-glass rounded-xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="p-5 md:p-6 flex justify-between items-center bg-white/5">
-                            <h4 class="font-bold text-base md:text-lg pr-4">What software do you use for video editing?</h4>
-                            <i class="fas fa-chevron-down faq-icon text-brand-neon flex-shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer px-5 md:px-6 text-gray-400 text-sm md:text-base">
-                            <p>I use industry-standard software such as Adobe Premiere Pro, After Effects, DaVinci Resolve, and Final Cut Pro depending on the specific requirements of the project.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ 2 -->
-                    <div class="faq-item liquid-glass rounded-xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="p-5 md:p-6 flex justify-between items-center bg-white/5">
-                            <h4 class="font-bold text-base md:text-lg pr-4">How long does it take to get a video edited?</h4>
-                            <i class="fas fa-chevron-down faq-icon text-brand-neon flex-shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer px-5 md:px-6 text-gray-400 text-sm md:text-base">
-                            <p>Turnaround times vary based on the project's complexity and length. Short videos can be delivered within 24-48 hours, while larger projects like documentaries might take a week or more. I offer fast turnarounds tailored to your needs.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ 3 -->
-                    <div class="faq-item liquid-glass rounded-xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="p-5 md:p-6 flex justify-between items-center bg-white/5">
-                            <h4 class="font-bold text-base md:text-lg pr-4">Do you provide source files?</h4>
-                            <i class="fas fa-chevron-down faq-icon text-brand-neon flex-shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer px-5 md:px-6 text-gray-400 text-sm md:text-base">
-                            <p>Yes, project source files can be provided upon request. This might involve an additional fee depending on the contract agreement.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ 4 -->
-                    <div class="faq-item liquid-glass rounded-xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="p-5 md:p-6 flex justify-between items-center bg-white/5">
-                            <h4 class="font-bold text-base md:text-lg pr-4">How do revisions work?</h4>
-                            <i class="fas fa-chevron-down faq-icon text-brand-neon flex-shrink-0" aria-hidden="true"></i>
-                        </div>
-                        <div class="faq-answer px-5 md:px-6 text-gray-400 text-sm md:text-base">
-                            <p>I ensure you are 100% satisfied. Standard packages include 2-3 rounds of revisions, and my 24/7 support is always available to discuss any required tweaks.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact" class="relative z-10 border-t border-white/10 bg-black pt-16 pb-8 px-4 md:px-6 text-center sm:text-left">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
-            <div class="flex flex-col items-center sm:items-start">
-                <a href="/" class="flex items-center gap-3 mb-4" aria-label="AR Motions Home">
-                    <img src="assets/images/logo.jpg" alt="AR Motions Logo" class="h-10 rounded shadow-lg">
-                    <span class="font-display font-bold text-2xl tracking-wider text-white">AR<span class="text-brand-neon">MOTIONS</span></span>
-                </a>
-                <p class="text-gray-400 text-sm mb-3">Founder-Led &bull; 4+ Years Experience &bull; Global Clients</p>
-                <button onclick="openOwnerModal(event)" class="text-brand-light font-semibold text-sm px-3 py-1 bg-white/5 rounded-full border border-white/10 shadow-sm mb-4 hover:bg-white/10 transition-colors cursor-pointer">Know more about The Owner</button>
-                <div class="inline-block bg-brand-purple/20 border border-brand-purple/50 px-4 py-2 rounded-lg text-sm text-brand-light font-semibold shadow-[0_0_15px_rgba(139,92,246,0.2)]">
-                    <i class="fas fa-clock mr-2 text-brand-neon" aria-hidden="true"></i> 24/7 Support Available
-                </div>
-            </div>
-            
-            <div class="flex flex-col items-center sm:items-start">
-                <h4 class="font-bold text-lg mb-4 text-white">Sitemap</h4>
-                <nav>
-                    <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><a href="/" class="hover:text-brand-neon transition-colors">Home</a></li>                         <li><a href="#latest-work" class="hover:text-brand-neon transition-colors">Latest Work</a></li>
-                        <li><a href="#services" class="hover:text-brand-neon transition-colors">Services</a></li>
-                        <li><a href="#how-it-works" class="hover:text-brand-neon transition-colors">How It Works</a></li>
-                        <li><a href="#faq" class="hover:text-brand-neon transition-colors">FAQ</a></li>
-                        <li><a href="/portfolio" class="hover:text-brand-neon transition-colors">Portfolio</a></li>
-                        <li><a href="/terms" class="hover:text-brand-neon transition-colors">Terms & Conditions</a></li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <div class="flex flex-col items-center sm:items-start">
-                <h4 class="font-bold text-lg mb-4 text-white">Contact Me</h4>
-                <address class="not-italic">
-                    <ul class="space-y-4 text-gray-400 text-sm flex flex-col items-center sm:items-start">
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon"><i class="fas fa-phone" aria-hidden="true"></i></div>
-                            <a href="tel:+919302687554" class="hover:text-white transition-colors font-semibold">+91 93026 87554</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-                            <a href="mailto:arshad@armotions.in" class="hover:text-white transition-colors">arshad@armotions.in</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon"><i class="fas fa-headset" aria-hidden="true"></i></div>
-                            <a href="mailto:support@armotions.in" class="hover:text-white transition-colors">support@armotions.in</a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col items-center justify-center gap-3 text-gray-500 text-sm">
-            <p class="font-medium text-gray-400">Made with ❤️ by <span class="text-brand-light font-bold">AR MOTIONS</span></p>
-            <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 items-center">
-                <p>&copy; 2026 AR MOTIONS. All rights reserved.</p>
-                <p class="hidden sm:block">•</p>
-                <p>armotions.in</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Button -->
-    <button id="wa-btn-trigger" class="whatsapp-btn cursor-pointer" aria-label="Chat with me on WhatsApp">
-        <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>
-        <span class="hidden sm:inline">Chat Now</span>
-    </button>
-
-    <!-- Owner Modal -->
-    <div id="owner-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center px-4 opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="owner-modal-title">
-        <div class="bg-brand-dark border border-brand-purple/30 p-8 rounded-2xl max-w-md w-full shadow-[0_0_40px_rgba(139,92,246,0.3)] transform scale-95 transition-transform duration-300 relative" id="owner-modal-content">
-            <button onclick="closeOwnerModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-full transition-all cursor-pointer" aria-label="Close modal">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="w-16 h-16 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-3xl mx-auto mb-4">
-                <i class="fas fa-user-tie" aria-hidden="true"></i>
-            </div>
-            <h3 id="owner-modal-title" class="font-bold text-2xl mb-2 text-center text-white">Founder &mdash; Arshad Khan</h3>
-            <p class="text-gray-300 text-center text-sm leading-relaxed mb-6">
-                One of the rare editors across Madhya Pradesh, India (Ratlam), ranked among the most sought-after editors in the industry.
-            </p>
-            <div class="bg-brand-purple/10 border border-brand-purple/30 rounded-xl p-4 mb-6">
-                <h4 class="text-brand-neon font-semibold text-sm mb-2 text-center"><i class="fas fa-star mr-2"></i>Speciality</h4>
-                <p class="text-gray-200 text-sm text-center leading-relaxed">Motion designing / premium UI / SaaS designing / Documentary Scenes designing</p>
-            </div>
-            <div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-4">
-                <i class="fas fa-users text-brand-light mt-1"></i>
-                <p class="text-gray-400 text-sm">2 additional editors available for handling urgent projects when required.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- WhatsApp Terms Modal -->
-    <div id="wa-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center px-4 opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="bg-brand-dark border border-brand-purple/30 p-8 rounded-2xl max-w-md w-full shadow-[0_0_40px_rgba(139,92,246,0.3)] transform scale-95 transition-transform duration-300 relative" id="wa-modal-content">
-            <div class="w-16 h-16 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon text-3xl mx-auto mb-4">
-                <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            </div>
-            <h3 id="modal-title" class="font-bold text-2xl mb-4 text-center text-white">Hold on!</h3>
-            <p class="text-gray-400 text-center mb-8">
-                You must agree to the <a href="/terms" class="text-brand-neon underline hover:text-white transition-colors">terms and conditions</a> to proceed further.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <button id="wa-cancel" class="flex-1 px-4 py-3 rounded-xl border border-white/10 text-white font-semibold hover:bg-white/5 transition-colors cursor-pointer" aria-label="Cancel and close modal">
-                    Cancel
-                </button>
-                <a href="https://wa.me/919303881879" target="_blank" id="wa-proceed" class="flex-1 px-4 py-3 rounded-xl bg-brand-purple text-white font-semibold text-center hover:bg-brand-neon transition-colors shadow-[0_0_15px_rgba(168,85,247,0.4)] cursor-pointer" aria-label="Agree to terms and proceed to WhatsApp">
-                    Agree & Proceed
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Force scroll to top on page refresh/load
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-        window.addEventListener('load', function() {
-            // Check if there is no hash in the URL to avoid breaking actual anchor links
-            if (!window.location.hash) {
-                window.scrollTo(0, 0);
-            }
-        });
-
-        // Init AOS
-        AOS.init({ once: true, offset: 50, duration: 800 });
-
-        // Custom Cursor Logic
-        const cursor = document.getElementById('cursor');
-        
-        // Only run cursor logic on desktop devices
-        if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            });
-
-            // Add hover effect to interactive elements
-            const interactiveElements = document.querySelectorAll('a, button, .cursor-pointer, .faq-item, .liquid-glass, .whatsapp-btn');
-            
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-                el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
-            });
-        }
-
-        // Scroll Progress Bar
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-        });
-
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const overlay = document.getElementById('mobile-overlay');
-
-        function toggleMenu() {
-            const isOpen = !mobileMenu.classList.contains('sidebar-closed');
-            
-            if (isOpen) {
-                mobileMenu.classList.add('sidebar-closed');
-                mobileMenu.classList.remove('sidebar-open');
-                overlay.classList.add('hidden');
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-                menuBtn.setAttribute('aria-expanded', 'false');
-            } else {
-                mobileMenu.classList.remove('sidebar-closed');
-                mobileMenu.classList.add('sidebar-open');
-                overlay.classList.remove('hidden');
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-times');
-                menuBtn.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        menuBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-        
-        // Close menu on link click
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if(!mobileMenu.classList.contains('sidebar-closed')) toggleMenu();
-            });
-        });
-
-        // Generate Floating Background Icons
-        const iconsContainer = document.getElementById('bg-icons');
-        const iconClasses = ['fa-film', 'fa-cut', 'fa-video', 'fa-clapperboard', 'fa-music', 'fa-tv', 'fa-play'];
-        
-        for (let i = 0; i < 15; i++) {
-            const icon = document.createElement('i');
-            const randomClass = iconClasses[Math.floor(Math.random() * iconClasses.length)];
-            icon.className = `fas ${randomClass} floating-icon`;
-            
-            // Random styling
-            const left = Math.random() * 100;
-            const duration = 15 + Math.random() * 20;
-            const delay = Math.random() * 20;
-            const size = 1 + Math.random() * 1.5;
-            
-            icon.style.left = `${left}vw`;
-            icon.style.animationDuration = `${duration}s`;
-            icon.style.animationDelay = `-${delay}s`; // negative delay to start immediately
-            icon.style.fontSize = `${size}rem`;
-            
-            iconsContainer.appendChild(icon);
-        }
-
-        // FAQ Toggle
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all other FAQs
-                document.querySelectorAll('.faq-item').forEach(other => {
-                    other.classList.remove('active');
-                    other.setAttribute('aria-expanded', 'false');
-                });
-                
-                // Toggle current FAQ
-                if (!isActive) {
-                    item.classList.add('active');
-                    item.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
-
-        // WhatsApp Modal Logic
-        const waBtn = document.getElementById('wa-btn-trigger');
-        const waModal = document.getElementById('wa-modal');
-        const waModalContent = document.getElementById('wa-modal-content');
-        const waCancel = document.getElementById('wa-cancel');
-        const waProceed = document.getElementById('wa-proceed');
-
-        waBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            waModal.classList.remove('hidden');
-            // Trigger reflow for transition
-            void waModal.offsetWidth;
-            waModal.classList.remove('opacity-0');
-            waModalContent.classList.remove('scale-95');
-        });
-
-        function closeWaModal() {
-            waModal.classList.add('opacity-0');
-            waModalContent.classList.add('scale-95');
-            setTimeout(() => {
-                waModal.classList.add('hidden');
-            }, 300);
-        }
-
-        waCancel.addEventListener('click', closeWaModal);
-        waProceed.addEventListener('click', closeWaModal);
-        
-        waModal.addEventListener('click', (e) => {
-            if (e.target === waModal) closeWaModal();
-        });
-
-        // Owner Modal Logic
-        const ownerModal = document.getElementById('owner-modal');
-        const ownerModalContent = document.getElementById('owner-modal-content');
-
-        function openOwnerModal(e) {
-            e.preventDefault();
-            ownerModal.classList.remove('hidden');
-            void ownerModal.offsetWidth;
-            ownerModal.classList.remove('opacity-0');
-            ownerModalContent.classList.remove('scale-95');
-        }
-
-        function closeOwnerModal() {
-            ownerModal.classList.add('opacity-0');
-            ownerModalContent.classList.add('scale-95');
-            setTimeout(() => ownerModal.classList.add('hidden'), 300);
-        }
-
-        ownerModal.addEventListener('click', (e) => {
-            if (e.target === ownerModal) closeOwnerModal();
-        });
-    </script>
+<body>
+<header class="nav">
+<div class="wrap nav-in">
+<a class="logo" href="#top">AR<b>&nbsp;</b>MOTIONS</a>
+<nav class="nav-links" id="navLinks" aria-label="Primary">
+<a class="nl" href="#work">Work</a>
+<a class="nl" href="#documentaries">Documentaries</a>
+<a class="nl" href="#creators">Creators</a>
+<a class="nl" href="#process">Process</a>
+<a class="nl" href="#faq">FAQ</a>
+<a class="nl" href="#contact">Contact</a>
+<a class="btn btn-solid btn-sm" href="#contact">Start a Project</a>
+</nav>
+<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="badge"><span class="dot"></span>Founder-led studio &middot; Arshad Khan</span>
+<h1>Crafting <span class="accent">Masterpieces</span> Out of Motion.</h1>
+<p class="lead">I&rsquo;m Arshad Khan, founder of AR MOTIONS. I turn raw footage into cinematic documentaries, scroll-stopping ads, and high-retention YouTube videos for clients across the globe.</p>
+<div class="hero-cta">
+<a class="btn btn-solid" href="#work">View Portfolio</a>
+<a class="btn btn-ghost" href="#process">See How It Works</a>
+</div>
+<div class="hero-mini">
+<div><b>200<i>+</i></b><span>Projects delivered</span></div>
+<div><b>75<i>+</i></b><span>Global clients</span></div>
+<div><b>3<i>+</i></b><span>Years of craft</span></div>
+</div>
+</div>
+<div class="hero-stage" id="heroStage">
+<div class="hero-tilt" id="heroTilt">
+<div class="hero-float">
+<div class="hero-frame">
+<iframe src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1" title="Mumbai Investigation Documentary - Showreel" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="eager"></iframe>
+</div>
+</div>
+</div>
+<p class="hero-cap">Showreel &middot; Mumbai Investigation Documentary</p>
+</div>
+</div>
+</section>
+<div class="stats">
+<div class="wrap stats-in">
+<div class="stat"><b>3<i>+</i></b><span>Years Experience</span></div>
+<div class="stat"><b>200<i>+</i></b><span>Projects Completed</span></div>
+<div class="stat"><b>75<i>+</i></b><span>Global Clients</span></div>
+</div>
+</div>
+<section id="work">
+<div class="wrap">
+<span class="eyebrow">Portfolio</span>
+<h2 class="sec">Selected Work</h2>
+<p class="sub">Every project below plays right here on the page &mdash; no sliders, no carousels, no hidden tabs. Just scroll and press play.</p>
+<div class="work-grid">
+<article class="work-card">
+<div class="vwrap"><iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" title="Mumbai Investigation Documentary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="lazy"></iframe></div>
+<h3>Mumbai Investigation Documentary</h3><p>Documentary &middot; Investigation</p>
+</article>
+<article class="work-card">
+<div class="vwrap"><iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://player.vimeo.com/video/1240103461?badge=0&autopause=0&player_id=0&app_id=58479" title="Colgate Animated Ad" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="lazy"></iframe></div>
+<h3>Colgate Animated Ad</h3><p>Animated Advertisement</p>
+</article>
+<article class="work-card">
+<div class="vwrap"><iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://player.vimeo.com/video/1240103662?badge=0&autopause=0&player_id=0&app_id=58479" title="India 44 Km Documentary - Part 2" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="lazy"></iframe></div>
+<h3>India 44 Km Documentary &mdash; Part 2</h3><p>Documentary Series</p>
+</article>
+<article class="work-card">
+<div class="vwrap"><iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://player.vimeo.com/video/1240103811?badge=0&autopause=0&player_id=0&app_id=58479" title="Rocket Blueprint Documentary - Part 1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="lazy"></iframe></div>
+<h3>Rocket Blueprint Documentary &mdash; Part 1</h3><p>Documentary Series</p>
+</article>
+<article class="work-card">
+<div class="vwrap"><iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://player.vimeo.com/video/1224003113?badge=0&autopause=0&player_id=0&app_id=58479" title="Copy of lembo.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="lazy"></iframe></div>
+<h3>Copy of lembo.mp4</h3><p>Client Project</p>
+</article>
+<article class="work-card">
+<div class="vwrap"><iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://player.vimeo.com/video/1224003112?badge=0&autopause=0&player_id=0&app_id=58479" title="#Finance.mp4" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="lazy"></iframe></div>
+<h3>#Finance.mp4</h3><p>Finance Content</p>
+</article>
+<article class="work-card">
+<div class="vwrap"><iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://player.vimeo.com/video/1223935407?badge=0&autopause=0&player_id=0&app_id=58479" title="jewellery Documantary" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="lazy"></iframe></div>
+<h3>jewellery Documantary</h3><p>Brand Documentary</p>
+</article>
+<article class="work-card">
+<div class="vwrap"><iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://player.vimeo.com/video/1224077827?badge=0&autopause=0&player_id=0&app_id=58479" title="Showcase" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" loading="lazy"></iframe></div>
+<h3>Showcase</h3><p>Showreel Cut</p>
+</article>
+</div>
+<div class="more-row"><a class="more-link" href="/portfolio/">View More Works &rarr;</a></div>
+</div>
+</section>
+<section id="documentaries" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<div class="wrap">
+<span class="eyebrow">Long Form</span>
+<h2 class="sec">Documentaries</h2>
+<p class="sub">Full-length stories, streaming directly on this page. Tap a thumbnail to play.</p>
+<div class="yt-grid">
+<article class="yt-card">
+<div class="yt" data-embed="Y-AG6qYqFfs" data-title="Why Hindus Are Targeted? The Political Truth Nobody Explains" role="button" tabindex="0" aria-label="Play documentary: Why Hindus Are Targeted? The Political Truth Nobody Explains">
+<img src="https://i.ytimg.com/vi/Y-AG6qYqFfs/maxresdefault.jpg" alt="Thumbnail for Why Hindus Are Targeted? The Political Truth Nobody Explains" loading="lazy">
+<span class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="#e11d2e"><path d="M8 5v14l11-7z"/></svg></span>
+<span class="time">16:44</span>
+</div>
+<h3>Why Hindus Are Targeted? The Political Truth Nobody Explains</h3><p>Long-form documentary &middot; 16:44</p>
+</article>
+<article class="yt-card">
+<div class="yt" data-embed="2MyTrl8KihQ" data-title="The Network Marketing(MLM) Scam || Ravi Sharma" role="button" tabindex="0" aria-label="Play documentary: The Network Marketing(MLM) Scam, Ravi Sharma">
+<img src="https://i.ytimg.com/vi/2MyTrl8KihQ/maxresdefault.jpg" alt="Thumbnail for The Network Marketing(MLM) Scam, Ravi Sharma" loading="lazy">
+<span class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="#e11d2e"><path d="M8 5v14l11-7z"/></svg></span>
+<span class="time">6:10</span>
+</div>
+<h3>The Network Marketing(MLM) Scam || Ravi Sharma</h3><p>Long-form documentary &middot; 6:10</p>
+</article>
+</div>
+</div>
+</section>
+<section id="creators">
+<div class="wrap">
+<span class="eyebrow">Collaborations</span>
+<h2 class="sec">Recently Worked With</h2>
+<p class="sub">Creators and educators who trusted AR MOTIONS with their stories.</p>
+<div class="creators-grid">
+<article class="creator">
+<img src="data:image/jpeg;base64,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" alt="Krish Chakraborty" loading="lazy">
+<div>
+<h3>Krish Chakraborty</h3>
+<a class="handle" href="https://www.instagram.com/theproudindiankrish" target="_blank" rel="noopener">@theproudindiankrish</a>
+<p class="fol">33.5K followers &middot; Educator & Creator</p>
+</div>
+</article>
+<article class="creator">
+<img src="data:image/jpeg;base64,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" alt="Akshay Wadhwa" loading="lazy">
+<div>
+<h3>Akshay Wadhwa <span class="vbadge" title="Verified">&#10003;</span></h3>
+<a class="handle" href="https://www.instagram.com/thegenzskool" target="_blank" rel="noopener">@thegenzskool</a>
+<p class="fol">44.1K followers &middot; Exposing Scams for GenZ</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section id="why" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<div class="wrap">
+<span class="eyebrow">Why Me</span>
+<h2 class="sec">Why Choose Me</h2>
+<p class="sub">One editor, full ownership &mdash; from first cut to final export.</p>
+<div class="why-grid">
+<div class="why"><div class="ico">01</div><h3>Founder-Led Craft</h3><p>You work directly with me, Arshad Khan &mdash; no middlemen, no diluted vision, no hand-offs.</p></div>
+<div class="why"><div class="ico">02</div><h3>Fast Turnaround</h3><p>Short-form edits delivered in 48&ndash;72 hours, without cutting corners on quality.</p></div>
+<div class="why"><div class="ico">03</div><h3>Cinematic Quality</h3><p>Documentary-grade pacing, color, and sound design in every single edit.</p></div>
+<div class="why"><div class="ico">04</div><h3>Global Clientele</h3><p>Trusted by 75+ clients worldwide &mdash; YouTubers, brands, and filmmakers.</p></div>
+<div class="why"><div class="ico">05</div><h3>Direct Communication</h3><p>Clear updates and quick replies on WhatsApp and email, at every stage.</p></div>
+<div class="why"><div class="ico">06</div><h3>Revisions Until Right</h3><p>Structured revision rounds included, until the final cut feels perfect.</p></div>
+</div>
+</div>
+</section>
+<section id="process">
+<div class="wrap">
+<span class="eyebrow">Process</span>
+<h2 class="sec">How It Works</h2>
+<p class="sub">Three simple steps from raw footage to a finished masterpiece.</p>
+<div class="steps">
+<div class="step"><div class="n">STEP 01</div><h3>Share Your Vision</h3><p>Send your footage, reference videos, and goals over WhatsApp or email. Tell me the story you want to tell.</p></div>
+<div class="step"><div class="n">STEP 02</div><h3>I Craft the Edit</h3><p>I cut, grade, design the sound, and add motion graphics &mdash; building pacing that holds attention.</p></div>
+<div class="step"><div class="n">STEP 03</div><h3>Review &amp; Launch</h3><p>You review the cut, I refine the details, and you receive the final file &mdash; ready to publish everywhere.</p></div>
+</div>
+<div class="more-row"><a class="btn btn-accent" href="https://wa.me/919303881879" target="_blank" rel="noopener">Start Your Project</a></div>
+</div>
+</section>
+<section id="expertise" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<div class="wrap">
+<span class="eyebrow">Services</span>
+<h2 class="sec">Expertise</h2>
+<p class="sub">Every editing discipline your content needs &mdash; under one roof.</p>
+<div class="tags">
+<span class="tag">Video Editing</span><span class="tag">Motion Graphics</span><span class="tag">Documentary Editing</span><span class="tag">Color Grading</span><span class="tag">Sound Design &amp; Mixing</span><span class="tag">YouTube Editing</span><span class="tag">Reels &amp; Shorts</span><span class="tag">SaaS UI Animation</span><span class="tag">Real Estate Video Ads</span><span class="tag">Animated Ads</span><span class="tag">Logo &amp; Intro Animation</span><span class="tag">Podcast Editing</span><span class="tag">Subtitles &amp; Captions</span><span class="tag">Thumbnail Design</span><span class="tag more">+ Many More</span>
+</div>
+</div>
+</section>
+<section id="faq">
+<div class="wrap">
+<span class="eyebrow">FAQ</span>
+<h2 class="sec">Questions, Answered</h2>
+<p class="sub">Everything you need to know before we start.</p>
+<div class="faq">
+<details>
+<summary>What is your turnaround time?<span class="pm">+</span></summary>
+<p class="ans">Most short-form edits are delivered within 48&ndash;72 hours. Documentaries and long-form projects typically take 5&ndash;10 days, depending on footage length and complexity. On a tight deadline? Rush delivery is available &mdash; just mention it when you reach out.</p>
+</details>
+<details>
+<summary>How many revisions do I get?<span class="pm">+</span></summary>
+<p class="ans">Every project includes structured revision rounds, so we can fine-tune pacing, music, graphics, and color until it feels right. I keep refining within the agreed scope until you are genuinely happy with the final cut.</p>
+</details>
+<details>
+<summary>What do you need from me to start?<span class="pm">+</span></summary>
+<p class="ans">Just your raw footage (or even a rough idea), a few reference videos you like, and the goal of the video. I handle everything else &mdash; structure, pacing, sound design, color grading, captions, and final delivery in the exact format you need.</p>
+</details>
+<details>
+<summary>How do pricing and payment work?<span class="pm">+</span></summary>
+<p class="ans">Pricing depends on video length, style, and complexity &mdash; every quote is custom, transparent, and has no hidden charges. A small advance confirms your slot, and the balance is due on final delivery. Message me on WhatsApp or email for a fast, free quote.</p>
+</details>
+</div>
+</div>
+</section>
+</main>
+<footer id="contact">
+<div class="wrap">
+<div class="foot-grid">
+<div class="foot-brand">
+<a class="logo" href="#top">AR<b>&nbsp;</b>MOTIONS</a>
+<p>Premium video editing, motion graphics, and post-production &mdash; crafted personally by founder Arshad Khan for clients worldwide.</p>
+<button class="btn btn-ghost btn-sm" id="founderBtn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.3)">Meet the Founder</button>
+</div>
+<div class="foot-contact">
+<div class="foot-h">Contact</div>
+<p>Phone / WhatsApp<br><a href="tel:+919302687554">+91 93026 87554</a></p>
+<p>Email<br><a href="mailto:arshad@armotions.in">arshad@armotions.in</a><br><a href="mailto:support@armotions.in">support@armotions.in</a></p>
+</div>
+<div>
+<div class="foot-h">Explore</div>
+<ul class="foot-links">
+<li><a href="#work">Selected Work</a></li>
+<li><a href="#documentaries">Documentaries</a></li>
+<li><a href="#creators">Creators</a></li>
+<li><a href="#process">How It Works</a></li>
+<li><a href="/portfolio/">More Works</a></li>
+<li><a href="/terms/">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="foot-bottom">
+<span>&copy; <span id="yr">2026</span> AR MOTIONS &middot; Crafted in Ratlam, India</span>
+<span><a href="/terms/">Terms</a> &middot; <a href="/portfolio/">Portfolio</a></span>
+</div>
+</div>
+</footer>
+<div class="modal" id="ownerModal" role="dialog" aria-modal="true" aria-labelledby="ownerTitle">
+<div class="ov" id="ownerOv"></div>
+<div class="card">
+<button class="x" id="ownerClose" aria-label="Close">&times;</button>
+<div class="who">AK</div>
+<h3 id="ownerTitle">Arshad Khan</h3>
+<div class="role">Founder &mdash; AR MOTIONS &middot; Ratlam, India</div>
+<p>Based in Ratlam, Madhya Pradesh, I personally lead every project at AR MOTIONS &mdash; from the first rough cut to the final grade. No agencies, no hand-offs: just one editor obsessed with turning your footage into a masterpiece out of motion.</p>
+<p style="margin-top:14px"><a class="btn btn-accent btn-sm" href="https://wa.me/919303881879" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+</div>
+</div>
+<a id="robot" href="https://wa.me/919303881879" target="_blank" rel="noopener" aria-label="Contact Me on WhatsApp">
+<span class="robot-label">Contact Me</span>
+<span class="robot-btn">
+<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9.2" y="4.6" width="5.6" height="3" rx="1.5" fill="#111214"/><circle cx="12" cy="3.4" r="1.3" fill="#e11d2e"/><rect x="4.8" y="8" width="14.4" height="11.4" rx="4.5" fill="#111214"/><circle cx="9.3" cy="12.8" r="1.6" fill="#fff"/><circle cx="14.7" cy="12.8" r="1.6" fill="#fff"/><circle cx="9.3" cy="12.8" r=".7" fill="#111214"/><circle cx="14.7" cy="12.8" r=".7" fill="#111214"/><rect x="10" y="15.9" width="4" height="1.5" rx=".75" fill="#e11d2e"/></svg>
+</span>
+</a>
+<script>
+(function(){
+var burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+if(burger&&links){burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o?'true':'false');});
+links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');burger.setAttribute('aria-expanded','false');});});}
+document.querySelectorAll('.yt').forEach(function(el){
+function play(){var id=el.getAttribute('data-embed');if(!id||el.querySelector('iframe'))return;
+var f=document.createElement('iframe');
+f.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';
+f.title=el.getAttribute('data-title')||'YouTube video';
+f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+f.setAttribute('allowfullscreen','');
+el.innerHTML='';el.appendChild(f);}
+el.addEventListener('click',play);
+el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play();}});
+});
+var stage=document.getElementById('heroStage'),tilt=document.getElementById('heroTilt');
+var fine=window.matchMedia&&window.matchMedia('(pointer:fine)').matches;
+var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(stage&&tilt&&fine&&!calm){
+stage.addEventListener('mousemove',function(e){var r=stage.getBoundingClientRect();
+var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+tilt.style.transform='rotateY('+(x*10).toFixed(2)+'deg) rotateX('+(-y*10).toFixed(2)+'deg)';});
+stage.addEventListener('mouseleave',function(){tilt.style.transform='rotateY(0deg) rotateX(0deg)';});
+}
+var modal=document.getElementById('ownerModal'),open=document.getElementById('founderBtn'),close=document.getElementById('ownerClose'),ov=document.getElementById('ownerOv');
+function show(o){modal.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
+if(open)open.addEventListener('click',function(){show(true);});
+if(close)close.addEventListener('click',function(){show(false);});
+if(ov)ov.addEventListener('click',function(){show(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')show(false);});
+var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
