@@ -7,8 +7,8 @@
     <title>AR MOTIONS | Premium Video Production & Editing</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="AR MOTIONS provides top-tier video editing and post-production. I specialize in premium motion graphics, documentary edits, SaaS UI animations, and short-form content for global clients.">
-    <meta name="keywords" content="video editing, premium video editing, professional video editors, motion graphics, documentary editing, YouTube editor, SaaS UI animation, real estate video ads, short form content editing, post-production, AR MOTIONS, fast turnaround video editing, hire video editor">
+    <meta name="description" content="AR MOTIONS provides top-tier video editing and post-production. I specialize in premium motion graphics, documentary edits, SaaS UI animations, and short-form content that converts. Trusted by global clients.">
+    <meta name="keywords" content="video editing, premium video editing, professional video editors, motion graphics, documentary editing, YouTube editor, SaaS UI animation, real estate video ads, short form content, podcast editing, map animations, color grading, AR Motions, Arshad Khan">
     <meta name="author" content="Arshad Khan - AR MOTIONS">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -47,894 +47,673 @@
             }
         }
     </script>
+
     <style>
-        :root { --cyan:#22d3ee; --teal:#2dd4bf; --gold:#fbbf24; }
-        html { scroll-behavior: smooth; }
-        body { background:#05080d; color:#ffffff; overflow-x:hidden; }
-        ::selection { background:#22d3ee; color:#05080d; }
-
+        :root{--cyan:#22d3ee;--teal:#2dd4bf;--gold:#fbbf24;}
+        html{scroll-behavior:smooth;}
+        body{background:#05080d;color:#ffffff;overflow-x:hidden;}
+        ::selection{background:#22d3ee;color:#05080d;}
         /* Animated gradient headline */
-        .grad-head {
-            background: linear-gradient(100deg,#22d3ee 5%,#2dd4bf 30%,#fbbf24 55%,#22d3ee 85%);
-            background-size: 230% auto;
-            -webkit-background-clip: text; background-clip: text;
-            color: transparent; -webkit-text-fill-color: transparent;
-            animation: gradShift 7s linear infinite;
+        .grad-head{
+            background:linear-gradient(100deg,#22d3ee 5%,#2dd4bf 30%,#fbbf24 55%,#22d3ee 85%);
+            background-size:230% auto;
+            -webkit-background-clip:text;background-clip:text;
+            color:transparent;-webkit-text-fill-color:transparent;
+            animation:gradShift 7s linear infinite;
         }
-        @keyframes gradShift { to { background-position: 230% center; } }
-
-        /* 3D scene */
-        .scene { perspective: 1500px; }
-        .preserve3d { transform-style: preserve-3d; }
-        #heroDeck { transform: rotateX(16deg) rotateY(-18deg); transform-style: preserve-3d; transition: transform .25s ease-out; }
-
-        /* Glass */
-        .glass {
-            background: linear-gradient(140deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-            backdrop-filter: blur(18px) saturate(160%);
-            -webkit-backdrop-filter: blur(18px) saturate(160%);
-            border: 1px solid rgba(255,255,255,.12);
-        }
-        .edge-cyan { box-shadow: 0 0 0 1px rgba(34,211,238,.28), 0 24px 60px -18px rgba(34,211,238,.28), 0 50px 100px -40px rgba(0,0,0,.9); }
-        .edge-gold { box-shadow: 0 0 0 1px rgba(251,191,36,.32), 0 24px 60px -18px rgba(251,191,36,.25), 0 50px 100px -40px rgba(0,0,0,.9); }
-        .edge-soft { box-shadow: 0 30px 80px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.08); }
-
-        .blueprint {
-            background-image: linear-gradient(rgba(34,211,238,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,.08) 1px, transparent 1px);
-            background-size: 46px 46px;
-        }
-
+        @keyframes gradShift{to{background-position:230% center;}}
+        /* 3D helpers */
+        .persp{perspective:1400px;}
+        .persp-deep{perspective:2200px;}
+        .t3d{transform-style:preserve-3d;}
+        .glass{background:rgba(255,255,255,.045);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);}
+        .gold-glass{background:rgba(251,191,36,.06);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(251,191,36,.22);}
+        .cyan-glow{box-shadow:0 0 24px rgba(34,211,238,.28),0 24px 60px -18px rgba(34,211,238,.35);}
+        .deep-shadow{box-shadow:0 40px 90px -20px rgba(0,0,0,.85),0 0 60px -30px rgba(34,211,238,.35);}
+        /* Section reveal */
+        .rv{opacity:0;transform:translateY(46px) rotateX(6deg);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
+        .rv.in{opacity:1;transform:translateY(0) rotateX(0);}
         /* Floating chips */
-        @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
-        .chip-float { animation: floaty 7s ease-in-out infinite; }
-        .chip-float.d1 { animation-delay:-2s; } .chip-float.d2 { animation-delay:-4s; } .chip-float.d3 { animation-delay:-5.5s; }
-
-        @keyframes pulseGlow { 0%,100% { opacity:.55; } 50% { opacity:1; } }
-        .play-medallion { animation: pulseGlow 2.6s ease-in-out infinite; }
-
-        /* Scroll reveal */
-        .rv { opacity:0; transform: translateY(36px); transition: opacity .8s ease, transform .9s cubic-bezier(.16,.7,.2,1); }
-        .rv.on { opacity:1; transform: translateY(0); }
-        .rv-d1 { transition-delay:.08s; } .rv-d2 { transition-delay:.16s; } .rv-d3 { transition-delay:.24s; }
-
-        /* Tilt */
-        .tilt-wrap { perspective: 1200px; }
-        [data-tilt] { transform-style: preserve-3d; transition: transform .18s ease-out; will-change: transform; }
-
-        .orb { position:absolute; border-radius:9999px; filter: blur(120px); pointer-events:none; }
-        .beam { background: linear-gradient(90deg, transparent, rgba(34,211,238,.9), rgba(251,191,36,.9), transparent); }
-
-        /* FAQ accordion */
-        .faq-a { max-height:0; overflow:hidden; transition: max-height .4s ease; }
-        .faq-item.open .faq-a { max-height: 480px; }
-        .faq-chev { transition: transform .35s ease; }
-        .faq-item.open .faq-chev { transform: rotate(180deg); }
-        .faq-item.open { border-color: rgba(34,211,238,.4); }
-
-        /* Mobile menu */
-        #mobileMenu { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
-        .menu-closed { transform: translateX(100%); }
-
-        /* Modals */
-        .modal { transition: opacity .3s ease; }
-        .modal-card { transition: transform .3s cubic-bezier(.2,.7,.2,1); }
-
-        @keyframes scrollDot { 0% { transform: translateY(0); opacity:1; } 70% { transform: translateY(14px); opacity:0; } 100% { opacity:0; } }
-        .scroll-dot { animation: scrollDot 1.8s ease-in-out infinite; }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important; }
-            .rv { opacity:1; transform:none; }
-            html { scroll-behavior:auto; }
+        @keyframes floaty{0%,100%{transform:translateY(0) translateZ(var(--z,40px));}50%{transform:translateY(-14px) translateZ(var(--z,40px));}}
+        .floaty{animation:floaty 6s ease-in-out infinite;}
+        /* Aurora drift */
+        @keyframes drift{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(60px,-40px) scale(1.12);}66%{transform:translate(-50px,30px) scale(.94);}}
+        .aurora{animation:drift 16s ease-in-out infinite;filter:blur(90px);}
+        /* Tilt cards */
+        .tilt{transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;will-change:transform;}
+        .tilt:hover{box-shadow:0 30px 70px -18px rgba(0,0,0,.9),0 0 50px -12px rgba(34,211,238,.4);}
+        /* Bento hover lift */
+        .bento{transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s;}
+        .bento:hover{transform:translateY(-8px) scale(1.015);box-shadow:0 34px 80px -20px rgba(0,0,0,.9),0 0 60px -18px rgba(45,212,191,.35);z-index:5;}
+        /* Timeline beam */
+        .beam{background:linear-gradient(180deg,#22d3ee,#2dd4bf 45%,#fbbf24);box-shadow:0 0 18px rgba(34,211,238,.8);}
+        /* FAQ */
+        .faq-a{max-height:0;overflow:hidden;transition:max-height .55s cubic-bezier(.16,1,.3,1);}
+        .faq-item.open .faq-a{max-height:320px;}
+        .faq-item.open .faq-chev{transform:rotate(45deg);color:#fbbf24;}
+        .faq-chev{transition:transform .4s;}
+        /* Scroll cue */
+        @keyframes cue{0%,100%{transform:translateY(0);opacity:.9;}50%{transform:translateY(12px);opacity:.4;}}
+        .cue{animation:cue 2.2s ease-in-out infinite;}
+        /* Marquee strip */
+        @keyframes marq{to{transform:translateX(-50%);}}
+        .marq{animation:marq 26s linear infinite;}
+        @media (prefers-reduced-motion:reduce){
+            *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+            html{scroll-behavior:auto;}
+            .rv{opacity:1;transform:none;}
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="font-sans antialiased">
 
-    <!-- Scroll progress -->
-    <div id="progressBar" class="fixed top-0 left-0 h-[3px] z-[70] w-0 bg-gradient-to-r from-volt via-mint to-gold"></div>
+    <!-- ══════════ FLOATING NAV ══════════ -->
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-5xl">
+        <div class="glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between cyan-glow">
+            <a href="#top" class="font-display font-bold text-lg tracking-wide">AR <span class="text-volt">MOTIONS</span></a>
+            <div class="hidden md:flex items-center gap-6 text-sm text-white/70">
+                <a href="#work" class="hover:text-volt transition">Work</a>
+                <a href="#longform" class="hover:text-volt transition">Long Form</a>
+                <a href="#clients" class="hover:text-volt transition">Clients</a>
+                <a href="#expertise" class="hover:text-volt transition">Services</a>
+                <a href="#how-it-works" class="hover:text-volt transition">Process</a>
+                <a href="#faq" class="hover:text-volt transition">FAQ</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="hidden sm:inline-block bg-gradient-to-r from-volt to-mint text-ink text-sm font-bold px-5 py-2 rounded-xl hover:opacity-90 transition">Contact Me</a>
+                <button id="menuBtn" class="md:hidden text-white/80 text-xl px-2" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden mt-2 glass rounded-2xl p-4 flex-col gap-1 text-white/80">
+            <a href="#work" class="block py-2 px-3 rounded-lg hover:bg-white/5">Work</a>
+            <a href="#longform" class="block py-2 px-3 rounded-lg hover:bg-white/5">Long Form</a>
+            <a href="#clients" class="block py-2 px-3 rounded-lg hover:bg-white/5">Clients</a>
+            <a href="#expertise" class="block py-2 px-3 rounded-lg hover:bg-white/5">Services</a>
+            <a href="#how-it-works" class="block py-2 px-3 rounded-lg hover:bg-white/5">Process</a>
+            <a href="#faq" class="block py-2 px-3 rounded-lg hover:bg-white/5">FAQ</a>
+            <a href="#contact" class="block py-2 px-3 rounded-lg text-volt font-semibold">Contact Me</a>
+        </div>
+    </nav>
 
-    <!-- Ambient background -->
-    <div class="fixed inset-0 pointer-events-none" aria-hidden="true">
-        <div class="orb w-[520px] h-[520px] left-[-160px] top-[-120px]" style="background:rgba(34,211,238,.13)"></div>
-        <div class="orb w-[620px] h-[620px] right-[-200px] top-[32%]" style="background:rgba(45,212,191,.09)"></div>
-        <div class="orb w-[560px] h-[560px] left-[8%] bottom-[-220px]" style="background:rgba(251,191,36,.08)"></div>
-    </div>
+    <!-- ══════════ HERO — FULL-SCREEN 3D SHOWCASE ══════════ -->
+    <header id="top" class="relative min-h-screen flex items-center overflow-hidden persp-deep">
+        <!-- layered depth background -->
+        <div class="absolute inset-0" data-depth="0.03">
+            <div class="absolute -top-32 -left-32 w-[560px] h-[560px] rounded-full aurora" style="background:radial-gradient(circle,rgba(34,211,238,.20),transparent 65%);"></div>
+            <div class="absolute top-1/3 -right-40 w-[620px] h-[620px] rounded-full aurora" style="background:radial-gradient(circle,rgba(45,212,191,.16),transparent 65%);animation-delay:-6s;"></div>
+            <div class="absolute bottom-0 left-1/3 w-[520px] h-[520px] rounded-full aurora" style="background:radial-gradient(circle,rgba(251,191,36,.12),transparent 65%);animation-delay:-11s;"></div>
+        </div>
+        <!-- blueprint grid back layer -->
+        <div class="absolute inset-0 opacity-[.14]" data-depth="0.06" style="background-image:linear-gradient(rgba(34,211,238,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.5) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 90% 80% at 50% 40%,black 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 90% 80% at 50% 40%,black 30%,transparent 75%);"></div>
 
-    <!-- ============ NAV ============ -->
-    <header class="fixed top-0 inset-x-0 z-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <nav class="mt-4 glass edge-soft rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between" aria-label="Main Navigation">
-                <a href="/" class="flex items-center gap-3" aria-label="AR Motions Home">
-                    <img src="assets/images/logo.jpg" alt="AR Motions Official Logo" class="h-9 w-9 rounded-xl object-cover shadow-[0_0_18px_rgba(34,211,238,.35)]">
-                    <span class="font-display font-bold text-lg md:text-xl tracking-widest">AR<span class="text-volt">MOTIONS</span></span>
-                </a>
-                <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-gray-300">
-                    <a href="#work" class="hover:text-volt transition-colors">Work</a>
-                    <a href="#longform" class="hover:text-volt transition-colors">Long Form</a>
-                    <a href="#clients" class="hover:text-volt transition-colors">Clients</a>
-                    <a href="#expertise" class="hover:text-volt transition-colors">Expertise</a>
-                    <a href="#how-it-works" class="hover:text-volt transition-colors">Process</a>
-                    <a href="#faq" class="hover:text-volt transition-colors">FAQ</a>
+        <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-32 pb-24 grid lg:grid-cols-2 gap-14 items-center w-full">
+            <!-- Copy -->
+            <div>
+                <div class="rv inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs sm:text-sm text-white/85 mb-7" data-depth="0.12">
+                    <span class="w-2 h-2 rounded-full bg-mint animate-pulse"></span>
+                    Founder-Led &bull; 4+ Years Experience &bull; Global Clients
                 </div>
-                <div class="hidden lg:flex items-center gap-3">
-                    <button onclick="openOwnerModal(event)" class="text-sm font-semibold text-mint px-4 py-2.5 rounded-xl border border-mint/30 hover:bg-mint/10 transition-colors flex items-center gap-2"><i class="fas fa-user-tie"></i> Know the Owner</button>
-                    <button data-wa class="text-sm font-bold text-ink px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold to-amber-300 hover:shadow-[0_0_28px_rgba(251,191,36,.5)] transition-all">Start a Project</button>
+                <h1 class="rv font-display font-bold leading-[1.02] text-5xl sm:text-6xl xl:text-7xl mb-6">
+                    <span class="grad-head">Crafting Masterpieces<br>Out of Motion.</span>
+                </h1>
+                <p class="rv text-white/65 text-base sm:text-lg leading-relaxed max-w-xl mb-4">
+                    An editor recognised among the rare creative talents of Madhya Pradesh and India, with a distinctive approach to visual storytelling. Handling clients across the world, from documentary edits to SaaS UI animations, I make your brand unforgettable.
+                </p>
+                <p class="rv text-gold/90 text-sm sm:text-base font-semibold mb-9">
+                    <i class="fa-solid fa-bolt mr-2"></i>Try my service for the first time at a cost lower than Starbucks!
+                </p>
+                <div class="rv flex flex-wrap gap-4">
+                    <a href="#work" class="bg-gradient-to-r from-volt to-mint text-ink font-bold px-8 py-4 rounded-2xl cyan-glow hover:scale-[1.03] active:scale-95 transition">Explore My Work</a>
+                    <button data-owner-open class="glass font-semibold px-8 py-4 rounded-2xl hover:border-gold/50 hover:text-gold transition">Know the Owner</button>
                 </div>
-                <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Open menu" aria-expanded="false"><i id="menuIcon" class="fas fa-bars text-2xl"></i></button>
-            </nav>
+            </div>
+            <!-- 3D tilted showcase deck -->
+            <div class="rv persp hidden md:block" id="heroDeckWrap">
+                <div id="heroDeck" class="t3d relative" style="transform:rotateX(16deg) rotateY(-18deg);">
+                    <!-- back plate -->
+                    <div class="absolute inset-0 rounded-3xl border border-volt/20 bg-abyss/80" style="transform:translateZ(-70px);"></div>
+                    <!-- main NLE timeline panel -->
+                    <div class="relative rounded-3xl glass deep-shadow p-6" style="transform:translateZ(30px);">
+                        <div class="flex items-center gap-2 mb-5">
+                            <span class="w-3 h-3 rounded-full bg-red-400/80"></span><span class="w-3 h-3 rounded-full bg-gold/80"></span><span class="w-3 h-3 rounded-full bg-mint/80"></span>
+                            <span class="ml-3 text-xs text-white/40 font-display tracking-widest">AR_MOTIONS — TIMELINE_V2</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="h-11 rounded-xl bg-gradient-to-r from-volt/70 via-volt/25 to-transparent border border-volt/30"></div>
+                            <div class="h-11 rounded-xl bg-gradient-to-r from-mint/60 via-mint/20 to-transparent border border-mint/30 ml-8"></div>
+                            <div class="h-11 rounded-xl bg-gradient-to-r from-gold/70 via-gold/20 to-transparent border border-gold/30 ml-4"></div>
+                            <div class="h-11 rounded-xl bg-gradient-to-r from-volt/50 via-mint/15 to-transparent border border-white/10 ml-12"></div>
+                        </div>
+                        <div class="mt-5 flex items-center justify-between text-white/40 text-xs">
+                            <span><i class="fa-solid fa-play text-volt mr-2"></i>00:00:00:00</span>
+                            <span class="font-display">4K &bull; 24FPS &bull; REC</span>
+                        </div>
+                        <!-- playhead -->
+                        <div class="absolute top-14 bottom-8 w-[2px] bg-gold" style="left:38%;box-shadow:0 0 12px #fbbf24;"></div>
+                    </div>
+                    <!-- floating glass chips at depth -->
+                    <div class="floaty absolute -top-8 -left-10 glass rounded-2xl px-5 py-3 text-sm font-semibold cyan-glow" style="--z:90px;transform:translateZ(90px);">
+                        <i class="fa-solid fa-crown text-gold mr-2"></i>Founder-Led Studio
+                    </div>
+                    <div class="floaty absolute -bottom-9 -right-6 gold-glass rounded-2xl px-5 py-3 text-sm font-semibold" style="--z:110px;transform:translateZ(110px);animation-delay:-2s;">
+                        <i class="fa-solid fa-circle-check text-mint mr-2"></i>200+ Projects Delivered
+                    </div>
+                    <div class="floaty absolute top-1/2 -right-12 glass rounded-2xl px-5 py-3 text-sm font-semibold" style="--z:70px;transform:translateZ(70px);animation-delay:-4s;">
+                        <i class="fa-solid fa-earth-americas text-volt mr-2"></i>75+ Global Clients
+                    </div>
+                    <div class="floaty absolute -bottom-6 left-8 glass rounded-2xl px-4 py-2 text-xs text-white/70" style="--z:60px;transform:translateZ(60px);animation-delay:-3s;">
+                        Docs &bull; Ads &bull; SaaS UI
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- scroll cue -->
+        <div class="absolute bottom-7 left-1/2 -translate-x-1/2 text-white/50 text-center">
+            <div class="cue text-2xl"><i class="fa-solid fa-chevron-down"></i></div>
+            <p class="text-[11px] tracking-[.3em] mt-1 font-display">SCROLL</p>
         </div>
     </header>
 
-    <!-- Mobile menu -->
-    <div id="mobileOverlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[55] hidden lg:hidden" aria-hidden="true"></div>
-    <aside id="mobileMenu" class="menu-closed fixed inset-y-0 right-0 w-72 bg-abyss/95 backdrop-blur-xl border-l border-volt/20 z-[58] flex flex-col p-7 pt-24 lg:hidden" aria-label="Mobile Navigation">
-        <nav class="flex flex-col gap-1 text-lg font-semibold">
-            <a href="/" class="py-2.5 hover:text-volt transition-colors">Home</a>
-            <a href="#work" class="py-2.5 hover:text-volt transition-colors">Work</a>
-            <a href="#longform" class="py-2.5 hover:text-volt transition-colors">Long Form</a>
-            <a href="#clients" class="py-2.5 hover:text-volt transition-colors">Clients</a>
-            <a href="#expertise" class="py-2.5 hover:text-volt transition-colors">Expertise</a>
-            <a href="#how-it-works" class="py-2.5 hover:text-volt transition-colors">Process</a>
-            <a href="#faq" class="py-2.5 hover:text-volt transition-colors">FAQ</a>
-            <a href="/portfolio" class="py-2.5 hover:text-volt transition-colors">Portfolio</a>
-            <a href="/terms" class="py-2.5 hover:text-volt transition-colors">Terms</a>
-            <button onclick="openOwnerModal(event)" class="text-left py-2.5 text-mint hover:text-volt transition-colors flex items-center gap-2"><i class="fas fa-user-tie"></i> Know the Owner</button>
-        </nav>
-        <div class="mt-auto flex flex-col gap-3">
-            <button data-wa class="w-full py-3.5 rounded-xl font-bold text-ink bg-gradient-to-r from-gold to-amber-300">Start a Project</button>
-            <a href="#contact" class="w-full py-3.5 rounded-xl font-bold glass text-center">Contact Me</a>
+    <!-- marquee -->
+    <div class="relative border-y border-white/10 bg-abyss/70 py-4 overflow-hidden">
+        <div class="marq flex whitespace-nowrap gap-10 font-display text-sm tracking-[.25em] text-white/50 w-max">
+            <span>DOCUMENTARY EDITS</span><span class="text-volt">◆</span><span>MOTION GRAPHICS</span><span class="text-gold">◆</span><span>SAAS UI ANIMATION</span><span class="text-mint">◆</span><span>SHORT-FORM CONTENT</span><span class="text-volt">◆</span><span>COLOR GRADING</span><span class="text-gold">◆</span><span>MAP ANIMATIONS</span><span class="text-mint">◆</span>
+            <span>DOCUMENTARY EDITS</span><span class="text-volt">◆</span><span>MOTION GRAPHICS</span><span class="text-gold">◆</span><span>SAAS UI ANIMATION</span><span class="text-mint">◆</span><span>SHORT-FORM CONTENT</span><span class="text-volt">◆</span><span>COLOR GRADING</span><span class="text-gold">◆</span><span>MAP ANIMATIONS</span><span class="text-mint">◆</span>
         </div>
-    </aside>
+    </div>
 
-    <main class="relative z-10">
-
-        <!-- ============ HERO : full-screen 3D scene ============ -->
-        <section id="hero" class="relative overflow-hidden">
-            <div class="absolute inset-0 blueprint opacity-70" aria-hidden="true"></div>
-            <div class="relative max-w-7xl mx-auto px-5 md:px-8 pt-36 md:pt-44 pb-16 grid lg:grid-cols-12 gap-14 items-center min-h-screen">
-
-                <div class="lg:col-span-7 relative z-10">
-                    <div class="rv inline-flex items-center gap-2.5 glass rounded-full pl-2 pr-5 py-1.5 text-xs sm:text-sm font-semibold text-mint edge-soft">
-                        <span class="w-8 h-8 rounded-full bg-gradient-to-br from-volt to-mint flex items-center justify-center text-ink"><i class="fas fa-clapperboard text-sm"></i></span>
-                        Founder-Led &bull; 4+ Years Experience &bull; Global Clients
-                    </div>
-                    <h1 class="rv rv-d1 font-display font-bold text-[2.9rem] leading-[1.04] sm:text-7xl xl:text-[5.4rem] mt-7">
-                        Crafting <span class="grad-head">Masterpieces</span><br> Out of Motion.
-                    </h1>
-                    <p class="rv rv-d2 mt-6 text-lg md:text-xl text-gray-400 max-w-xl font-light leading-relaxed">
-                        An editor recognised among the rare creative talents of Madhya Pradesh and India, with a distinctive approach to visual storytelling. Handling clients across the world, from documentary edits to SaaS UI animations, I make your brand unforgettable.
-                    </p>
-                    <div class="rv rv-d3 mt-8 inline-flex items-center gap-3 glass rounded-2xl px-5 py-3.5 edge-soft">
-                        <span class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/40 flex items-center justify-center text-gold text-lg shrink-0"><i class="fas fa-coffee"></i></span>
-                        <p class="text-sm md:text-base font-semibold text-gray-200">Try my service for the first time at a cost lower than <span class="text-gold">Starbucks!</span></p>
-                    </div>
-                    <div class="rv rv-d3 mt-9 flex flex-col sm:flex-row gap-4">
-                        <a href="/portfolio" class="px-9 py-4 rounded-2xl font-bold text-ink bg-gradient-to-r from-gold to-amber-300 hover:shadow-[0_0_36px_rgba(251,191,36,.45)] transition-all hover:-translate-y-0.5 text-center">View Portfolio</a>
-                        <a href="#how-it-works" class="px-9 py-4 rounded-2xl font-bold glass hover:border-volt/50 hover:text-volt transition-all text-center">See How It Works</a>
-                    </div>
+    <main>
+        <!-- ══════════ 01 · SHOWREEL BENTO ══════════ -->
+        <section id="work" class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-24 sm:pt-32 pb-10">
+            <div class="rv flex items-end justify-between flex-wrap gap-4 mb-10">
+                <div>
+                    <p class="font-display text-volt text-sm tracking-[.35em] mb-3">01 — SHOWREEL</p>
+                    <h2 class="font-display font-bold text-4xl sm:text-5xl">Work in <span class="text-transparent bg-clip-text bg-gradient-to-r from-volt to-mint">Motion</span></h2>
+                    <p class="text-white/55 mt-3 max-w-xl">A bento of recent edits — documentaries, animated ads and short-form pieces. Hover to tilt, tap to play.</p>
                 </div>
-
-                <div class="lg:col-span-5 relative">
-                    <div class="scene relative max-w-[440px] mx-auto" id="heroScene" aria-hidden="true">
-                        <div data-depth="0.10" id="deckWrap" class="preserve3d">
-                            <div id="heroDeck" class="preserve3d relative aspect-[4/5]">
-                                <!-- back layer -->
-                                <div class="absolute inset-0 rounded-[1.6rem] blueprint glass" style="transform:translateZ(-110px)"></div>
-                                <!-- mid aurora layer -->
-                                <div class="absolute inset-8 rounded-[1.6rem] overflow-hidden" style="transform:translateZ(-40px)">
-                                    <div class="absolute -top-10 -left-10 w-72 h-72 rounded-full" style="background:radial-gradient(circle,rgba(34,211,238,.5),transparent 70%)"></div>
-                                    <div class="absolute -bottom-12 -right-8 w-80 h-80 rounded-full" style="background:radial-gradient(circle,rgba(251,191,36,.42),transparent 70%)"></div>
-                                    <div class="absolute top-1/3 left-1/4 w-64 h-64 rounded-full" style="background:radial-gradient(circle,rgba(45,212,191,.35),transparent 70%)"></div>
-                                </div>
-                                <!-- front : NLE timeline panel -->
-                                <div class="absolute inset-0 rounded-[1.6rem] glass edge-cyan p-5 sm:p-6 flex flex-col" style="transform:translateZ(70px)">
-                                    <div class="flex items-center justify-between">
-                                        <div class="flex gap-1.5">
-                                            <span class="w-2.5 h-2.5 rounded-full bg-volt/80"></span>
-                                            <span class="w-2.5 h-2.5 rounded-full bg-gold/80"></span>
-                                            <span class="w-2.5 h-2.5 rounded-full bg-mint/80"></span>
-                                        </div>
-                                        <span class="text-[10px] tracking-[.35em] text-volt font-semibold">TIMELINE &middot; 4K</span>
-                                    </div>
-                                    <div class="mt-4 flex-1 rounded-2xl bg-black/60 border border-white/10 p-4 relative overflow-hidden">
-                                        <div class="space-y-3">
-                                            <div class="flex items-center gap-2">
-                                                <span class="text-[9px] font-bold text-gray-500 w-7">V2</span>
-                                                <div class="flex-1 flex gap-1.5 h-9">
-                                                    <div class="rounded-md bg-volt/70" style="width:24%"></div>
-                                                    <div class="rounded-md bg-mint/50" style="width:16%"></div>
-                                                    <div class="rounded-md bg-gold/70" style="width:32%"></div>
-                                                    <div class="rounded-md bg-volt/40" style="width:20%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-2">
-                                                <span class="text-[9px] font-bold text-gray-500 w-7">V1</span>
-                                                <div class="flex-1 flex gap-1.5 h-9">
-                                                    <div class="rounded-md bg-gold/50" style="width:30%"></div>
-                                                    <div class="rounded-md bg-volt/60" style="width:22%"></div>
-                                                    <div class="rounded-md bg-mint/60" style="width:40%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-2">
-                                                <span class="text-[9px] font-bold text-gray-500 w-7">A1</span>
-                                                <div class="flex-1 flex gap-1.5 h-6 items-center">
-                                                    <div class="rounded bg-mint/40 h-3" style="width:44%"></div>
-                                                    <div class="rounded bg-gold/40 h-3" style="width:26%"></div>
-                                                    <div class="rounded bg-volt/40 h-3" style="width:22%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="absolute top-2 bottom-2 w-[2px] bg-gold shadow-[0_0_12px_rgba(251,191,36,.9)]" style="left:58%"></div>
-                                    </div>
-                                    <div class="mt-4 flex items-center gap-4">
-                                        <div class="play-medallion w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-volt to-mint flex items-center justify-center text-ink shadow-[0_0_24px_rgba(34,211,238,.6)]"><i class="fas fa-play ml-0.5"></i></div>
-                                        <div>
-                                            <p class="font-display font-bold tracking-wide">SHOWREEL &rsquo;26</p>
-                                            <p class="text-xs text-gray-400">Documentary &bull; Ads &bull; Vertical</p>
-                                        </div>
-                                        <span class="ml-auto font-display font-bold text-gold">00:47</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- floating glass chips at layered depths -->
-                        <div class="absolute -left-4 sm:-left-8 top-6 z-20" data-depth="0.18" style="transform:translateZ(150px)">
-                            <div class="chip-float glass edge-gold rounded-2xl px-4 py-2.5 text-xs font-bold text-gold whitespace-nowrap"><i class="fas fa-crown mr-2"></i>Founder-Led Studio</div>
-                        </div>
-                        <div class="absolute -right-3 sm:-right-6 top-1/3 z-20" data-depth="0.24" style="transform:translateZ(190px)">
-                            <div class="chip-float d1 glass edge-cyan rounded-2xl px-4 py-2.5 text-xs font-bold text-volt whitespace-nowrap"><i class="fas fa-layer-group mr-2"></i>200+ Projects Delivered</div>
-                        </div>
-                        <div class="absolute left-4 sm:left-8 -bottom-4 z-20" data-depth="0.15" style="transform:translateZ(120px)">
-                            <div class="chip-float d2 glass edge-soft rounded-2xl px-4 py-2.5 text-xs font-bold text-mint whitespace-nowrap"><i class="fas fa-earth-asia mr-2"></i>75+ Global Clients</div>
-                        </div>
-                        <div class="absolute right-6 -top-5 z-20" data-depth="0.28" style="transform:translateZ(220px)">
-                            <div class="chip-float d3 glass rounded-2xl px-4 py-2.5 text-xs font-bold text-gray-200 whitespace-nowrap"><i class="fas fa-film mr-2 text-volt"></i>Docs &bull; Ads &bull; SaaS UI</div>
-                        </div>
-                    </div>
-                </div>
+                <a href="/portfolio" class="gold-glass text-gold text-sm font-semibold px-6 py-3 rounded-2xl hover:scale-105 transition">View More Works <i class="fa-solid fa-arrow-right ml-2"></i></a>
             </div>
-            <div class="relative z-10 flex justify-center pb-10" aria-hidden="true">
-                <div class="w-6 h-10 rounded-full border border-volt/40 flex justify-center pt-2"><div class="scroll-dot w-1.5 h-1.5 rounded-full bg-volt"></div></div>
+            <div class="persp grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 auto-rows-[minmax(0,1fr)]">
+                <!-- Large tile 1 -->
+                <div class="rv tilt bento col-span-2 row-span-2 relative rounded-3xl overflow-hidden border border-white/10 bg-abyss" data-tilt>
+                    <div class="aspect-[9/13] sm:aspect-auto sm:h-full sm:min-h-[520px]">
+                        <iframe src="https://player.vimeo.com/video/1240103124?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Mumbai Investigation Documentary"></iframe>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black/85 to-transparent pointer-events-none">
+                        <p class="text-[11px] font-display tracking-[.25em] text-volt mb-1">LATEST WORK</p>
+                        <h3 class="font-display font-semibold text-lg">Mumbai Investigation Documentary</h3>
+                    </div>
+                </div>
+                <!-- Large tile 2 -->
+                <div class="rv tilt bento col-span-2 row-span-2 relative rounded-3xl overflow-hidden border border-white/10 bg-abyss" data-tilt>
+                    <div class="aspect-[9/13] sm:aspect-auto sm:h-full sm:min-h-[520px]">
+                        <iframe src="https://player.vimeo.com/video/1240103461?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Colgate Animated Ad"></iframe>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black/85 to-transparent pointer-events-none">
+                        <p class="text-[11px] font-display tracking-[.25em] text-gold mb-1">LATEST WORK</p>
+                        <h3 class="font-display font-semibold text-lg">Colgate Animated Ad</h3>
+                    </div>
+                </div>
+                <!-- Medium tiles -->
+                <div class="rv tilt bento relative rounded-3xl overflow-hidden border border-white/10 bg-abyss" data-tilt>
+                    <div class="aspect-[9/14]">
+                        <iframe src="https://player.vimeo.com/video/1240103662?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="India 44 Km Documentary - Part 2"></iframe>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/85 to-transparent pointer-events-none">
+                        <h3 class="font-display font-semibold text-sm">India 44 Km Documentary - Part 2</h3>
+                    </div>
+                </div>
+                <div class="rv tilt bento relative rounded-3xl overflow-hidden border border-white/10 bg-abyss" data-tilt>
+                    <div class="aspect-[9/14]">
+                        <iframe src="https://player.vimeo.com/video/1240103811?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Rocket Blueprint Documentary - Part 1"></iframe>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/85 to-transparent pointer-events-none">
+                        <h3 class="font-display font-semibold text-sm">Rocket Blueprint Documentary - Part 1</h3>
+                    </div>
+                </div>
+                <div class="rv tilt bento relative rounded-3xl overflow-hidden border border-white/10 bg-abyss" data-tilt>
+                    <div class="aspect-[9/14]">
+                        <iframe src="https://player.vimeo.com/video/1224003113?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Recent Work"></iframe>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/85 to-transparent pointer-events-none">
+                        <p class="text-[10px] font-display tracking-[.25em] text-mint mb-1">RECENT WORK</p>
+                        <h3 class="font-display font-semibold text-sm">Recent Work</h3>
+                    </div>
+                </div>
+                <div class="rv tilt bento relative rounded-3xl overflow-hidden border border-white/10 bg-abyss" data-tilt>
+                    <div class="aspect-[9/14]">
+                        <iframe src="https://player.vimeo.com/video/1224003112?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Recent Work"></iframe>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/85 to-transparent pointer-events-none">
+                        <p class="text-[10px] font-display tracking-[.25em] text-mint mb-1">RECENT WORK</p>
+                        <h3 class="font-display font-semibold text-sm">Recent Work</h3>
+                    </div>
+                </div>
+                <div class="rv tilt bento relative rounded-3xl overflow-hidden border border-white/10 bg-abyss" data-tilt>
+                    <div class="aspect-[9/14]">
+                        <iframe src="https://player.vimeo.com/video/1223935407?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Recent Work"></iframe>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/85 to-transparent pointer-events-none">
+                        <p class="text-[10px] font-display tracking-[.25em] text-mint mb-1">RECENT WORK</p>
+                        <h3 class="font-display font-semibold text-sm">Recent Work</h3>
+                    </div>
+                </div>
+                <div class="rv tilt bento relative rounded-3xl overflow-hidden border border-white/10 bg-abyss" data-tilt>
+                    <div class="aspect-[9/14]">
+                        <iframe src="https://player.vimeo.com/video/1224077827?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Recent Work"></iframe>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/85 to-transparent pointer-events-none">
+                        <p class="text-[10px] font-display tracking-[.25em] text-mint mb-1">RECENT WORK</p>
+                        <h3 class="font-display font-semibold text-sm">Recent Work</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- ============ 01 · SHOWREEL : bento work grid ============ -->
-        <section id="work" class="relative py-24 md:py-32 scroll-mt-24">
-            <div class="max-w-7xl mx-auto px-5 md:px-8">
-                <div class="rv flex items-end justify-between flex-wrap gap-6 mb-12 md:mb-16">
+        <!-- ══════════ 02 · LONG FORM CINEMATIC ══════════ -->
+        <section id="longform" class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-24 sm:pt-32 pb-10">
+            <div class="rv mb-10">
+                <p class="font-display text-gold text-sm tracking-[.35em] mb-3">02 — LONG FORM</p>
+                <h2 class="font-display font-bold text-4xl sm:text-5xl">Documentary <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-volt">Cinema</span></h2>
+                <p class="text-white/55 mt-3 max-w-xl">Wide cinematic cards for the long-form stories. Tap a thumbnail to load the film.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 persp">
+                <article class="rv tilt rounded-3xl overflow-hidden border border-gold/25 bg-abyss deep-shadow" data-tilt>
+                    <button class="yt-load relative block w-full aspect-video group" data-yt="Y-AG6qYqFfs" aria-label="Play Why Hindus Are Targeted? The Political Truth Nobody Explains">
+                        <img src="https://i.ytimg.com/vi/Y-AG6qYqFfs/maxresdefault.jpg" alt="Why Hindus Are Targeted? The Political Truth Nobody Explains" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                        <span class="absolute inset-0 bg-black/35 group-hover:bg-black/15 transition"></span>
+                        <span class="absolute inset-0 flex items-center justify-center"><span class="w-20 h-20 rounded-full bg-gold text-ink flex items-center justify-center text-2xl cyan-glow group-hover:scale-110 transition"><i class="fa-solid fa-play ml-1"></i></span></span>
+                        <span class="absolute bottom-3 right-3 bg-black/80 text-xs font-display px-2.5 py-1 rounded-lg">16:44</span>
+                    </button>
+                    <div class="p-6">
+                        <h3 class="font-display font-semibold text-xl leading-snug">Why Hindus Are Targeted? The Political Truth Nobody Explains</h3>
+                        <p class="text-white/50 text-sm mt-2 font-display tracking-widest">DOCUMENTARY &bull; LONG FORM</p>
+                    </div>
+                </article>
+                <article class="rv tilt rounded-3xl overflow-hidden border border-volt/25 bg-abyss deep-shadow" data-tilt>
+                    <button class="yt-load relative block w-full aspect-video group" data-yt="2MyTrl8KihQ" aria-label="Play The Network Marketing(MLM) Scam || Ravi Sharma">
+                        <img src="https://i.ytimg.com/vi/2MyTrl8KihQ/maxresdefault.jpg" alt="The Network Marketing(MLM) Scam || Ravi Sharma" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                        <span class="absolute inset-0 bg-black/35 group-hover:bg-black/15 transition"></span>
+                        <span class="absolute inset-0 flex items-center justify-center"><span class="w-20 h-20 rounded-full bg-volt text-ink flex items-center justify-center text-2xl cyan-glow group-hover:scale-110 transition"><i class="fa-solid fa-play ml-1"></i></span></span>
+                        <span class="absolute bottom-3 right-3 bg-black/80 text-xs font-display px-2.5 py-1 rounded-lg">6:10</span>
+                    </button>
+                    <div class="p-6">
+                        <h3 class="font-display font-semibold text-xl leading-snug">The Network Marketing(MLM) Scam || Ravi Sharma</h3>
+                        <p class="text-white/50 text-sm mt-2 font-display tracking-widest">DOCUMENTARY &bull; LONG FORM</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ══════════ 03 · CLIENTS / CREATORS ══════════ -->
+        <section id="clients" class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-24 sm:pt-32 pb-10">
+            <div class="rv mb-10 text-center">
+                <p class="font-display text-mint text-sm tracking-[.35em] mb-3">03 — CLIENTS</p>
+                <h2 class="font-display font-bold text-4xl sm:text-5xl">Recently <span class="text-transparent bg-clip-text bg-gradient-to-r from-mint to-gold">Worked With</span></h2>
+                <p class="text-white/55 mt-3 max-w-xl mx-auto">Creators who trusted AR MOTIONS with their stories.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto persp">
+                <a href="https://www.instagram.com/theproudindiankrish" target="_blank" rel="noopener" class="rv tilt glass rounded-3xl p-8 text-center" data-tilt>
+                    <div class="relative w-24 h-24 mx-auto rounded-full p-[3px] bg-gradient-to-br from-volt via-mint to-gold">
+                        <img src="data:image/jpeg;base64,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" alt="Krish Chakraborty" class="w-full h-full rounded-full object-cover" loading="lazy">
+                    </div>
+                    <h3 class="font-display font-bold text-xl mt-5">Krish Chakraborty</h3>
+                    <p class="text-volt text-sm mt-1">@theproudindiankrish</p>
+                    <p class="text-white/50 text-sm mt-1 font-display">33.5K followers</p>
+                    <span class="inline-flex items-center gap-2 mt-4 text-sm text-white/60"><i class="fa-brands fa-instagram text-xl text-mint"></i>View Instagram</span>
+                </a>
+                <a href="https://www.instagram.com/thegenzskool" target="_blank" rel="noopener" class="rv tilt glass rounded-3xl p-8 text-center" data-tilt>
+                    <div class="relative w-24 h-24 mx-auto rounded-full p-[3px] bg-gradient-to-br from-gold via-amber-300 to-volt">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/7QCEUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAGgcAigAYkZCTUQwYTAwMGFhOTAxMDAwMDlhMDMwMDAwMTMwNTAwMDAwMjA2MDAwMDBhMDcwMDAwNGEwODAwMDAzMTBiMDAwMDhhMGIwMDAwOGIwYzAwMDA1ZDBkMDAwMDBiMTEwMDAwAP/bAIQABQYGCwgLCwsLCw0LCwsNDg4NDQ4ODw0ODg4NDxAQEBEREBAQEA8TEhMPEBETFBQTERMWFhYTFhUVFhkWGRYWEgEFBQUKBwoICQkICwgKCAsKCgkJCgoMCQoJCgkMDQsKCwsKCw0MCwsICwsMDAwNDQwMDQoLCg0MDQ0MExQTExOc/8IAEQgAlgCWAwEiAAIRAQMRAf/EAHQAAAEFAQEAAAAAAAAAAAAAAAIBAwQFBgcAEAABAwEGAwYEBgMBAAAAAAABAAIDEQQQEiExUSIwQQUTIGFxkTJAgcEUM6Gx0eFCUnLwEQACAQIFAwUBAQEAAAAAAAAAAREhMRBBUWFxgZHBIKGx0fDh8TD/2gAMAwEAAgADAAAAAecL4rapU/GbaKXiFF9Xic/1QcaRaer5r7JIaONNi6Ik2DoCYdH510VF504jpB4l842ni8Xq6qky6e3iy9rfVFryk+o83fYeUT0+aFC97zbbwNmz0XnfRBPn7guON+XxGCKXiGgtGArLreXvNtdm729xQ3boZJZLGxxgC6CeEDRCY6FgN+25gXANwFMTcbVfeMKy+rDqry02PPbGguujRI9fHdy8VV3WGATFEATADDe4TdieDISJDNtxxtVHzgFS2lfDnv3rOhzGlcyumzMuEnve0+XFCFCFswaNN1hN2J4JxpwvGUStbct6uCkCaM+vnR5d30XLaWqtJ/O+i89D1JOz46Cg040FpOgyAIHWU3eD3gngCaiI7AVs6W2UTAFacAC9ttPybVwpnQ8tYUDDuVGetjX1jytkl+AHfUQb3Ab9s+dVVlTx5vn46103Q0d7YAuPbsmF9CdEVSdYQOgsPMSbujjSecqhzoNk/Fk3NQ30HnvQlHl0B5iBZ+8rcZ2232S1wlOqpYNnQUG5yijWaDK2Kn0J+i0VRacsZ6Vzy0rHpMKXc0ydC530Rxrj69f9V23IGuyeFeZa6/8AGlDaSvRnYFPp/e9ykOs+eDG3tr6rsnGD8zJy9J0P2hzvOui+9Or/AP/aAAgBAQABBQL5p0qxlVQeUDXnSvpcxpchZ3p+JqGXOlOcTExqaE+IFTxd25unMlHExQELKr3NXaAQ5smtKnuixoi7yOGI1mhxMezCeZJrFG1ynFBZvywwKZSuxO5kjaiKRWmQOUAIbFaA9Wm0YTzgCCGUUcrEGJzsR5pdRGRWa1BFharNIZUW4Dy3PATpiibm8Kjiau7Fe0MpRMg4HkOfhRkJ8DBVWVpamuoqrtL47g8pklfCTTxNdRWe04U19U1doRE+Bpp4ZT4waKG1I2trRJb8SkbQwR9497cJCacr3nNNzNpjwN8AVaqCyulU9k4LBB3La1uj0uPgtZrJH2c+ronNLmFt8RzhetVavyLo73m8K0/HaZTGrThAZF31nfCyJphwoAKzvTHqaISNkYWFR3vuN0cRKdNRkMOFQ1/DW1odFA0lDIxuzY5McrTZxKHxlhZ44n0FnpKvxGC0WpncwMf+LhbMHxPoEDnGaqMpjlJGHK0xNaLv/9oACAEDAAE/AUTcyMv0X4N24UkLma+91ULib7NHkPPVNsY6lWmy4RuD+iOVwNxRKqrK/JnoopSemYUhL2uFPROqCQdQSD6oG6qN/Z8wOGufQ/ZMk4zTPLopZQxhdXIJ78RJPUk+6CFxRusINdMj1UQyq0+uWa7WfSIYdHml4uKjs7n+Q3Udka3XiPn/AAgFZm0CtjeD6qSxNdpw/t7KWyOZn8QQuazEQEL4Z+hU8zS3DcRXLdEUJG11nbqfDDEHalTw04hdMON10LaC4dV/aKidQocQoeqmhLD5bq0N47hcNVutroijmF2mKPyyyu//2gAIAQIAAT8BQConyBmqNsbsVHM1+nsqI3gIXWl9S7yT7WegVmtNSOhH6oZqiIuF87PzFNHTOuRNFC0MIzTaEAjQjK4qiCCorbDk+hp/kPuns4ADlmoIy54b1OiawNAGwp7IhFUQQutlKa5hTuNaEemy7JjxSnFqwVuKNwUlpbH5nZSWxztOH0/lB9PqrbJU0HTU7/TdWNxxa9FHbnN14v391FbGvy0KNznYQSnlC6eCuY16qzxODq097mmlCsVQDuirS/IBFVVbrRKWjIaqCbFwm6E8DfRVVodV36XPGi/pAqVuJpR4TUKGUP8AVWc8Ppc7W5+g9Puj0W/qEFOMymars41Z9bv/2gAIAQEABj8C+c1+QpdotFmEPkswj8lqE084XB7cvJB1c0dD677IDSrm/REbc31WaAQzub/039047nn7lUoDvUqlC07JvXPn0CzBVO7K4NQCVXn1Co5Vjz8lJvoi3bm5ZX5t+6BasXXr5qo2Cz5wVdWrLS5v/N+vNpq28O21+RzW6p0Pt/dzWnQnNEbEj25A6JnniIO4r49hugG6t/VGeT0aPvyg3/UNb5LjFB61TgR8OqHmKjxOrmcdfflH/wBkoxXLBn+gVocKOOEDzFciD+6NRXB8G+g0WME8QoK+a1qUL6Kh5LXE1q0/wmh1KvAGYrrTopoydW1c7zNeikZ1Y05jfEapjq4dCK+ic4+/h8+ioeRXaijr/gfsng54yG+gRY065vO9Sntph7vT0onEtoGdBsgW6FevgzFUHNFM7//aAAgBAQEBPyHBIgjGPTBBBHqXpgdBtrMcUE8TPgVvX5F2el+hIj0MoZ5klAUhx0egjYanvmMqGd/TA8EL0yOtBaabUilEJdsNXQZBMnZ/BYm8el4IXpg5QLUcUMVhtJfaLJd4g3JXXIShHoY0L1KjjA1L5hEgGzzuWv8Achksp6CVKJSnJvg8j4hNQZScFbZle2MYtC9SQr1L2QooqKUZugyop3LlIj+WQ39I4y9vWsVjYLoiaIFKU5Le4qovdbcW4HlIq7bR5kQSUJV1ScYR6WLBC9DKhvjQ1SnOVJTVdrUnuV1CHCbJQfvXf/BYL0KvcDtD+DG/k7CadL39Hn1Fk1FGlqn2xaDNHX/gsFhdX0GvwxjdXI6wkShA1xDuIKg+KjRFRlH4zQuUNu5dTSdUWR4vFYJ5aG2rbFk2qFqV7DpX9g8A0K0fo0bxWsLF3xYiBOg3Ll54sZN2zNEd3RcL/RtBYu1OybMaHhMTxeFGMGPB4OaUWkE93OyousuxI4TiiJ7NTumNkW6zUoVRkJlks2VnmsLOUYJkweEjdhiJVuDalvIUrR0BZtD7z2wgawYeY+BtRareNSSu25vK/wDBCg001bNNuJeNqjkbebnvg1mjGMaFJeTQVYHOGlAZJRTwpY/QVU2kaqo0k8nHQeFT07ZTw8mTl2mNVb2dGNY6nGRRBYlQqjd4p9hYWvkYylyK5sPDU6olXczDT3JR7EENGTK7afxsgUjJWQ6FRDkPEtU913yT8IuBq2vknrISqZEhoi9jIK8DE9n7PJjWuGv04NceDS+MErhQc0D2mAuSFigmB7onXITX8FotFdC3fyPFSqtZIc6wl0ZH02ZOkqUT2y2F9m6SzfOiEozOhD1EKRMjTC3eOCLMP54KGPC+HjBzqnNOjkiMlvq0kMbLsXW6qRvVD6sMsysT6zHQRlCprKPE7wnPcWmhLLopfnyJWULo7qHBQvQRsGW5YyGqkns2iaVoe2DP/9oADAMBAQIBAwEAABDe0EC4zfBCPOfQMPIck6lKvLBX9xZkj7E2HIMpM+Baq0HzWeJsu8ItCy5bO+k68PUBkRpsmE0HaHNbpmk4c/Tsoq1kuMHMKCBPDKL/2gAIAQMBAT8QbwJHULMXeSFoHf6LApoqv4SIMThtkkS0ocW3I4qvQna2/gVGtG12E8KRsQySNHhCmHFE8op+tJ5qtWvqKnYQGiOGu+CmI5hklAFBRaRd2EKFCjNAydA2+l6XkZdzjlpYw/oIEnqiruVo3uKS" alt="Akshay Wadhwa" class="w-full h-full rounded-full object-cover" loading="lazy">
+                    </div>
+                    <h3 class="font-display font-bold text-xl mt-5">Akshay Wadhwa <i class="fa-solid fa-circle-check text-volt text-base" title="Verified"></i></h3>
+                    <p class="text-volt text-sm mt-1">@thegenzskool</p>
+                    <p class="text-white/50 text-sm mt-1 font-display">44.1K followers</p>
+                    <span class="inline-flex items-center gap-2 mt-4 text-sm text-white/60"><i class="fa-brands fa-instagram text-xl text-gold"></i>View Instagram</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ══════════ 04 · STATS COUNTER STRIP ══════════ -->
+        <section class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-20 pb-6">
+            <div class="rv glass rounded-3xl px-6 py-10 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center cyan-glow relative overflow-hidden">
+                <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 60% 120% at 50% 0%,rgba(34,211,238,.12),transparent);"></div>
+                <div class="relative">
+                    <p class="font-display font-bold text-5xl text-volt"><span class="counter" data-target="3">0</span>+</p>
+                    <p class="text-white/55 mt-2 font-display tracking-widest text-sm">YEARS EXPERIENCE</p>
+                </div>
+                <div class="relative">
+                    <p class="font-display font-bold text-5xl text-mint"><span class="counter" data-target="200">0</span>+</p>
+                    <p class="text-white/55 mt-2 font-display tracking-widest text-sm">PROJECTS COMPLETED</p>
+                </div>
+                <div class="relative">
+                    <p class="font-display font-bold text-5xl text-gold"><span class="counter" data-target="75">0</span>+</p>
+                    <p class="text-white/55 mt-2 font-display tracking-widest text-sm">GLOBAL CLIENTS</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════ 05 · WHY CHOOSE ME BENTO ══════════ -->
+        <section id="why-me" class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-24 sm:pt-28 pb-10">
+            <div class="rv mb-10">
+                <p class="font-display text-volt text-sm tracking-[.35em] mb-3">04 — WHY ME</p>
+                <h2 class="font-display font-bold text-4xl sm:text-5xl">Why Choose <span class="text-transparent bg-clip-text bg-gradient-to-r from-volt via-mint to-gold">Me</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-5 persp">
+                <div class="rv tilt glass rounded-3xl p-8 md:col-span-2" data-tilt>
+                    <i class="fa-solid fa-gem text-4xl text-volt mb-5"></i>
+                    <h3 class="font-display font-bold text-2xl mb-3">Premium Quality</h3>
+                    <p class="text-white/60 leading-relaxed">Every project is crafted with cinematic precision — clean cuts, rich color, and motion design that looks expensive. No templates, no shortcuts.</p>
+                </div>
+                <div class="rv tilt glass rounded-3xl p-8" data-tilt>
+                    <i class="fa-solid fa-bolt text-4xl text-gold mb-5"></i>
+                    <h3 class="font-display font-bold text-2xl mb-3">Fast Turnaround</h3>
+                    <p class="text-white/60 leading-relaxed">Tight deadline? I deliver polished edits at speed without compromising quality.</p>
+                </div>
+                <div class="rv tilt glass rounded-3xl p-8" data-tilt>
+                    <i class="fa-solid fa-earth-americas text-4xl text-mint mb-5"></i>
+                    <h3 class="font-display font-bold text-2xl mb-3">Global Experience</h3>
+                    <p class="text-white/60 leading-relaxed">75+ clients across the world — I adapt to any audience, niche, or platform.</p>
+                </div>
+                <div class="rv tilt glass rounded-3xl p-8" data-tilt>
+                    <i class="fa-solid fa-tag text-4xl text-volt mb-5"></i>
+                    <h3 class="font-display font-bold text-2xl mb-3">Unbeatable Pricing</h3>
+                    <p class="text-white/60 leading-relaxed">Agency-level output at freelancer pricing. Try the first project for less than a Starbucks coffee.</p>
+                </div>
+                <div class="rv tilt glass rounded-3xl p-8" data-tilt>
+                    <i class="fa-solid fa-user-tie text-4xl text-gold mb-5"></i>
+                    <h3 class="font-display font-bold text-2xl mb-3">Dedicated Editor</h3>
+                    <p class="text-white/60 leading-relaxed">You work directly with me — the founder — not a rotating team of juniors.</p>
+                </div>
+                <div class="rv tilt gold-glass rounded-3xl p-8 md:col-span-3 flex flex-col sm:flex-row items-start sm:items-center gap-5" data-tilt>
+                    <i class="fa-solid fa-headset text-4xl text-gold shrink-0"></i>
                     <div>
-                        <p class="text-xs font-bold tracking-[.35em] text-volt mb-4">01 &mdash; SHOWREEL</p>
-                        <h2 class="font-display text-4xl md:text-6xl font-bold">Selected <span class="grad-head">Work</span></h2>
-                        <p class="mt-4 text-gray-400 max-w-xl">Eight recent cuts &mdash; documentaries, animated ads and vertical edits, hosted on Vimeo.</p>
-                    </div>
-                    <a href="/portfolio" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-ink bg-gradient-to-r from-gold to-amber-300 hover:shadow-[0_0_30px_rgba(251,191,36,.45)] transition-all">View More Works <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6">
-                    <figure class="rv tilt-wrap col-span-1 md:col-span-6">
-                        <div data-tilt class="h-full">
-                            <div class="relative w-full overflow-hidden rounded-3xl glass edge-soft bg-black/60 aspect-[9/16]">
-                                <iframe src="https://player.vimeo.com/video/1240103124?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Mumbai Investigation Documentary" loading="lazy"></iframe>
-                            </div>
-                            <figcaption class="mt-3 flex items-center gap-3"><span class="w-1.5 h-9 rounded-full bg-gradient-to-b from-volt to-mint shrink-0"></span><span class="font-semibold text-gray-100 text-sm md:text-lg">Mumbai Investigation Documentary</span></figcaption>
-                        </div>
-                    </figure>
-                    <figure class="rv rv-d1 tilt-wrap col-span-1 md:col-span-6">
-                        <div data-tilt class="h-full">
-                            <div class="relative w-full overflow-hidden rounded-3xl glass edge-soft bg-black/60 aspect-[9/16]">
-                                <iframe src="https://player.vimeo.com/video/1240103461?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Colgate Animated Ad" loading="lazy"></iframe>
-                            </div>
-                            <figcaption class="mt-3 flex items-center gap-3"><span class="w-1.5 h-9 rounded-full bg-gradient-to-b from-gold to-amber-500 shrink-0"></span><span class="font-semibold text-gray-100 text-sm md:text-lg">Colgate Animated Ad</span></figcaption>
-                        </div>
-                    </figure>
-                    <figure class="rv tilt-wrap col-span-1 md:col-span-4">
-                        <div data-tilt class="h-full">
-                            <div class="relative w-full overflow-hidden rounded-3xl glass edge-soft bg-black/60 aspect-[9/16]">
-                                <iframe src="https://player.vimeo.com/video/1240103662?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="India 44 Km Documentary - Part 2" loading="lazy"></iframe>
-                            </div>
-                            <figcaption class="mt-3 flex items-center gap-3"><span class="w-1.5 h-9 rounded-full bg-gradient-to-b from-mint to-volt shrink-0"></span><span class="font-semibold text-gray-100 text-sm md:text-base">India 44 Km Documentary - Part 2</span></figcaption>
-                        </div>
-                    </figure>
-                    <figure class="rv rv-d1 tilt-wrap col-span-1 md:col-span-4">
-                        <div data-tilt class="h-full">
-                            <div class="relative w-full overflow-hidden rounded-3xl glass edge-soft bg-black/60 aspect-[9/16]">
-                                <iframe src="https://player.vimeo.com/video/1240103811?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Rocket Blueprint Documentary - Part 1" loading="lazy"></iframe>
-                            </div>
-                            <figcaption class="mt-3 flex items-center gap-3"><span class="w-1.5 h-9 rounded-full bg-gradient-to-b from-volt to-gold shrink-0"></span><span class="font-semibold text-gray-100 text-sm md:text-base">Rocket Blueprint Documentary - Part 1</span></figcaption>
-                        </div>
-                    </figure>
-                    <figure class="rv rv-d2 tilt-wrap col-span-1 md:col-span-4">
-                        <div data-tilt class="h-full">
-                            <div class="relative w-full overflow-hidden rounded-3xl glass edge-soft bg-black/60 aspect-[9/16]">
-                                <iframe src="https://player.vimeo.com/video/1224003113?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Recent Work" loading="lazy"></iframe>
-                            </div>
-                            <figcaption class="mt-3 flex items-center gap-3"><span class="w-1.5 h-9 rounded-full bg-gradient-to-b from-gold to-mint shrink-0"></span><span class="font-semibold text-gray-100 text-sm md:text-base">Recent Work</span></figcaption>
-                        </div>
-                    </figure>
-                    <figure class="rv tilt-wrap col-span-1 md:col-span-4">
-                        <div data-tilt class="h-full">
-                            <div class="relative w-full overflow-hidden rounded-3xl glass edge-soft bg-black/60 aspect-[9/16]">
-                                <iframe src="https://player.vimeo.com/video/1224003112?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Recent Work" loading="lazy"></iframe>
-                            </div>
-                            <figcaption class="mt-3 flex items-center gap-3"><span class="w-1.5 h-9 rounded-full bg-gradient-to-b from-mint to-gold shrink-0"></span><span class="font-semibold text-gray-100 text-sm md:text-base">Recent Work</span></figcaption>
-                        </div>
-                    </figure>
-                    <figure class="rv rv-d1 tilt-wrap col-span-1 md:col-span-4">
-                        <div data-tilt class="h-full">
-                            <div class="relative w-full overflow-hidden rounded-3xl glass edge-soft bg-black/60 aspect-[9/16]">
-                                <iframe src="https://player.vimeo.com/video/1223935407?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Recent Work" loading="lazy"></iframe>
-                            </div>
-                            <figcaption class="mt-3 flex items-center gap-3"><span class="w-1.5 h-9 rounded-full bg-gradient-to-b from-volt to-mint shrink-0"></span><span class="font-semibold text-gray-100 text-sm md:text-base">Recent Work</span></figcaption>
-                        </div>
-                    </figure>
-                    <figure class="rv rv-d2 tilt-wrap col-span-1 md:col-span-4">
-                        <div data-tilt class="h-full">
-                            <div class="relative w-full overflow-hidden rounded-3xl glass edge-soft bg-black/60 aspect-[9/16]">
-                                <iframe src="https://player.vimeo.com/video/1224077827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Recent Work" loading="lazy"></iframe>
-                            </div>
-                            <figcaption class="mt-3 flex items-center gap-3"><span class="w-1.5 h-9 rounded-full bg-gradient-to-b from-gold to-volt shrink-0"></span><span class="font-semibold text-gray-100 text-sm md:text-base">Recent Work</span></figcaption>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ 02 · LONG FORM : wide cinematic cards ============ -->
-        <section id="longform" class="relative py-24 md:py-32 border-t border-white/5 scroll-mt-24 overflow-hidden">
-            <div class="absolute inset-0 blueprint opacity-40" aria-hidden="true"></div>
-            <div class="relative max-w-7xl mx-auto px-5 md:px-8">
-                <div class="rv mb-12 md:mb-16">
-                    <p class="text-xs font-bold tracking-[.35em] text-gold mb-4">02 &mdash; LONG FORM</p>
-                    <h2 class="font-display text-4xl md:text-6xl font-bold">Long-Form <span class="grad-head">Documentaries</span></h2>
-                    <p class="mt-4 text-gray-400 max-w-xl">Full-length stories, cut for retention. Tap a frame to watch.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6 md:gap-10">
-                    <article class="rv tilt-wrap">
-                        <div data-tilt>
-                            <div class="relative rounded-[1.6rem] overflow-hidden glass edge-gold cursor-pointer group" data-yt="Y-AG6qYqFfs" data-title="Why Hindus Are Targeted? The Political Truth Nobody Explains" role="button" tabindex="0" aria-label="Play: Why Hindus Are Targeted? The Political Truth Nobody Explains">
-                                <div class="lf-media relative aspect-video bg-black">
-                                    <div class="lf-poster absolute inset-0">
-                                        <img src="https://i.ytimg.com/vi/Y-AG6qYqFfs/maxresdefault.jpg" alt="Why Hindus Are Targeted? The Political Truth Nobody Explains — thumbnail" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-                                        <div class="absolute inset-0 flex items-center justify-center">
-                                            <span class="play-medallion w-20 h-20 rounded-full bg-gradient-to-br from-gold to-amber-500 flex items-center justify-center text-ink text-2xl shadow-[0_0_44px_rgba(251,191,36,.55)] group-hover:scale-110 transition-transform"><i class="fas fa-play ml-1"></i></span>
-                                        </div>
-                                        <span class="absolute top-4 right-4 glass rounded-lg px-2.5 py-1 text-xs font-bold text-gold">16:44</span>
-                                        <span class="absolute top-4 left-4 rounded-lg px-2.5 py-1 text-[10px] font-bold tracking-[.25em] bg-gold/90 text-ink">DOCUMENTARY</span>
-                                    </div>
-                                </div>
-                                <div class="p-6 md:p-7">
-                                    <h3 class="font-display text-xl md:text-2xl font-bold leading-snug">Why Hindus Are Targeted? The Political Truth Nobody Explains</h3>
-                                    <p class="mt-2.5 text-sm text-gray-400">Long-form documentary edit <span class="text-gold mx-1">&bull;</span> YouTube</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="rv rv-d1 tilt-wrap">
-                        <div data-tilt>
-                            <div class="relative rounded-[1.6rem] overflow-hidden glass edge-gold cursor-pointer group" data-yt="2MyTrl8KihQ" data-title="The Network Marketing(MLM) Scam || Ravi Sharma" role="button" tabindex="0" aria-label="Play: The Network Marketing(MLM) Scam || Ravi Sharma">
-                                <div class="lf-media relative aspect-video bg-black">
-                                    <div class="lf-poster absolute inset-0">
-                                        <img src="https://i.ytimg.com/vi/2MyTrl8KihQ/maxresdefault.jpg" alt="The Network Marketing(MLM) Scam || Ravi Sharma — thumbnail" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-                                        <div class="absolute inset-0 flex items-center justify-center">
-                                            <span class="play-medallion w-20 h-20 rounded-full bg-gradient-to-br from-gold to-amber-500 flex items-center justify-center text-ink text-2xl shadow-[0_0_44px_rgba(251,191,36,.55)] group-hover:scale-110 transition-transform"><i class="fas fa-play ml-1"></i></span>
-                                        </div>
-                                        <span class="absolute top-4 right-4 glass rounded-lg px-2.5 py-1 text-xs font-bold text-gold">6:10</span>
-                                        <span class="absolute top-4 left-4 rounded-lg px-2.5 py-1 text-[10px] font-bold tracking-[.25em] bg-gold/90 text-ink">DOCUMENTARY</span>
-                                    </div>
-                                </div>
-                                <div class="p-6 md:p-7">
-                                    <h3 class="font-display text-xl md:text-2xl font-bold leading-snug">The Network Marketing(MLM) Scam || Ravi Sharma</h3>
-                                    <p class="mt-2.5 text-sm text-gray-400">Long-form documentary edit <span class="text-gold mx-1">&bull;</span> YouTube</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ 03 · CLIENTS : 3D tilt creator cards ============ -->
-        <section id="clients" class="relative py-24 md:py-32 border-t border-white/5 scroll-mt-24">
-            <div class="max-w-6xl mx-auto px-5 md:px-8">
-                <div class="rv text-center mb-12 md:mb-16">
-                    <p class="text-xs font-bold tracking-[.35em] text-mint mb-4">03 &mdash; CLIENTS</p>
-                    <h2 class="font-display text-4xl md:text-6xl font-bold">Recently <span class="grad-head">Worked With</span></h2>
-                    <p class="mt-4 text-gray-400 max-w-xl mx-auto">Recent collaborations with creators and their communities.</p>
-                </div>
-                <div class="grid sm:grid-cols-2 gap-6 md:gap-10 max-w-4xl mx-auto">
-                    <article class="rv tilt-wrap">
-                        <div data-tilt class="glass edge-cyan rounded-[1.8rem] p-8 md:p-10 text-center relative overflow-hidden h-full">
-                            <div class="absolute -top-16 -right-16 w-48 h-48 rounded-full" style="background:radial-gradient(circle,rgba(34,211,238,.28),transparent 70%)" aria-hidden="true"></div>
-                            <div class="relative w-24 h-24 mx-auto rounded-full p-[3px] bg-gradient-to-br from-volt via-mint to-gold">
-                                <div class="w-full h-full rounded-full bg-ink flex items-center justify-center font-display text-4xl font-bold text-volt">K</div>
-                            </div>
-                            <h3 class="mt-6 font-display text-2xl font-bold">Krish Chakraborty</h3>
-                            <a href="https://www.instagram.com/theproudindiankrish" target="_blank" rel="noopener" class="text-volt font-semibold hover:underline">@theproudindiankrish</a>
-                            <p class="mt-2 text-gray-400 text-sm tracking-[.2em] font-semibold">33.5K FOLLOWERS</p>
-                            <a href="https://www.instagram.com/theproudindiankrish" target="_blank" rel="noopener" class="mt-7 inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-volt/40 text-volt font-bold hover:bg-volt/10 transition-colors"><i class="fa-brands fa-instagram text-lg"></i> View on Instagram</a>
-                        </div>
-                    </article>
-                    <article class="rv rv-d1 tilt-wrap">
-                        <div data-tilt class="glass edge-gold rounded-[1.8rem] p-8 md:p-10 text-center relative overflow-hidden h-full">
-                            <div class="absolute -top-16 -left-16 w-48 h-48 rounded-full" style="background:radial-gradient(circle,rgba(251,191,36,.25),transparent 70%)" aria-hidden="true"></div>
-                            <div class="relative w-24 h-24 mx-auto rounded-full p-[3px] bg-gradient-to-br from-gold via-amber-300 to-volt">
-                                <div class="w-full h-full rounded-full bg-ink flex items-center justify-center font-display text-4xl font-bold text-gold">A</div>
-                            </div>
-                            <h3 class="mt-6 font-display text-2xl font-bold">Akshay Wadhwa <i class="fas fa-circle-check text-volt text-xl align-middle" title="Verified"></i></h3>
-                            <a href="https://www.instagram.com/thegenzskool" target="_blank" rel="noopener" class="text-gold font-semibold hover:underline">@thegenzskool</a>
-                            <p class="mt-2 text-gray-400 text-sm tracking-[.2em] font-semibold">44.1K FOLLOWERS</p>
-                            <a href="https://www.instagram.com/thegenzskool" target="_blank" rel="noopener" class="mt-7 inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gold/40 text-gold font-bold hover:bg-gold/10 transition-colors"><i class="fa-brands fa-instagram text-lg"></i> View on Instagram</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ 04 · PROOF : animated glass counter strip ============ -->
-        <section class="relative py-16 md:py-20 border-y border-white/5 bg-white/[0.015]" aria-label="Statistics">
-            <div class="max-w-6xl mx-auto px-5 md:px-8">
-                <p class="rv text-center text-xs font-bold tracking-[.35em] text-gray-500 mb-10">04 &mdash; BY THE NUMBERS</p>
-                <div class="grid grid-cols-3 gap-3 md:gap-8">
-                    <div class="rv glass edge-soft rounded-3xl py-8 md:py-12 px-2 md:px-4 text-center relative overflow-hidden">
-                        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-volt to-transparent"></div>
-                        <div class="font-display text-4xl md:text-6xl font-bold text-volt"><span class="counter" data-count="3">0</span>+</div>
-                        <p class="mt-3 text-[10px] md:text-sm uppercase tracking-[.2em] text-gray-400 font-semibold">Years Experience</p>
-                    </div>
-                    <div class="rv rv-d1 glass edge-soft rounded-3xl py-8 md:py-12 px-2 md:px-4 text-center relative overflow-hidden">
-                        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
-                        <div class="font-display text-4xl md:text-6xl font-bold text-gold"><span class="counter" data-count="200">0</span>+</div>
-                        <p class="mt-3 text-[10px] md:text-sm uppercase tracking-[.2em] text-gray-400 font-semibold">Projects Delivered</p>
-                    </div>
-                    <div class="rv rv-d2 glass edge-soft rounded-3xl py-8 md:py-12 px-2 md:px-4 text-center relative overflow-hidden">
-                        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-mint to-transparent"></div>
-                        <div class="font-display text-4xl md:text-6xl font-bold text-mint"><span class="counter" data-count="75">0</span>+</div>
-                        <p class="mt-3 text-[10px] md:text-sm uppercase tracking-[.2em] text-gray-400 font-semibold">Global Clients</p>
+                        <h3 class="font-display font-bold text-2xl mb-2">24/7 Support</h3>
+                        <p class="text-white/60 leading-relaxed">Questions, revisions, urgent launches — I'm reachable around the clock until your video is perfect.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ============ 05 · WHY ME : bento ============ -->
-        <section id="why" class="relative py-24 md:py-32 scroll-mt-24">
-            <div class="max-w-7xl mx-auto px-5 md:px-8">
-                <div class="rv mb-12 md:mb-16">
-                    <p class="text-xs font-bold tracking-[.35em] text-volt mb-4">05 &mdash; WHY ME</p>
-                    <h2 class="font-display text-4xl md:text-6xl font-bold">Why Choose <span class="grad-head">Me?</span></h2>
-                    <p class="mt-4 text-gray-400 max-w-2xl">I bring expertise, speed, and quality to every frame I cut. Ranked top among video editors.</p>
-                </div>
-                <div class="grid md:grid-cols-6 gap-4 md:gap-6">
-                    <article class="rv tilt-wrap md:col-span-3">
-                        <div data-tilt class="glass edge-cyan rounded-3xl p-7 md:p-9 h-full flex gap-5 items-start">
-                            <div class="w-14 h-14 shrink-0 rounded-2xl bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-2xl"><i class="fas fa-star"></i></div>
-                            <div><h3 class="font-display font-bold text-xl md:text-2xl mb-2">Premium Quality</h3><p class="text-gray-400 text-sm md:text-base leading-relaxed">Top-tier visual effects, smooth transitions, and a polished final cut every time.</p></div>
-                        </div>
-                    </article>
-                    <article class="rv rv-d1 tilt-wrap md:col-span-3">
-                        <div data-tilt class="glass edge-gold rounded-3xl p-7 md:p-9 h-full flex gap-5 items-start">
-                            <div class="w-14 h-14 shrink-0 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl"><i class="fas fa-rocket"></i></div>
-                            <div><h3 class="font-display font-bold text-xl md:text-2xl mb-2">Fast Turnaround</h3><p class="text-gray-400 text-sm md:text-base leading-relaxed">I value your time. Get your high-quality edits delivered faster than industry standards.</p></div>
-                        </div>
-                    </article>
-                    <article class="rv tilt-wrap md:col-span-2">
-                        <div data-tilt class="glass edge-soft rounded-3xl p-7 h-full">
-                            <div class="w-12 h-12 rounded-2xl bg-mint/10 border border-mint/30 flex items-center justify-center text-mint text-xl mb-4"><i class="fas fa-globe"></i></div>
-                            <h3 class="font-display font-bold text-lg mb-2">Global Experience</h3><p class="text-gray-400 text-sm leading-relaxed">Trusted by 75+ clients worldwide, adapting to different cultural styles and trends.</p>
-                        </div>
-                    </article>
-                    <article class="rv rv-d1 tilt-wrap md:col-span-2">
-                        <div data-tilt class="glass edge-soft rounded-3xl p-7 h-full">
-                            <div class="w-12 h-12 rounded-2xl bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-xl mb-4"><i class="fas fa-tag"></i></div>
-                            <h3 class="font-display font-bold text-lg mb-2">Unbeatable Pricing</h3><p class="text-gray-400 text-sm leading-relaxed">Premium doesn&rsquo;t mean overpriced. I offer the best value for your investment.</p>
-                        </div>
-                    </article>
-                    <article class="rv rv-d2 tilt-wrap md:col-span-2">
-                        <div data-tilt class="glass edge-soft rounded-3xl p-7 h-full">
-                            <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl mb-4"><i class="fas fa-users"></i></div>
-                            <h3 class="font-display font-bold text-lg mb-2">Dedicated Editor</h3><p class="text-gray-400 text-sm leading-relaxed">I work to handle any complex workflow or volume.</p>
-                        </div>
-                    </article>
-                    <article class="rv tilt-wrap md:col-span-6">
-                        <div data-tilt class="rounded-3xl p-[1.5px] bg-gradient-to-r from-volt via-mint to-gold h-full">
-                            <div class="rounded-3xl bg-ink/90 px-7 md:px-9 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                                <div class="w-12 h-12 shrink-0 rounded-2xl bg-mint/10 border border-mint/30 flex items-center justify-center text-mint text-xl"><i class="fas fa-headset"></i></div>
-                                <div><h3 class="font-display font-bold text-lg md:text-xl">24/7 Support</h3><p class="text-gray-400 text-sm md:text-base">My support is always available. I am here whenever you need revisions or help.</p></div>
-                                <button data-wa class="sm:ml-auto shrink-0 px-6 py-3 rounded-xl font-bold text-ink bg-gradient-to-r from-volt to-mint hover:shadow-[0_0_28px_rgba(34,211,238,.5)] transition-all">Chat Now</button>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+        <!-- ══════════ 06 · EXPERTISE CHIP DECK ══════════ -->
+        <section id="expertise" class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-24 sm:pt-28 pb-10">
+            <div class="rv mb-10">
+                <p class="font-display text-gold text-sm tracking-[.35em] mb-3">05 — EXPERTISE</p>
+                <h2 class="font-display font-bold text-4xl sm:text-5xl">What I <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-mint">Do Best</span></h2>
+                <p class="text-white/55 mt-3 max-w-xl">Fourteen specialties, one standard: unforgettable.</p>
+            </div>
+            <div class="rv flex flex-wrap gap-3 sm:gap-4 persp" id="chipDeck">
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-wand-magic-sparkles text-volt mr-2"></i>Motion Graphics</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-scissors text-mint mr-2"></i>Simple Edits</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-mobile-screen text-gold mr-2"></i>Short Videos</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-film text-volt mr-2"></i>Long Videos</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-clapperboard text-mint mr-2"></i>Documentary Edits</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-music text-gold mr-2"></i>Music Videos</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-laptop-code text-volt mr-2"></i>SaaS UI Animation</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-podcast text-mint mr-2"></i>Podcasts</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-bolt text-gold mr-2"></i>Short Clips</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-graduation-cap text-volt mr-2"></i>Educational</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-building text-mint mr-2"></i>Real Estate Ads</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-circle-info text-gold mr-2"></i>Informational</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-map-location-dot text-volt mr-2"></i>Map Animations</span>
+                <span class="tilt glass rounded-2xl px-6 py-4 font-display font-semibold" data-tilt><i class="fa-solid fa-palette text-mint mr-2"></i>Color Grading</span>
+                <span class="tilt gold-glass rounded-2xl px-6 py-4 font-display font-bold text-gold" data-tilt><i class="fa-solid fa-plus mr-2"></i>Many More</span>
             </div>
         </section>
 
-        <!-- ============ 06 · EXPERTISE : staggered chip deck ============ -->
-        <section id="expertise" class="relative py-24 md:py-32 border-t border-white/5 scroll-mt-24 overflow-hidden">
-            <div class="absolute inset-0 blueprint opacity-30" aria-hidden="true"></div>
-            <div class="relative max-w-7xl mx-auto px-5 md:px-8">
-                <div class="rv text-center mb-14 md:mb-20">
-                    <p class="text-xs font-bold tracking-[.35em] text-gold mb-4">06 &mdash; EXPERTISE</p>
-                    <h2 class="font-display text-4xl md:text-6xl font-bold">My <span class="grad-head">Expertise</span></h2>
-                    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">I offer a wide array of premium editing services tailored to elevate your visual identity.</p>
-                </div>
-                <div class="rv grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-                    <div class="tilt-wrap"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-lg"><i class="fas fa-layer-group"></i></div><h3 class="font-semibold text-sm md:text-base">Motion Graphics</h3></div></div>
-                    <div class="tilt-wrap md:translate-y-10"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-lg"><i class="fas fa-cut"></i></div><h3 class="font-semibold text-sm md:text-base">Simple Edits</h3></div></div>
-                    <div class="tilt-wrap md:translate-y-10"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-mint/10 border border-mint/30 flex items-center justify-center text-mint text-lg"><i class="fas fa-mobile-alt"></i></div><h3 class="font-semibold text-sm md:text-base">Short Videos</h3></div></div>
-                    <div class="tilt-wrap"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-lg"><i class="fas fa-film"></i></div><h3 class="font-semibold text-sm md:text-base">Long Videos</h3></div></div>
-                    <div class="tilt-wrap"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-lg"><i class="fas fa-video"></i></div><h3 class="font-semibold text-sm md:text-base">Documentary Edits</h3></div></div>
-                    <div class="tilt-wrap md:translate-y-10"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-mint/10 border border-mint/30 flex items-center justify-center text-mint text-lg"><i class="fas fa-music"></i></div><h3 class="font-semibold text-sm md:text-base">Music Videos</h3></div></div>
-                    <div class="tilt-wrap md:translate-y-10"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-lg"><i class="fas fa-laptop-code"></i></div><h3 class="font-semibold text-sm md:text-base">SaaS UI Animation</h3></div></div>
-                    <div class="tilt-wrap"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-lg"><i class="fas fa-microphone-alt"></i></div><h3 class="font-semibold text-sm md:text-base">Podcasts</h3></div></div>
-                    <div class="tilt-wrap"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-mint/10 border border-mint/30 flex items-center justify-center text-mint text-lg"><i class="fas fa-bolt"></i></div><h3 class="font-semibold text-sm md:text-base">Short Clips</h3></div></div>
-                    <div class="tilt-wrap md:translate-y-10"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-lg"><i class="fas fa-graduation-cap"></i></div><h3 class="font-semibold text-sm md:text-base">Educational</h3></div></div>
-                    <div class="tilt-wrap md:translate-y-10"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-lg"><i class="fas fa-home"></i></div><h3 class="font-semibold text-sm md:text-base">Real Estate Ads</h3></div></div>
-                    <div class="tilt-wrap"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-mint/10 border border-mint/30 flex items-center justify-center text-mint text-lg"><i class="fas fa-info-circle"></i></div><h3 class="font-semibold text-sm md:text-base">Informational</h3></div></div>
-                    <div class="tilt-wrap"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-lg"><i class="fas fa-map-marked-alt"></i></div><h3 class="font-semibold text-sm md:text-base">Map Animations</h3></div></div>
-                    <div class="tilt-wrap md:translate-y-10"><div data-tilt class="glass edge-soft rounded-2xl p-5 md:p-6 flex flex-col items-center text-center gap-3 h-full"><div class="w-11 h-11 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-lg"><i class="fas fa-palette"></i></div><h3 class="font-semibold text-sm md:text-base">Color Grading</h3></div></div>
-                    <div class="tilt-wrap col-span-2 md:translate-y-10"><div data-tilt class="rounded-2xl h-full min-h-[7rem] bg-gradient-to-br from-gold to-amber-500 flex items-center justify-center shadow-[0_0_36px_rgba(251,191,36,.35)]"><span class="font-display font-bold text-ink text-xl md:text-2xl">+ Many More</span></div></div>
-                </div>
+        <!-- ══════════ 07 · HOW IT WORKS TIMELINE ══════════ -->
+        <section id="how-it-works" class="relative max-w-5xl mx-auto px-5 sm:px-8 pt-24 sm:pt-28 pb-10">
+            <div class="rv mb-14 text-center">
+                <p class="font-display text-mint text-sm tracking-[.35em] mb-3">06 — PROCESS</p>
+                <h2 class="font-display font-bold text-4xl sm:text-5xl">How It <span class="text-transparent bg-clip-text bg-gradient-to-r from-mint to-volt">Works</span></h2>
+                <p class="text-white/55 mt-3">Three steps from brief to delivery.</p>
             </div>
-        </section>
-
-        <!-- ============ 07 · PROCESS : 3D timeline ============ -->
-        <section id="how-it-works" class="relative py-24 md:py-32 border-t border-white/5 scroll-mt-24">
-            <div class="max-w-7xl mx-auto px-5 md:px-8">
-                <div class="rv text-center mb-14 md:mb-20">
-                    <p class="text-xs font-bold tracking-[.35em] text-mint mb-4">07 &mdash; PROCESS</p>
-                    <h2 class="font-display text-4xl md:text-6xl font-bold">How It <span class="grad-head">Works</span></h2>
-                    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Hire the best video editor in three simple steps.</p>
-                </div>
-                <div class="relative grid md:grid-cols-3 gap-8 md:gap-10">
-                    <div class="hidden md:block absolute top-12 left-[20%] right-[20%] h-[3px] beam rounded-full" aria-hidden="true"></div>
-                    <div class="rv tilt-wrap relative">
-                        <div data-tilt class="glass edge-cyan rounded-[1.6rem] p-8 md:p-9 text-center h-full relative">
-                            <div class="w-20 h-20 mx-auto rounded-3xl rotate-3 bg-ink border-2 border-volt flex items-center justify-center font-display text-3xl font-bold text-volt shadow-[0_0_28px_rgba(34,211,238,.45)] mb-6">1</div>
-                            <h3 class="font-display font-bold text-xl md:text-2xl mb-3">Share your brief</h3>
-                            <p class="text-gray-400 text-sm md:text-base leading-relaxed">Send me your raw footage, requirements, and vision. I&rsquo;ll analyze and plan the perfect cut.</p>
+            <div class="relative pl-10 sm:pl-0">
+                <div class="beam absolute left-4 sm:left-1/2 top-2 bottom-2 w-[3px] sm:-translate-x-1/2 rounded-full"></div>
+                <div class="space-y-12">
+                    <div class="rv relative sm:grid sm:grid-cols-2 sm:gap-16 items-center">
+                        <div class="absolute left-4 sm:left-1/2 top-1 -translate-x-1/2 w-9 h-9 rounded-full bg-ink border-2 border-volt flex items-center justify-center font-display font-bold text-volt text-sm cyan-glow z-10">1</div>
+                        <div class="tilt glass rounded-3xl p-7 sm:text-right sm:mr-10" data-tilt>
+                            <i class="fa-solid fa-paper-plane text-3xl text-volt mb-4"></i>
+                            <h3 class="font-display font-bold text-2xl mb-2">Share your brief</h3>
+                            <p class="text-white/60 leading-relaxed">Send your footage, script, or just an idea over WhatsApp or email. I'll ask the right questions to lock the vision.</p>
+                        </div><div></div>
+                    </div>
+                    <div class="rv relative sm:grid sm:grid-cols-2 sm:gap-16 items-center">
+                        <div></div>
+                        <div class="absolute left-4 sm:left-1/2 top-1 -translate-x-1/2 w-9 h-9 rounded-full bg-ink border-2 border-mint flex items-center justify-center font-display font-bold text-mint text-sm z-10" style="box-shadow:0 0 18px rgba(45,212,191,.7);">2</div>
+                        <div class="tilt glass rounded-3xl p-7 sm:ml-10" data-tilt>
+                            <i class="fa-solid fa-wand-magic-sparkles text-3xl text-mint mb-4"></i>
+                            <h3 class="font-display font-bold text-2xl mb-2">I edit &amp; create</h3>
+                            <p class="text-white/60 leading-relaxed">I cut, grade, animate, and sound-design your video into a cinematic piece — with progress updates along the way.</p>
                         </div>
                     </div>
-                    <div class="rv rv-d1 tilt-wrap relative">
-                        <div data-tilt class="glass edge-gold rounded-[1.6rem] p-8 md:p-9 text-center h-full relative">
-                            <div class="w-20 h-20 mx-auto rounded-3xl -rotate-3 bg-ink border-2 border-gold flex items-center justify-center font-display text-3xl font-bold text-gold shadow-[0_0_28px_rgba(251,191,36,.45)] mb-6">2</div>
-                            <h3 class="font-display font-bold text-xl md:text-2xl mb-3">I edit &amp; create</h3>
-                            <p class="text-gray-400 text-sm md:text-base leading-relaxed">I get to work, adding motion graphics, grading, and sound design to bring it alive.</p>
-                        </div>
-                    </div>
-                    <div class="rv rv-d2 tilt-wrap relative">
-                        <div data-tilt class="glass edge-soft rounded-[1.6rem] p-8 md:p-9 text-center h-full relative">
-                            <div class="w-20 h-20 mx-auto rounded-3xl rotate-3 bg-ink border-2 border-mint flex items-center justify-center font-display text-3xl font-bold text-mint shadow-[0_0_28px_rgba(45,212,191,.45)] mb-6">3</div>
-                            <h3 class="font-display font-bold text-xl md:text-2xl mb-3">Review &amp; deliver</h3>
-                            <p class="text-gray-400 text-sm md:text-base leading-relaxed">You review the draft, I make any requested tweaks instantly, and hand over the masterpiece.</p>
-                        </div>
+                    <div class="rv relative sm:grid sm:grid-cols-2 sm:gap-16 items-center">
+                        <div class="absolute left-4 sm:left-1/2 top-1 -translate-x-1/2 w-9 h-9 rounded-full bg-ink border-2 border-gold flex items-center justify-center font-display font-bold text-gold text-sm z-10" style="box-shadow:0 0 18px rgba(251,191,36,.7);">3</div>
+                        <div class="tilt glass rounded-3xl p-7 sm:text-right sm:mr-10" data-tilt>
+                            <i class="fa-solid fa-rocket text-3xl text-gold mb-4"></i>
+                            <h3 class="font-display font-bold text-2xl mb-2">Review &amp; deliver</h3>
+                            <p class="text-white/60 leading-relaxed">You review the cut, request revisions, and receive the final master files — ready to publish anywhere.</p>
+                        </div><div></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ============ 08 · FAQ : accordion ============ -->
-        <section id="faq" class="relative py-24 md:py-32 border-t border-white/5 scroll-mt-24">
-            <div class="max-w-4xl mx-auto px-5 md:px-8">
-                <div class="rv text-center mb-12 md:mb-14">
-                    <p class="text-xs font-bold tracking-[.35em] text-volt mb-4">08 &mdash; FAQ</p>
-                    <h2 class="font-display text-4xl md:text-6xl font-bold">Frequently Asked <span class="grad-head">Questions</span></h2>
+        <!-- ══════════ 08 · FAQ ACCORDION ══════════ -->
+        <section id="faq" class="relative max-w-4xl mx-auto px-5 sm:px-8 pt-24 sm:pt-28 pb-10">
+            <div class="rv mb-10 text-center">
+                <p class="font-display text-volt text-sm tracking-[.35em] mb-3">07 — FAQ</p>
+                <h2 class="font-display font-bold text-4xl sm:text-5xl">Questions, <span class="text-transparent bg-clip-text bg-gradient-to-r from-volt to-gold">Answered</span></h2>
+            </div>
+            <div class="space-y-4">
+                <div class="rv faq-item glass rounded-2xl overflow-hidden">
+                    <button class="faq-q w-full flex items-center gap-5 p-6 text-left">
+                        <span class="font-display text-volt/60 font-bold">01</span>
+                        <span class="font-display font-semibold text-lg flex-1">How much does a video edit cost?</span>
+                        <span class="faq-chev text-2xl text-white/50 font-light">+</span>
+                    </button>
+                    <div class="faq-a"><p class="px-6 pb-6 pl-[4.25rem] text-white/60 leading-relaxed">Pricing depends on the length, complexity, and turnaround of your project. Short-form edits start very affordably — and your first project costs less than a Starbucks coffee. Share your brief and I'll quote a fixed price before we start, with no hidden charges.</p></div>
                 </div>
-                <div class="space-y-4">
-                    <div class="faq-item rv glass edge-soft rounded-2xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="faq-head p-5 md:p-6 flex items-center gap-4 md:gap-5">
-                            <span class="font-display font-bold text-volt/70 text-lg shrink-0">01</span>
-                            <h4 class="flex-1 font-bold text-base md:text-lg">What software do you use for video editing?</h4>
-                            <i class="fas fa-chevron-down faq-chev text-gold shrink-0"></i>
-                        </div>
-                        <div class="faq-a px-5 md:px-6"><p class="pb-6 pl-0 md:pl-11 text-gray-400 text-sm md:text-base leading-relaxed">I use industry-standard software such as Adobe Premiere Pro, After Effects, DaVinci Resolve, and Final Cut Pro depending on the specific requirements of the project.</p></div>
-                    </div>
-                    <div class="faq-item rv glass edge-soft rounded-2xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="faq-head p-5 md:p-6 flex items-center gap-4 md:gap-5">
-                            <span class="font-display font-bold text-volt/70 text-lg shrink-0">02</span>
-                            <h4 class="flex-1 font-bold text-base md:text-lg">How long does it take to get a video edited?</h4>
-                            <i class="fas fa-chevron-down faq-chev text-gold shrink-0"></i>
-                        </div>
-                        <div class="faq-a px-5 md:px-6"><p class="pb-6 pl-0 md:pl-11 text-gray-400 text-sm md:text-base leading-relaxed">Turnaround times vary based on the project&rsquo;s complexity and length. Short videos can be delivered within 24-48 hours, while larger projects like documentaries might take a week or more. I offer fast turnarounds tailored to your needs.</p></div>
-                    </div>
-                    <div class="faq-item rv glass edge-soft rounded-2xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="faq-head p-5 md:p-6 flex items-center gap-4 md:gap-5">
-                            <span class="font-display font-bold text-volt/70 text-lg shrink-0">03</span>
-                            <h4 class="flex-1 font-bold text-base md:text-lg">Do you provide source files?</h4>
-                            <i class="fas fa-chevron-down faq-chev text-gold shrink-0"></i>
-                        </div>
-                        <div class="faq-a px-5 md:px-6"><p class="pb-6 pl-0 md:pl-11 text-gray-400 text-sm md:text-base leading-relaxed">Yes, project source files can be provided upon request. This might involve an additional fee depending on the contract agreement.</p></div>
-                    </div>
-                    <div class="faq-item rv glass edge-soft rounded-2xl overflow-hidden cursor-pointer" tabindex="0" role="button" aria-expanded="false">
-                        <div class="faq-head p-5 md:p-6 flex items-center gap-4 md:gap-5">
-                            <span class="font-display font-bold text-volt/70 text-lg shrink-0">04</span>
-                            <h4 class="flex-1 font-bold text-base md:text-lg">How do revisions work?</h4>
-                            <i class="fas fa-chevron-down faq-chev text-gold shrink-0"></i>
-                        </div>
-                        <div class="faq-a px-5 md:px-6"><p class="pb-6 pl-0 md:pl-11 text-gray-400 text-sm md:text-base leading-relaxed">I ensure you are 100% satisfied. Standard packages include 2-3 rounds of revisions, and my 24/7 support is always available to discuss any required tweaks.</p></div>
-                    </div>
+                <div class="rv faq-item glass rounded-2xl overflow-hidden">
+                    <button class="faq-q w-full flex items-center gap-5 p-6 text-left">
+                        <span class="font-display text-volt/60 font-bold">02</span>
+                        <span class="font-display font-semibold text-lg flex-1">How long does delivery take?</span>
+                        <span class="faq-chev text-2xl text-white/50 font-light">+</span>
+                    </button>
+                    <div class="faq-a"><p class="px-6 pb-6 pl-[4.25rem] text-white/60 leading-relaxed">Most short-form videos are delivered within 48–72 hours. Long-form and documentary projects typically take 5–10 days depending on scope. Urgent deadlines? I have 2 additional editors available for rush projects when required.</p></div>
+                </div>
+                <div class="rv faq-item glass rounded-2xl overflow-hidden">
+                    <button class="faq-q w-full flex items-center gap-5 p-6 text-left">
+                        <span class="font-display text-volt/60 font-bold">03</span>
+                        <span class="font-display font-semibold text-lg flex-1">Do you offer revisions?</span>
+                        <span class="faq-chev text-2xl text-white/50 font-light">+</span>
+                    </button>
+                    <div class="faq-a"><p class="px-6 pb-6 pl-[4.25rem] text-white/60 leading-relaxed">Yes — every project includes revision rounds so the final cut matches your vision exactly. I keep refining until you're fully satisfied with the result.</p></div>
+                </div>
+                <div class="rv faq-item glass rounded-2xl overflow-hidden">
+                    <button class="faq-q w-full flex items-center gap-5 p-6 text-left">
+                        <span class="font-display text-volt/60 font-bold">04</span>
+                        <span class="font-display font-semibold text-lg flex-1">How do we start working together?</span>
+                        <span class="faq-chev text-2xl text-white/50 font-light">+</span>
+                    </button>
+                    <div class="faq-a"><p class="px-6 pb-6 pl-[4.25rem] text-white/60 leading-relaxed">Just hit the WhatsApp "Chat Now" button or email me your brief. We'll lock the scope and price, I'll edit your video, and you'll receive polished master files ready to publish.</p></div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ============ FOOTER ============ -->
-    <footer id="contact" class="relative z-10 border-t border-white/10 bg-[#03060b] pt-20 pb-10 px-5 md:px-8 overflow-hidden scroll-mt-24">
-        <div class="orb w-[480px] h-[480px] left-[-160px] bottom-[-200px]" style="background:rgba(34,211,238,.08)" aria-hidden="true"></div>
-        <div class="orb w-[420px] h-[420px] right-[-140px] top-[-120px]" style="background:rgba(251,191,36,.07)" aria-hidden="true"></div>
-        <div class="relative max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 mb-14">
-                <div>
-                    <a href="/" class="flex items-center gap-3 mb-5" aria-label="AR Motions Home">
-                        <img src="assets/images/logo.jpg" alt="AR Motions Logo" class="h-11 w-11 rounded-xl object-cover shadow-[0_0_18px_rgba(34,211,238,.35)]">
-                        <span class="font-display font-bold text-2xl tracking-widest">AR<span class="text-volt">MOTIONS</span></span>
-                    </a>
-                    <p class="text-gray-400 text-sm mb-5">Founder-Led &bull; 4+ Years Experience &bull; Global Clients</p>
-                    <button onclick="openOwnerModal(event)" class="text-mint font-semibold text-sm px-4 py-2 rounded-full border border-mint/30 hover:bg-mint/10 transition-colors mb-5">Know more about The Owner</button>
-                    <div><span class="inline-flex items-center gap-2 glass rounded-xl px-4 py-2.5 text-sm text-gray-200 font-semibold"><i class="fas fa-clock text-gold"></i> 24/7 Support Available</span></div>
-                </div>
-                <div>
-                    <h4 class="font-display font-bold text-lg mb-5">Sitemap</h4>
-                    <nav aria-label="Footer">
-                        <ul class="space-y-3 text-gray-400 text-sm">
-                            <li><a href="/" class="hover:text-volt transition-colors">Home</a></li>
-                            <li><a href="#work" class="hover:text-volt transition-colors">Latest Work</a></li>
-                            <li><a href="#expertise" class="hover:text-volt transition-colors">Services</a></li>
-                            <li><a href="#how-it-works" class="hover:text-volt transition-colors">How It Works</a></li>
-                            <li><a href="#faq" class="hover:text-volt transition-colors">FAQ</a></li>
-                            <li><a href="/portfolio" class="hover:text-volt transition-colors">Portfolio</a></li>
-                            <li><a href="/terms" class="hover:text-volt transition-colors">Terms &amp; Conditions</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <h4 class="font-display font-bold text-lg mb-5">Contact Me</h4>
-                    <address class="not-italic">
-                        <ul class="space-y-4 text-gray-400 text-sm">
-                            <li class="flex items-center gap-3">
-                                <span class="w-9 h-9 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt shrink-0"><i class="fas fa-phone"></i></span>
-                                <a href="tel:+919302687554" class="hover:text-white transition-colors font-semibold">+91 93026 87554</a>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-9 h-9 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt shrink-0"><i class="fas fa-envelope"></i></span>
-                                <a href="mailto:arshad@armotions.in" class="hover:text-white transition-colors">arshad@armotions.in</a>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-9 h-9 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt shrink-0"><i class="fas fa-headset"></i></span>
-                                <a href="mailto:support@armotions.in" class="hover:text-white transition-colors">support@armotions.in</a>
-                            </li>
-                        </ul>
-                    </address>
+    <!-- ══════════ FOOTER / CONTACT ══════════ -->
+    <footer id="contact" class="relative mt-24 border-t border-white/10">
+        <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(34,211,238,.10),transparent);"></div>
+        <div class="relative max-w-7xl mx-auto px-5 sm:px-8 py-16 grid gap-12 md:grid-cols-3">
+            <div>
+                <p class="font-display font-bold text-2xl mb-4">AR <span class="text-volt">MOTIONS</span></p>
+                <p class="text-white/55 text-sm leading-relaxed mb-6">Premium video editing, motion graphics, and post-production — crafting masterpieces out of motion for clients worldwide.</p>
+                <button data-owner-open class="gold-glass text-gold text-sm font-semibold px-5 py-2.5 rounded-xl hover:scale-105 transition"><i class="fa-solid fa-user-tie mr-2"></i>Know the Owner</button>
+            </div>
+            <div>
+                <p class="font-display font-semibold tracking-widest text-sm text-white/40 mb-5">SITEMAP</p>
+                <div class="grid grid-cols-2 gap-2 text-sm text-white/65">
+                    <a href="#top" class="hover:text-volt transition py-1">Home</a>
+                    <a href="#work" class="hover:text-volt transition py-1">Latest Work</a>
+                    <a href="#expertise" class="hover:text-volt transition py-1">Services</a>
+                    <a href="#how-it-works" class="hover:text-volt transition py-1">How It Works</a>
+                    <a href="#faq" class="hover:text-volt transition py-1">FAQ</a>
+                    <a href="/portfolio" class="hover:text-volt transition py-1">Portfolio</a>
+                    <a href="/terms" class="hover:text-volt transition py-1">Terms &amp; Conditions</a>
+                    <a href="#contact" class="hover:text-volt transition py-1">Contact Me</a>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col items-center gap-3 text-sm text-gray-500">
-                <p class="font-medium text-gray-400">Made with &#10084;&#65039; by <span class="text-mint font-bold">AR MOTIONS</span></p>
-                <div class="flex items-center gap-4">
-                    <p>&copy; 2026 AR MOTIONS. All rights reserved.</p>
-                    <p class="text-gray-700">&bull;</p>
-                    <p>armotions.in</p>
+            <div>
+                <p class="font-display font-semibold tracking-widest text-sm text-white/40 mb-5">CONTACT</p>
+                <div class="space-y-3 text-sm">
+                    <a href="tel:+919302687554" class="flex items-center gap-3 text-white/70 hover:text-volt transition"><i class="fa-solid fa-phone text-volt w-5"></i>+91 93026 87554</a>
+                    <a href="mailto:arshad@armotions.in" class="flex items-center gap-3 text-white/70 hover:text-volt transition"><i class="fa-solid fa-envelope text-volt w-5"></i>arshad@armotions.in</a>
+                    <a href="mailto:support@armotions.in" class="flex items-center gap-3 text-white/70 hover:text-volt transition"><i class="fa-solid fa-headset text-volt w-5"></i>support@armotions.in</a>
                 </div>
             </div>
         </div>
+        <div class="relative border-t border-white/10 py-6 text-center text-white/35 text-xs font-display tracking-widest">
+            &copy; 2026 AR MOTIONS &bull; CRAFTED WITH PRECISION
+        </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <button data-wa class="fixed bottom-6 right-6 z-[60] flex items-center gap-2.5 rounded-full pl-4 pr-5 py-3.5 font-bold text-white hover:-translate-y-1 transition-transform" style="background:linear-gradient(135deg,#25D366,#128C7E);box-shadow:0 12px 36px rgba(37,211,102,.45)" aria-label="Chat with me on WhatsApp">
-        <i class="fa-brands fa-whatsapp text-2xl"></i><span class="hidden sm:inline">Chat Now</span>
+    <!-- ══════════ FLOATING WHATSAPP ══════════ -->
+    <button id="waBtn" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-gradient-to-r from-mint to-volt text-ink font-bold pl-4 pr-6 py-3.5 rounded-full cyan-glow hover:scale-105 active:scale-95 transition" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i><span>Chat Now</span>
     </button>
 
-    <!-- Owner modal -->
-    <div id="ownerModal" class="modal fixed inset-0 z-[80] hidden items-center justify-center px-4 bg-black/80 backdrop-blur-sm opacity-0" role="dialog" aria-modal="true" aria-labelledby="ownerTitle">
-        <div class="modal-card scale-95 max-w-md w-full rounded-[1.6rem] bg-abyss border border-volt/25 p-8 shadow-[0_0_60px_rgba(34,211,238,.25)] relative">
-            <button onclick="closeOwnerModal()" class="absolute top-4 right-4 w-9 h-9 flex items-center justify-center text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-full transition-all" aria-label="Close"><i class="fas fa-xmark"></i></button>
-            <div class="w-16 h-16 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-3xl mx-auto mb-4"><i class="fas fa-user-tie"></i></div>
-            <h3 id="ownerTitle" class="font-display font-bold text-2xl text-center">Founder &mdash; Arshad Khan</h3>
-            <p class="text-gray-300 text-center text-sm leading-relaxed mt-3 mb-6">One of the rare editors across Madhya Pradesh, India (Ratlam), ranked among the most sought-after editors in the industry.</p>
-            <div class="rounded-2xl border border-gold/30 bg-gold/5 p-4 mb-5">
-                <h4 class="text-gold font-semibold text-sm mb-2 text-center"><i class="fas fa-star mr-2"></i>Speciality</h4>
-                <p class="text-gray-200 text-sm text-center leading-relaxed">Motion designing / premium UI / SaaS designing / Documentary Scenes designing</p>
+    <!-- ══════════ TERMS GATE MODAL ══════════ -->
+    <div id="termsModal" class="fixed inset-0 z-[70] hidden items-center justify-center p-5">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-terms-close></div>
+        <div class="relative glass rounded-3xl max-w-md w-full p-8 text-center deep-shadow">
+            <div class="w-16 h-16 mx-auto rounded-2xl bg-gold/15 border border-gold/40 flex items-center justify-center mb-5">
+                <i class="fa-solid fa-triangle-exclamation text-3xl text-gold"></i>
             </div>
-            <div class="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
-                <i class="fas fa-users text-mint mt-1"></i>
-                <p class="text-gray-400 text-sm">2 additional editors available for handling urgent projects when required.</p>
+            <h3 class="font-display font-bold text-2xl mb-3">Hold on!</h3>
+            <p class="text-white/60 mb-3">You must agree to the terms and conditions to proceed further.</p>
+            <a href="/terms" class="text-volt text-sm underline underline-offset-4 hover:text-mint transition">Read Terms &amp; Conditions</a>
+            <div class="flex gap-3 mt-7">
+                <button data-terms-close class="flex-1 glass rounded-2xl py-3.5 font-semibold hover:bg-white/10 transition">Cancel</button>
+                <a href="https://wa.me/919303881879" target="_blank" rel="noopener" class="flex-1 bg-gradient-to-r from-volt to-mint text-ink rounded-2xl py-3.5 font-bold hover:opacity-90 transition">Agree &amp; Proceed</a>
             </div>
         </div>
     </div>
 
-    <!-- WhatsApp terms gate -->
-    <div id="waModal" class="modal fixed inset-0 z-[80] hidden items-center justify-center px-4 bg-black/80 backdrop-blur-sm opacity-0" role="dialog" aria-modal="true" aria-labelledby="waTitle">
-        <div class="modal-card scale-95 max-w-md w-full rounded-[1.6rem] bg-abyss border border-volt/25 p-8 shadow-[0_0_60px_rgba(34,211,238,.25)] relative">
-            <div class="w-16 h-16 rounded-full bg-volt/10 border border-volt/30 flex items-center justify-center text-volt text-3xl mx-auto mb-4"><i class="fa-brands fa-whatsapp"></i></div>
-            <h3 id="waTitle" class="font-display font-bold text-2xl text-center">Hold on!</h3>
-            <p class="text-gray-400 text-center mt-3 mb-8">You must agree to the <a href="/terms" class="text-volt underline hover:text-white transition-colors">terms and conditions</a> to proceed further.</p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <button id="waCancel" class="flex-1 px-4 py-3.5 rounded-xl border border-white/15 font-semibold hover:bg-white/5 transition-colors">Cancel</button>
-                <a href="https://wa.me/919303881879" target="_blank" rel="noopener" id="waProceed" class="flex-1 px-4 py-3.5 rounded-xl font-bold text-ink text-center bg-gradient-to-r from-volt to-mint hover:shadow-[0_0_28px_rgba(34,211,238,.5)] transition-all">Agree &amp; Proceed</a>
+    <!-- ══════════ OWNER MODAL ══════════ -->
+    <div id="ownerModal" class="fixed inset-0 z-[70] hidden items-center justify-center p-5">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-owner-close></div>
+        <div class="relative glass rounded-3xl max-w-lg w-full p-8 sm:p-10 deep-shadow t3d">
+            <button data-owner-close class="absolute top-5 right-5 text-white/40 hover:text-white text-xl" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="flex items-center gap-5 mb-6">
+                <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-volt via-mint to-gold p-[2px] shrink-0">
+                    <div class="w-full h-full rounded-2xl bg-ink flex items-center justify-center text-3xl text-volt"><i class="fa-solid fa-user-tie"></i></div>
+                </div>
+                <div>
+                    <p class="font-display text-xs tracking-[.3em] text-gold mb-1">FOUNDER</p>
+                    <h3 class="font-display font-bold text-3xl">Arshad Khan</h3>
+                    <p class="text-white/50 text-sm mt-1"><i class="fa-solid fa-location-dot text-volt mr-1"></i>Ratlam, Madhya Pradesh, India</p>
+                </div>
             </div>
+            <p class="text-white/65 leading-relaxed mb-4">One of the rare editors across Madhya Pradesh, India (Ratlam), ranked among the most sought-after editors in the industry.</p>
+            <div class="gold-glass rounded-2xl p-5 mb-4">
+                <p class="font-display text-xs tracking-[.25em] text-gold mb-2">SPECIALITY</p>
+                <p class="text-white/75 text-sm leading-relaxed">Motion designing / premium UI / SaaS designing / Documentary Scenes designing</p>
+            </div>
+            <p class="text-white/45 text-sm leading-relaxed"><i class="fa-solid fa-users text-mint mr-2"></i>2 additional editors available for handling urgent projects when required.</p>
         </div>
     </div>
 
     <script>
-    (function() {
-        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        /* Scroll reveal */
+        const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }), { threshold: .12 });
+        document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
-        if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
-        window.scrollTo(0, 0);
-        window.addEventListener('load', function() { if (!window.location.hash) { window.scrollTo(0, 0); } });
+        /* Animated counters */
+        const cio = new IntersectionObserver(es => es.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target, target = +el.dataset.target, t0 = performance.now(), dur = 1600;
+            (function tick(t) {
+                const p = Math.min((t - t0) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(target * ease);
+                if (p < 1) requestAnimationFrame(tick);
+            })(t0);
+            cio.unobserve(el);
+        }), { threshold: .6 });
+        document.querySelectorAll('.counter').forEach(el => cio.observe(el));
 
-        // Scroll progress bar
-        var bar = document.getElementById('progressBar');
-        function onScrollBar() {
-            var h = document.documentElement;
-            var p = h.scrollTop / ((h.scrollHeight - h.clientHeight) || 1);
-            bar.style.width = (p * 100) + '%';
-        }
-        window.addEventListener('scroll', onScrollBar, { passive: true });
-        onScrollBar();
-
-        // Scroll reveal
-        var io = new IntersectionObserver(function(entries) {
-            entries.forEach(function(e) {
-                if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
-            });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.rv').forEach(function(el) { io.observe(el); });
-
-        // Animated counters
-        var cio = new IntersectionObserver(function(entries) {
-            entries.forEach(function(e) {
-                if (!e.isIntersecting) return;
-                cio.unobserve(e.target);
-                var el = e.target, target = parseInt(el.getAttribute('data-count'), 10);
-                if (reduceMotion) { el.textContent = target; return; }
-                var t0 = performance.now(), dur = 1400;
-                function tick(t) {
-                    var p = Math.min((t - t0) / dur, 1);
-                    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-                    if (p < 1) requestAnimationFrame(tick);
-                }
-                requestAnimationFrame(tick);
-            });
-        }, { threshold: 0.5 });
-        document.querySelectorAll('.counter').forEach(function(el) { cio.observe(el); });
-
-        // 3D tilt on hover (desktop pointers only)
-        if (finePointer && !reduceMotion) {
-            document.querySelectorAll('[data-tilt]').forEach(function(card) {
-                var raf = null;
-                card.addEventListener('pointermove', function(ev) {
-                    var r = card.getBoundingClientRect();
-                    var x = (ev.clientX - r.left) / r.width - 0.5;
-                    var y = (ev.clientY - r.top) / r.height - 0.5;
-                    if (raf) cancelAnimationFrame(raf);
-                    raf = requestAnimationFrame(function() {
-                        card.style.transform = 'rotateX(' + (-y * 10).toFixed(2) + 'deg) rotateY(' + (x * 12).toFixed(2) + 'deg) translateZ(6px)';
-                    });
+        /* Pointer 3D tilt (fine pointers only) */
+        if (matchMedia('(pointer:fine)').matches) {
+            document.querySelectorAll('[data-tilt]').forEach(card => {
+                card.addEventListener('pointermove', ev => {
+                    const r = card.getBoundingClientRect(),
+                        x = (ev.clientX - r.left) / r.width - .5,
+                        y = (ev.clientY - r.top) / r.height - .5;
+                    card.style.transform = `perspective(1100px) rotateX(${-y * 9}deg) rotateY(${x * 11}deg) translateZ(6px)`;
                 });
-                card.addEventListener('pointerleave', function() {
-                    if (raf) cancelAnimationFrame(raf);
-                    card.style.transform = '';
-                });
+                card.addEventListener('pointerleave', () => { card.style.transform = ''; });
             });
-        }
-
-        // Hero parallax: mouse tilt + scroll depth
-        var hero = document.getElementById('hero');
-        var deck = document.getElementById('heroDeck');
-        var layers = document.querySelectorAll('#hero [data-depth]');
-        if (hero && !reduceMotion) {
-            if (finePointer && deck) {
-                hero.addEventListener('pointermove', function(ev) {
-                    var r = hero.getBoundingClientRect();
-                    var x = (ev.clientX - r.left) / r.width - 0.5;
-                    var y = (ev.clientY - r.top) / r.height - 0.5;
-                    deck.style.transform = 'rotateX(' + (16 - y * 10).toFixed(2) + 'deg) rotateY(' + (-18 + x * 12).toFixed(2) + 'deg)';
+            /* Hero deck mouse tilt + scroll parallax */
+            const deck = document.getElementById('heroDeck');
+            if (deck) {
+                const wrap = document.getElementById('heroDeckWrap');
+                wrap.addEventListener('pointermove', ev => {
+                    const r = wrap.getBoundingClientRect(),
+                        x = (ev.clientX - r.left) / r.width - .5,
+                        y = (ev.clientY - r.top) / r.height - .5;
+                    deck.style.transform = `rotateX(${16 - y * 10}deg) rotateY(${-18 + x * 12}deg)`;
                 });
-                hero.addEventListener('pointerleave', function() { deck.style.transform = ''; });
+                wrap.addEventListener('pointerleave', () => { deck.style.transform = 'rotateX(16deg) rotateY(-18deg)'; });
             }
-            var ticking = false;
-            window.addEventListener('scroll', function() {
-                if (ticking) return;
-                ticking = true;
-                requestAnimationFrame(function() {
-                    var y = window.scrollY;
-                    if (y < window.innerHeight * 1.2) {
-                        layers.forEach(function(l) {
-                            l.style.translate = '0 ' + (y * parseFloat(l.getAttribute('data-depth'))).toFixed(1) + 'px';
-                        });
-                    }
-                    ticking = false;
-                });
-            }, { passive: true });
         }
-
-        // Mobile menu
-        var menuBtn = document.getElementById('menuBtn');
-        var mobileMenu = document.getElementById('mobileMenu');
-        var overlay = document.getElementById('mobileOverlay');
-        var menuIcon = document.getElementById('menuIcon');
-        function setMenu(open) {
-            mobileMenu.classList.toggle('menu-closed', !open);
-            overlay.classList.toggle('hidden', !open);
-            menuIcon.classList.toggle('fa-bars', !open);
-            menuIcon.classList.toggle('fa-xmark', open);
-            menuBtn.setAttribute('aria-expanded', open);
-            document.body.style.overflow = open ? 'hidden' : '';
-        }
-        menuBtn.addEventListener('click', function() { setMenu(mobileMenu.classList.contains('menu-closed')); });
-        overlay.addEventListener('click', function() { setMenu(false); });
-        mobileMenu.querySelectorAll('a, button').forEach(function(a) { a.addEventListener('click', function() { setMenu(false); }); });
-
-        // FAQ accordion
-        document.querySelectorAll('.faq-item').forEach(function(item) {
-            function toggle() {
-                var wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item.open').forEach(function(o) {
-                    o.classList.remove('open'); o.setAttribute('aria-expanded', 'false');
-                });
-                if (!wasOpen) { item.classList.add('open'); item.setAttribute('aria-expanded', 'true'); }
-            }
-            item.querySelector('.faq-head').addEventListener('click', toggle);
-            item.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+        /* Scroll parallax for hero depth layers */
+        const layers = document.querySelectorAll('[data-depth]');
+        let ticking = false;
+        addEventListener('scroll', () => {
+            if (ticking) return; ticking = true;
+            requestAnimationFrame(() => {
+                const y = scrollY;
+                layers.forEach(l => { l.style.translate = `0 ${y * parseFloat(l.dataset.depth)}px`; });
+                ticking = false;
             });
-        });
+        }, { passive: true });
 
-        // Lazy YouTube embeds
-        document.querySelectorAll('[data-yt]').forEach(function(card) {
-            function play() {
-                var id = card.getAttribute('data-yt');
-                var frame = document.createElement('iframe');
-                frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
-                frame.title = card.getAttribute('data-title') || 'YouTube video';
-                frame.className = 'absolute inset-0 w-full h-full';
-                frame.setAttribute('frameborder', '0');
-                frame.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-                frame.setAttribute('allowfullscreen', '');
-                card.querySelector('.lf-media').appendChild(frame);
-                var poster = card.querySelector('.lf-poster');
-                if (poster) poster.style.display = 'none';
-            }
-            card.addEventListener('click', play, { once: true });
-            card.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
-            });
-        });
+        /* Mobile menu */
+        const menuBtn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); mobileMenu.classList.toggle('flex'); });
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); }));
 
-        // Modals
-        var ownerModal = document.getElementById('ownerModal');
-        var waModal = document.getElementById('waModal');
-        function openModal(m) {
-            m.classList.remove('hidden'); m.classList.add('flex');
-            requestAnimationFrame(function() {
-                m.classList.remove('opacity-0');
-                m.querySelector('.modal-card').classList.remove('scale-95');
-            });
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal(m) {
-            m.classList.add('opacity-0');
-            m.querySelector('.modal-card').classList.add('scale-95');
-            setTimeout(function() { m.classList.add('hidden'); m.classList.remove('flex'); document.body.style.overflow = ''; }, 300);
-        }
-        window.openOwnerModal = function(e) { if (e) e.preventDefault(); setMenu(false); openModal(ownerModal); };
-        window.closeOwnerModal = function() { closeModal(ownerModal); };
-        document.querySelectorAll('[data-wa]').forEach(function(b) {
-            b.addEventListener('click', function(e) { e.preventDefault(); setMenu(false); openModal(waModal); });
-        });
-        document.getElementById('waCancel').addEventListener('click', function() { closeModal(waModal); });
-        document.getElementById('waProceed').addEventListener('click', function() { closeModal(waModal); });
-        [ownerModal, waModal].forEach(function(m) {
-            m.addEventListener('click', function(e) { if (e.target === m) closeModal(m); });
-        });
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                [ownerModal, waModal].forEach(function(m) { if (!m.classList.contains('hidden')) closeModal(m); });
-                setMenu(false);
-            }
-        });
-    })();
+        /* FAQ accordion */
+        document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => {
+            const item = q.closest('.faq-item'), wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+            if (!wasOpen) item.classList.add('open');
+        }));
+
+        /* Lazy YouTube embeds */
+        document.querySelectorAll('.yt-load').forEach(btn => btn.addEventListener('click', () => {
+            const id = btn.dataset.yt, frame = document.createElement('iframe');
+            frame.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+            frame.className = 'absolute inset-0 w-full h-full';
+            frame.title = btn.getAttribute('aria-label');
+            frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            frame.allowFullscreen = true;
+            btn.replaceWith(frame);
+        }));
+
+        /* Terms gate modal */
+        const termsModal = document.getElementById('termsModal'), waBtn = document.getElementById('waBtn');
+        waBtn.addEventListener('click', () => { termsModal.classList.remove('hidden'); termsModal.classList.add('flex'); });
+        document.querySelectorAll('[data-terms-close]').forEach(el => el.addEventListener('click', () => { termsModal.classList.add('hidden'); termsModal.classList.remove('flex'); }));
+
+        /* Owner modal */
+        const ownerModal = document.getElementById('ownerModal');
+        document.querySelectorAll('[data-owner-open]').forEach(el => el.addEventListener('click', () => { ownerModal.classList.remove('hidden'); ownerModal.classList.add('flex'); }));
+        document.querySelectorAll('[data-owner-close]').forEach(el => el.addEventListener('click', () => { ownerModal.classList.add('hidden'); ownerModal.classList.remove('flex'); }));
+        addEventListener('keydown', e => { if (e.key === 'Escape') { [termsModal, ownerModal].forEach(m => { m.classList.add('hidden'); m.classList.remove('flex'); }); } });
     </script>
 </body>
 </html>
