@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Aroma — Sample Website</title>
+<meta name="description" content="Sample cafe website. All names, prices and timings are samples only.">
+<style>
+:root{--bg:#241610;--bg2:#2e1c14;--card:#332016;--amber:#e8a54b;--amber2:#f7c873;--cream:#f7ead8;--muted:#c8ab8b;--line:rgba(232,165,75,.28)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--cream);line-height:1.65;overflow-x:hidden}
+section[id]{scroll-margin-top:88px}
+.sample-banner{background:linear-gradient(90deg,#8a5a1e,var(--amber),#8a5a1e);color:#241305;text-align:center;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 1rem}
+.nav{position:sticky;top:0;z-index:60;background:rgba(36,22,16,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.95rem 1.25rem}
+.logo{font-family:Georgia,"Times New Roman",serif;font-size:1.4rem;font-weight:700;color:var(--amber2);text-decoration:none}
+.logo span{color:var(--cream);font-weight:400;font-style:italic}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;transition:color .25s ease}
+.nav-links a:hover{color:var(--amber2)}
+.nav-cta{padding:.55rem 1.35rem!important;font-size:.9rem!important}
+.btn{display:inline-block;padding:.9rem 2rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem;border:none;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;text-align:center;font-family:inherit}
+.btn-amber{background:linear-gradient(135deg,#f2b45e,#d18a2e);color:#241305}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(232,165,75,.35)}
+.btn-ghost{border:2px solid var(--amber);color:var(--amber2);background:transparent}
+.btn-ghost:hover{background:rgba(232,165,75,.14);transform:translateY(-2px)}
+.hero{padding:6.5rem 1.25rem 5.5rem;text-align:center;background:radial-gradient(720px 340px at 20% 10%,rgba(232,165,75,.18),transparent 60%),radial-gradient(720px 360px at 85% 90%,rgba(232,165,75,.10),transparent 60%),repeating-linear-gradient(45deg,rgba(232,165,75,.04) 0 2px,transparent 2px 16px),var(--bg)}
+.eyebrow{color:var(--amber);letter-spacing:.3em;text-transform:uppercase;font-size:.76rem;font-weight:700;margin-bottom:1.1rem}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6.5vw,4.4rem);line-height:1.08;margin-bottom:1.2rem;color:#fff;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--amber2)}
+.hero .sub{max-width:640px;margin:0 auto 2.3rem;color:var(--muted);font-size:1.12rem}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.hero-meta{margin-top:2.4rem;color:var(--muted);font-size:.92rem}
+.hero-meta strong{color:var(--amber2)}
+.section{max-width:1120px;margin:0 auto;padding:4.5rem 1.25rem}
+.kicker{color:var(--amber);letter-spacing:.24em;text-transform:uppercase;font-size:.76rem;font-weight:700;text-align:center;margin-bottom:.8rem}
+.section h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,4.5vw,2.8rem);text-align:center;margin-bottom:.7rem;color:#fff}
+.lead{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 3rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.6rem}
+.card{background:linear-gradient(160deg,#37221666,#241610);background-color:#2c1b12;border:1px solid var(--line);border-radius:1.1rem;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(0,0,0,.5);border-color:var(--amber)}
+.card-art{height:150px;position:relative;background:radial-gradient(circle at 28% 30%,rgba(242,180,94,.5),transparent 55%),radial-gradient(circle at 78% 72%,rgba(232,165,75,.28),transparent 52%),linear-gradient(135deg,#4a2c17,#1d110a)}
+.card-art::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 10px,rgba(255,255,255,.045) 10px 12px)}
+.card-body{padding:1.6rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card-body h3{font-family:Georgia,serif;font-size:1.28rem;color:#fff}
+.card-body p{color:var(--muted);font-size:.95rem;flex:1}
+.price{font-size:1.55rem;font-weight:800;color:var(--amber2);margin-top:.4rem}
+.price small{font-size:.82rem;color:var(--muted);font-weight:600}
+.perks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.perk{background:#2c1b12;border:1px solid var(--line);border-radius:1rem;padding:1.6rem;text-align:center;transition:transform .3s ease,border-color .3s ease}
+.perk:hover{transform:translateY(-5px);border-color:var(--amber)}
+.perk .icon{font-size:2rem;margin-bottom:.6rem}
+.perk b{display:block;color:var(--amber2);font-size:1.05rem;margin-bottom:.4rem}
+.perk span{color:var(--muted);font-size:.9rem}
+.timings{text-align:center;background:linear-gradient(135deg,#2e1c14,#1e120c);border:1px solid var(--line);border-radius:1.2rem;padding:2.6rem 1.5rem;max-width:760px;margin:0 auto}
+.timings h3{font-family:Georgia,serif;font-size:1.6rem;margin-bottom:.4rem;color:#fff}
+.timings p{color:var(--muted)}
+.timings .big{font-size:1.4rem;color:var(--amber2);font-weight:800;margin:.7rem 0}
+.booking-wrap{max-width:720px;margin:0 auto}
+form.sample-form{background:#2c1b12;border:1px solid var(--line);border-radius:1.2rem;padding:2.2rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.4rem}
+.form-grid .full{grid-column:1/-1}
+label{display:block;font-size:.9rem;font-weight:600;color:var(--muted)}
+input,select,textarea{width:100%;margin-top:.4rem;padding:.85rem 1rem;border-radius:.7rem;border:1px solid rgba(232,165,75,.32);background:#1d110a;color:var(--cream);font-size:1rem;font-family:inherit;transition:border-color .25s ease,box-shadow .25s ease}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(232,165,75,.2)}
+textarea{resize:vertical}
+.form-note{margin-top:1rem;font-size:.85rem;color:var(--muted);text-align:center}
+.form-notice{background:#2c1b12;border:2px dashed var(--amber);border-radius:1.2rem;padding:2.4rem;text-align:center}
+.form-notice h3{font-family:Georgia,serif;font-size:1.7rem;color:var(--amber2);margin-bottom:1rem}
+.form-notice p{color:var(--muted);margin-bottom:1rem}
+.form-notice .tiny{font-size:.82rem;margin-top:1.4rem}
+footer{border-top:1px solid var(--line);background:#180d08;padding:2.8rem 1.25rem;text-align:center}
+footer .f-logo{font-family:Georgia,serif;font-size:1.4rem;color:var(--amber2);margin-bottom:.6rem}
+footer p{color:var(--muted);font-size:.9rem;max-width:640px;margin:0 auto .6rem}
+footer .tiny{font-size:.78rem;opacity:.75}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:680px){.nav-links{display:none}.hero{padding:5rem 1.1rem 4rem}.form-grid{grid-template-columns:1fr}form.sample-form{padding:1.6rem}.section{padding:3.5rem 1.1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card:hover,.btn-amber:hover,.btn-ghost:hover,.perk:hover{transform:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="sample-banner">Sample Website &middot; Demo only &mdash; all names, prices &amp; timings are samples</div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">Cafe <span>Aroma</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#perks">Why Us</a></li>
+      <li><a href="#timings">Timings</a></li>
+      <li><a href="#visit" class="btn btn-amber nav-cta">Order / Visit</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+  <p class="eyebrow reveal">Coffee &middot; Comfort &middot; Sample Site</p>
+  <h1 class="reveal">Brewed for<br><em>Slow Mornings.</em></h1>
+  <p class="sub reveal">A warm sample cafe website with a full menu, cosy highlights and an enquiry form &mdash; everything here is fictional and for demonstration only.</p>
+  <div class="hero-ctas reveal">
+    <a class="btn btn-amber" href="#menu">View Menu</a>
+    <a class="btn btn-ghost" href="#visit">Plan Your Visit</a>
+  </div>
+  <p class="hero-meta reveal">Open daily &middot; <strong>9:00 AM &ndash; 11:00 PM</strong> <span style="opacity:.7">(sample timings)</span></p>
+</section>
+<section id="menu" class="section">
+  <p class="kicker reveal">Taste</p>
+  <h2 class="reveal">Our Menu</h2>
+  <p class="lead reveal">Sample dishes and sample pricing, shown to demonstrate the design.</p>
+  <div class="cards">
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Hot Coffee</h3><p>Espresso, cappuccino, latte and filter coffee, brewed fresh. Sample description.</p><div class="price">&#8377;149<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Cold Coffee</h3><p>Iced lattes, frappes and cold brews for warm afternoons. Sample description.</p><div class="price">&#8377;179<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Sandwiches &amp; Pasta</h3><p>Grilled sandwiches, creamy pastas and quick bites. Sample description.</p><div class="price">&#8377;199<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Desserts</h3><p>Brownies, cheesecakes and seasonal sweets. Sample description.</p><div class="price">&#8377;129<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>All-Day Breakfast</h3><p>Pancakes, eggs and toast platters, served all day. Sample description.</p><div class="price">&#8377;169<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Fresh Juices &amp; Shakes</h3><p>Seasonal fruit juices and thick milkshakes. Sample description.</p><div class="price">&#8377;139<small> onwards*</small></div></div></article>
+  </div>
+  <p class="form-note reveal" style="margin-top:2rem">*All prices are SAMPLE ONLY and do not represent real pricing.</p>
+</section>
+<section id="perks" class="section" style="background:var(--bg2);max-width:none">
+  <div style="max-width:1120px;margin:0 auto">
+  <p class="kicker reveal">Good To Know</p>
+  <h2 class="reveal">Made for Lingering</h2>
+  <p class="lead reveal">Sample highlights of the cafe experience.</p>
+  <div class="perks">
+    <div class="perk reveal"><div class="icon">&#9673;</div><b>Free Wi-Fi</b><span>Fast internet for work or play (sample perk).</span></div>
+    <div class="perk reveal"><div class="icon">&#9673;</div><b>Family Seating</b><span>Spacious tables for groups and families (sample perk).</span></div>
+    <div class="perk reveal"><div class="icon">&#9673;</div><b>Freshly Baked</b><span>Desserts baked in-house daily (sample perk).</span></div>
+    <div class="perk reveal"><div class="icon">&#9673;</div><b>Pet Friendly Corner</b><span>A cosy corner for furry friends (sample perk).</span></div>
+  </div>
+  </div>
+</section>
+<section id="timings" class="section">
+  <div class="timings reveal">
+    <h3>Visit Us</h3>
+    <p>Sample location: <strong>Sample City</strong> (address is a placeholder)</p>
+    <p class="big">Open Daily &middot; 9:00 AM &ndash; 11:00 PM</p>
+    <p>Sample timings only. Kitchen closes 30 minutes before closing (sample text).</p>
+  </div>
+</section>
+<section id="visit" class="section">
+  <p class="kicker reveal">Say Hello</p>
+  <h2 class="reveal">Plan Your Visit</h2>
+  <p class="lead reveal">Fill in this sample enquiry form. Nothing is sent to any server &mdash; it is a design demo.</p>
+  <div class="booking-wrap">
+    <form class="sample-form reveal" novalidate>
+      <div class="form-grid">
+        <label>Your name<input type="text" name="name" required placeholder="e.g. Sample Guest"></label>
+        <label>Phone<input type="tel" name="phone" required placeholder="e.g. 98XXX XXXXX"></label>
+        <label>I'm interested in<select name="service"><option>Table booking</option><option>Takeaway order</option><option>Bulk / party order</option><option>Feedback</option></select></label>
+        <label>Preferred date / time<input type="text" name="slot" placeholder="e.g. Sunday, 11 AM (sample)"></label>
+        <label class="full">Message<textarea name="message" rows="4" placeholder="Anything we should know? (sample field)"></textarea></label>
+      </div>
+      <button class="btn btn-amber" type="submit" style="width:100%">Send Sample Enquiry</button>
+      <p class="form-note">Sample form &mdash; your details are not sent anywhere.</p>
+    </form>
+    <div class="form-notice" hidden>
+      <h3>Sample Notice</h3>
+      <p>Thank you, <strong class="n-name">friend</strong>! This is a <strong>SAMPLE</strong> website, so your enquiry about &ldquo;<span class="n-service">a visit</span>&rdquo; was <strong>not sent</strong> anywhere and no booking was made.</p>
+      <p>To continue this demo, use the sample contact options below:</p>
+      <div class="hero-ctas">
+        <a class="btn btn-amber" href="https://wa.me/910000000000?text=Sample%20enquiry%20for%20Cafe%20Aroma" target="_blank" rel="noopener">WhatsApp (Sample)</a>
+        <a class="btn btn-ghost" href="mailto:sample@example.com?subject=Sample%20enquiry%20%E2%80%94%20Cafe%20Aroma">Email (Sample)</a>
+      </div>
+      <p class="tiny">Sample Phone: 00000 00000 &middot; Sample Location: Sample City &middot; These are placeholders, not real contact details.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="f-logo">Cafe Aroma</div>
+  <p><strong>SAMPLE WEBSITE</strong> &mdash; built as a design demo. All names, prices, timings and contact details on this page are samples only.</p>
+  <p class="tiny">Sample Phone: 00000 00000 &middot; Sample Location: Sample City &middot; &copy; 2026 Cafe Aroma (Sample)</p>
+</footer>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var t=document.querySelector(a.getAttribute('href'));if(t){ev.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}});});
+  document.querySelectorAll('form.sample-form').forEach(function(form){form.addEventListener('submit',function(ev){ev.preventDefault();
+    var n=form.querySelector('[name="name"]');var s=form.querySelector('[name="service"]');
+    var wrap=form.closest('.booking-wrap')||form.parentElement;var notice=wrap.querySelector('.form-notice');
+    form.style.display='none';
+    if(notice){notice.hidden=false;var nn=notice.querySelector('.n-name');if(nn&&n)nn.textContent=n.value||'friend';var ns=notice.querySelector('.n-service');if(ns&&s)ns.textContent=s.value;notice.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});}
+  });});
+})();
+</script>
+</body>
+</html>
