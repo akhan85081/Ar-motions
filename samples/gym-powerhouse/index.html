@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerHouse Gym — Sample Website</title>
+<meta name="description" content="Sample gym website. All names, prices and timings are samples only.">
+<style>
+:root{--bg:#0a0a0c;--bg2:#101013;--card:#141417;--red:#e10600;--red2:#ff3b30;--text:#f5f5f5;--muted:#a8a8b0;--line:rgba(225,6,0,.28)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+section[id]{scroll-margin-top:88px}
+.sample-banner{background:linear-gradient(90deg,#8f0400,var(--red),#8f0400);color:#fff;text-align:center;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 1rem}
+.nav{position:sticky;top:0;z-index:60;background:rgba(10,10,12,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.95rem 1.25rem}
+.logo{font-size:1.35rem;font-weight:900;color:#fff;text-decoration:none;letter-spacing:.05em;text-transform:uppercase}
+.logo span{color:var(--red2)}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;transition:color .25s ease}
+.nav-links a:hover{color:#fff}
+.nav-cta{padding:.55rem 1.35rem!important;font-size:.9rem!important}
+.btn{display:inline-block;padding:.9rem 2rem;border-radius:.6rem;font-weight:800;text-decoration:none;font-size:1rem;border:none;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;text-align:center;font-family:inherit;text-transform:uppercase;letter-spacing:.04em}
+.btn-red{background:linear-gradient(135deg,#ff2b1f,#b30400);color:#fff}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(225,6,0,.4)}
+.btn-ghost{border:2px solid var(--red);color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(225,6,0,.15);transform:translateY(-2px)}
+.hero{padding:6.5rem 1.25rem 5.5rem;text-align:center;background:radial-gradient(720px 340px at 50% 0%,rgba(225,6,0,.20),transparent 60%),repeating-linear-gradient(-45deg,rgba(225,6,0,.04) 0 2px,transparent 2px 16px),var(--bg)}
+.eyebrow{color:var(--red2);letter-spacing:.3em;text-transform:uppercase;font-size:.76rem;font-weight:800;margin-bottom:1.1rem}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;margin-bottom:1.2rem;color:#fff;font-weight:900;text-transform:uppercase;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--red2)}
+.hero .sub{max-width:640px;margin:0 auto 2.3rem;color:var(--muted);font-size:1.12rem}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.hero-meta{margin-top:2.4rem;color:var(--muted);font-size:.92rem}
+.hero-meta strong{color:#fff}
+.section{max-width:1120px;margin:0 auto;padding:4.5rem 1.25rem}
+.kicker{color:var(--red2);letter-spacing:.24em;text-transform:uppercase;font-size:.76rem;font-weight:800;text-align:center;margin-bottom:.8rem}
+.section h2{font-size:clamp(1.9rem,4.5vw,2.8rem);text-align:center;margin-bottom:.7rem;color:#fff;font-weight:900;text-transform:uppercase}
+.lead{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 3rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.6rem}
+.card{background:linear-gradient(160deg,#151518,#0e0e10);border:1px solid var(--line);border-radius:1rem;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;display:flex;flex-direction:column;position:relative}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(0,0,0,.6);border-color:var(--red)}
+.card.pop{border:2px solid var(--red)}
+.card-art{height:140px;position:relative;background:radial-gradient(circle at 30% 30%,rgba(225,6,0,.5),transparent 55%),radial-gradient(circle at 75% 70%,rgba(225,6,0,.25),transparent 52%),linear-gradient(135deg,#221014,#0c0a0b)}
+.card-art::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 10px,rgba(255,255,255,.05) 10px 12px)}
+.badge{position:absolute;top:1rem;right:1rem;background:var(--red);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;z-index:2}
+.card-body{padding:1.6rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card-body h3{font-size:1.25rem;color:#fff;font-weight:800;text-transform:uppercase}
+.card-body ul{list-style:none;color:var(--muted);font-size:.93rem;flex:1;display:flex;flex-direction:column;gap:.35rem;margin:.3rem 0}
+.card-body ul li::before{content:"\2713  ";color:var(--red2);font-weight:800}
+.price{font-size:1.7rem;font-weight:900;color:#fff;margin-top:.5rem}
+.price small{font-size:.85rem;color:var(--muted);font-weight:600}
+.price .per{font-size:.9rem;color:var(--red2);font-weight:700}
+.trainers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.6rem}
+.trainer{background:#131316;border:1px solid var(--line);border-radius:1rem;overflow:hidden;text-align:center;transition:transform .35s ease,border-color .35s ease}
+.trainer:hover{transform:translateY(-8px);border-color:var(--red)}
+.trainer-art{height:170px;display:flex;align-items:center;justify-content:center;font-size:3.4rem;font-weight:900;color:rgba(255,255,255,.9);background:radial-gradient(circle at 50% 35%,rgba(225,6,0,.55),transparent 60%),linear-gradient(150deg,#2a1214,#101012)}
+.trainer-body{padding:1.4rem}
+.trainer-body h3{font-size:1.1rem;font-weight:800;text-transform:uppercase;margin-bottom:.35rem}
+.trainer-body p{color:var(--muted);font-size:.9rem}
+.timings{text-align:center;background:linear-gradient(135deg,#141416,#0c0c0e);border:1px solid var(--line);border-radius:1.2rem;padding:2.6rem 1.5rem;max-width:760px;margin:0 auto}
+.timings h3{font-size:1.6rem;margin-bottom:.4rem;color:#fff;font-weight:900;text-transform:uppercase}
+.timings p{color:var(--muted)}
+.timings .big{font-size:1.4rem;color:var(--red2);font-weight:900;margin:.7rem 0}
+.booking-wrap{max-width:720px;margin:0 auto}
+form.sample-form{background:#131316;border:1px solid var(--line);border-radius:1.2rem;padding:2.2rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.4rem}
+.form-grid .full{grid-column:1/-1}
+label{display:block;font-size:.9rem;font-weight:600;color:var(--muted)}
+input,select,textarea{width:100%;margin-top:.4rem;padding:.85rem 1rem;border-radius:.6rem;border:1px solid rgba(225,6,0,.35);background:#0c0c0e;color:var(--text);font-size:1rem;font-family:inherit;transition:border-color .25s ease,box-shadow .25s ease}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(225,6,0,.2)}
+textarea{resize:vertical}
+.form-note{margin-top:1rem;font-size:.85rem;color:var(--muted);text-align:center}
+.form-notice{background:#131316;border:2px dashed var(--red);border-radius:1.2rem;padding:2.4rem;text-align:center}
+.form-notice h3{font-size:1.7rem;color:#fff;margin-bottom:1rem;font-weight:900;text-transform:uppercase}
+.form-notice p{color:var(--muted);margin-bottom:1rem}
+.form-notice .tiny{font-size:.82rem;margin-top:1.4rem}
+footer{border-top:1px solid var(--line);background:#070708;padding:2.8rem 1.25rem;text-align:center}
+footer .f-logo{font-size:1.4rem;color:#fff;margin-bottom:.6rem;font-weight:900;text-transform:uppercase}
+footer .f-logo span{color:var(--red2)}
+footer p{color:var(--muted);font-size:.9rem;max-width:640px;margin:0 auto .6rem}
+footer .tiny{font-size:.78rem;opacity:.75}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:680px){.nav-links{display:none}.hero{padding:5rem 1.1rem 4rem}.form-grid{grid-template-columns:1fr}form.sample-form{padding:1.6rem}.section{padding:3.5rem 1.1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card:hover,.btn-red:hover,.btn-ghost:hover,.trainer:hover{transform:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="sample-banner">Sample Website &middot; Demo only &mdash; all names, prices &amp; timings are samples</div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">Power<span>House</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#trainers">Trainers</a></li>
+      <li><a href="#timings">Timings</a></li>
+      <li><a href="#join" class="btn btn-red nav-cta">Join Now</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+  <p class="eyebrow reveal">Strength &middot; Conditioning &middot; Sample Site</p>
+  <h1 class="reveal">Stronger<br><em>Every Rep.</em></h1>
+  <p class="sub reveal">A bold sample gym website with membership plans, trainer roles and a join enquiry form &mdash; everything here is fictional and for demonstration only.</p>
+  <div class="hero-ctas reveal">
+    <a class="btn btn-red" href="#join">Join Now</a>
+    <a class="btn btn-ghost" href="#plans">View Plans</a>
+  </div>
+  <p class="hero-meta reveal">Open daily &middot; <strong>5:00 AM &ndash; 10:00 PM</strong> <span style="opacity:.7">(sample timings)</span></p>
+</section>
+<section id="plans" class="section">
+  <p class="kicker reveal">Membership</p>
+  <h2 class="reveal">Choose Your Plan</h2>
+  <p class="lead reveal">Sample membership plans with sample pricing, shown to demonstrate the design.</p>
+  <div class="cards">
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Monthly</h3><ul><li>Full gym floor access</li><li>1 group class / week (sample)</li><li>Locker access (sample)</li></ul><div class="price">&#8377;999 <span class="per">/ month*</span></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Quarterly</h3><ul><li>Everything in Monthly</li><li>3 group classes / week (sample)</li><li>Diet chart sample (sample)</li></ul><div class="price">&#8377;2499 <span class="per">/ 3 months*</span></div></div></article>
+    <article class="card pop reveal"><div class="badge">Popular</div><div class="card-art"></div><div class="card-body"><h3>Yearly</h3><ul><li>Everything in Quarterly</li><li>Unlimited group classes (sample)</li><li>2 PT sessions free (sample)</li></ul><div class="price">&#8377;7999 <span class="per">/ year*</span></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Personal Training</h3><ul><li>1-on-1 coaching (sample)</li><li>Custom workout split (sample)</li><li>Progress tracking (sample)</li></ul><div class="price">&#8377;3999 <span class="per">/ month*</span></div></div></article>
+  </div>
+  <p class="form-note reveal" style="margin-top:2rem">*All prices are SAMPLE ONLY and do not represent real pricing.</p>
+</section>
+<section id="trainers" class="section" style="background:var(--bg2);max-width:none">
+  <div style="max-width:1120px;margin:0 auto">
+  <p class="kicker reveal">Coaching Team</p>
+  <h2 class="reveal">Train With Experts</h2>
+  <p class="lead reveal">Sample trainer roles only &mdash; no names or photos are used in this demo.</p>
+  <div class="trainers">
+    <div class="trainer reveal"><div class="trainer-art">S</div><div class="trainer-body"><h3>Strength Coach</h3><p>Powerlifting &amp; muscle building programs (sample role).</p></div></div>
+    <div class="trainer reveal"><div class="trainer-art">C</div><div class="trainer-body"><h3>Cardio &amp; Conditioning Coach</h3><p>HIIT, stamina and fat-loss circuits (sample role).</p></div></div>
+    <div class="trainer reveal"><div class="trainer-art">Y</div><div class="trainer-body"><h3>Yoga &amp; Mobility Coach</h3><p>Flexibility, recovery and breathwork (sample role).</p></div></div>
+    <div class="trainer reveal"><div class="trainer-art">N</div><div class="trainer-body"><h3>Nutrition Guide</h3><p>Meal planning support for members (sample role).</p></div></div>
+  </div>
+  </div>
+</section>
+<section id="timings" class="section">
+  <div class="timings reveal">
+    <h3>Gym Hours</h3>
+    <p>Sample location: <strong>Sample City</strong> (address is a placeholder)</p>
+    <p class="big">Open Daily &middot; 5:00 AM &ndash; 10:00 PM</p>
+    <p>Sample timings only. Peak hours 6&ndash;9 AM and 5&ndash;8 PM (sample text).</p>
+  </div>
+</section>
+<section id="join" class="section">
+  <p class="kicker reveal">Get Started</p>
+  <h2 class="reveal">Join PowerHouse</h2>
+  <p class="lead reveal">Fill in this sample enquiry form. Nothing is sent to any server &mdash; it is a design demo.</p>
+  <div class="booking-wrap">
+    <form class="sample-form reveal" novalidate>
+      <div class="form-grid">
+        <label>Your name<input type="text" name="name" required placeholder="e.g. Sample Guest"></label>
+        <label>Phone<input type="tel" name="phone" required placeholder="e.g. 98XXX XXXXX"></label>
+        <label>Plan<select name="service"><option>Monthly &#8377;999</option><option>Quarterly &#8377;2499</option><option>Yearly &#8377;7999</option><option>Personal Training &#8377;3999</option></select></label>
+        <label>Fitness goal<input type="text" name="slot" placeholder="e.g. Build strength (sample)"></label>
+        <label class="full">Message<textarea name="message" rows="4" placeholder="Anything we should know? (sample field)"></textarea></label>
+      </div>
+      <button class="btn btn-red" type="submit" style="width:100%">Send Sample Enquiry</button>
+      <p class="form-note">Sample form &mdash; your details are not sent anywhere.</p>
+    </form>
+    <div class="form-notice" hidden>
+      <h3>Sample Notice</h3>
+      <p>Thank you, <strong class="n-name">friend</strong>! This is a <strong>SAMPLE</strong> website, so your enquiry about &ldquo;<span class="n-service">a plan</span>&rdquo; was <strong>not sent</strong> anywhere and no membership was created.</p>
+      <p>To continue this demo, use the sample contact options below:</p>
+      <div class="hero-ctas">
+        <a class="btn btn-red" href="https://wa.me/910000000000?text=Sample%20enquiry%20for%20PowerHouse%20Gym" target="_blank" rel="noopener">WhatsApp (Sample)</a>
+        <a class="btn btn-ghost" href="mailto:sample@example.com?subject=Sample%20enquiry%20%E2%80%94%20PowerHouse%20Gym">Email (Sample)</a>
+      </div>
+      <p class="tiny">Sample Phone: 00000 00000 &middot; Sample Location: Sample City &middot; These are placeholders, not real contact details.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="f-logo">Power<span>House</span></div>
+  <p><strong>SAMPLE WEBSITE</strong> &mdash; built as a design demo. All names, prices, timings and contact details on this page are samples only.</p>
+  <p class="tiny">Sample Phone: 00000 00000 &middot; Sample Location: Sample City &middot; &copy; 2026 PowerHouse Gym (Sample)</p>
+</footer>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var t=document.querySelector(a.getAttribute('href'));if(t){ev.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}});});
+  document.querySelectorAll('form.sample-form').forEach(function(form){form.addEventListener('submit',function(ev){ev.preventDefault();
+    var n=form.querySelector('[name="name"]');var s=form.querySelector('[name="service"]');
+    var wrap=form.closest('.booking-wrap')||form.parentElement;var notice=wrap.querySelector('.form-notice');
+    form.style.display='none';
+    if(notice){notice.hidden=false;var nn=notice.querySelector('.n-name');if(nn&&n)nn.textContent=n.value||'friend';var ns=notice.querySelector('.n-service');if(ns&&s)ns.textContent=s.value;notice.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});}
+  });});
+})();
+</script>
+</body>
+</html>
