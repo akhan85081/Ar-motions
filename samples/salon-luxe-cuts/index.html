@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxe Cuts Salon — Sample Website</title>
+<meta name="description" content="Sample luxury salon website. All names, prices and timings are samples only.">
+<style>
+:root{--bg:#0b0906;--bg2:#100d07;--card:#171206;--gold:#d4af37;--gold2:#f0d47c;--text:#f6f0e2;--muted:#bcae8e;--line:rgba(212,175,55,.25)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+section[id]{scroll-margin-top:88px}
+.sample-banner{background:linear-gradient(90deg,#8a6d1f,#d4af37,#8a6d1f);color:#1a1204;text-align:center;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 1rem}
+.nav{position:sticky;top:0;z-index:60;background:rgba(11,9,6,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.95rem 1.25rem}
+.logo{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;color:var(--gold2);text-decoration:none;letter-spacing:.03em}
+.logo span{color:var(--text);font-weight:400}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;transition:color .25s ease}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{padding:.55rem 1.35rem!important;font-size:.9rem!important}
+.btn{display:inline-block;padding:.9rem 2rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem;border:none;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;text-align:center;font-family:inherit}
+.btn-gold{background:linear-gradient(135deg,#e8c65a,#c39a2b);color:#1a1204}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(212,175,55,.35)}
+.btn-ghost{border:2px solid var(--gold);color:var(--gold2);background:transparent}
+.btn-ghost:hover{background:rgba(212,175,55,.12);transform:translateY(-2px)}
+.hero{padding:6.5rem 1.25rem 5.5rem;text-align:center;background:radial-gradient(720px 340px at 18% 8%,rgba(212,175,55,.16),transparent 60%),radial-gradient(720px 360px at 85% 90%,rgba(212,175,55,.10),transparent 60%),repeating-linear-gradient(45deg,rgba(212,175,55,.035) 0 2px,transparent 2px 16px),var(--bg)}
+.eyebrow{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.76rem;font-weight:700;margin-bottom:1.1rem}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6.5vw,4.4rem);line-height:1.08;margin-bottom:1.2rem;color:#fff;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero .sub{max-width:640px;margin:0 auto 2.3rem;color:var(--muted);font-size:1.12rem}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.hero-meta{margin-top:2.4rem;color:var(--muted);font-size:.92rem}
+.hero-meta strong{color:var(--gold2)}
+.section{max-width:1120px;margin:0 auto;padding:4.5rem 1.25rem}
+.kicker{color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-size:.76rem;font-weight:700;text-align:center;margin-bottom:.8rem}
+.section h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,4.5vw,2.8rem);text-align:center;margin-bottom:.7rem;color:#fff}
+.lead{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 3rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
+.card{background:linear-gradient(160deg,#171206,#0f0c06);border:1px solid var(--line);border-radius:1.1rem;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(0,0,0,.55);border-color:var(--gold)}
+.card-art{height:150px;position:relative;background:radial-gradient(circle at 28% 30%,rgba(232,198,90,.55),transparent 55%),radial-gradient(circle at 78% 72%,rgba(212,175,55,.30),transparent 52%),linear-gradient(135deg,#2a2009,#0e0b05)}
+.card-art::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 10px,rgba(255,255,255,.045) 10px 12px)}
+.card-body{padding:1.6rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card-body h3{font-family:Georgia,serif;font-size:1.28rem;color:#fff}
+.card-body p{color:var(--muted);font-size:.95rem;flex:1}
+.price{font-size:1.55rem;font-weight:800;color:var(--gold2);margin-top:.4rem}
+.price small{font-size:.82rem;color:var(--muted);font-weight:600}
+.about{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-inner{max-width:860px;margin:0 auto;text-align:center}
+.about-inner p{color:var(--muted);margin-bottom:1.2rem;font-size:1.05rem}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:2.4rem}
+.why div{background:#14100a;border:1px solid var(--line);border-radius:.9rem;padding:1.4rem;transition:transform .3s ease,border-color .3s ease}
+.why div:hover{transform:translateY(-5px);border-color:var(--gold)}
+.why b{display:block;color:var(--gold2);font-size:1.05rem;margin-bottom:.4rem}
+.why span{color:var(--muted);font-size:.9rem}
+.timings{text-align:center;background:linear-gradient(135deg,#14100a,#0d0a05);border:1px solid var(--line);border-radius:1.2rem;padding:2.6rem 1.5rem;max-width:760px;margin:0 auto}
+.timings h3{font-family:Georgia,serif;font-size:1.6rem;margin-bottom:.4rem;color:#fff}
+.timings p{color:var(--muted)}
+.timings .big{font-size:1.4rem;color:var(--gold2);font-weight:800;margin:.7rem 0}
+.booking-wrap{max-width:720px;margin:0 auto}
+form.sample-form{background:#14100a;border:1px solid var(--line);border-radius:1.2rem;padding:2.2rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.4rem}
+.form-grid .full{grid-column:1/-1}
+label{display:block;font-size:.9rem;font-weight:600;color:var(--muted)}
+input,select,textarea{width:100%;margin-top:.4rem;padding:.85rem 1rem;border-radius:.7rem;border:1px solid rgba(212,175,55,.3);background:#0d0a05;color:var(--text);font-size:1rem;font-family:inherit;transition:border-color .25s ease,box-shadow .25s ease}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.18)}
+textarea{resize:vertical}
+.form-note{margin-top:1rem;font-size:.85rem;color:var(--muted);text-align:center}
+.form-notice{background:#14100a;border:2px dashed var(--gold);border-radius:1.2rem;padding:2.4rem;text-align:center}
+.form-notice h3{font-family:Georgia,serif;font-size:1.7rem;color:var(--gold2);margin-bottom:1rem}
+.form-notice p{color:var(--muted);margin-bottom:1rem}
+.form-notice .tiny{font-size:.82rem;margin-top:1.4rem}
+footer{border-top:1px solid var(--line);background:#080604;padding:2.8rem 1.25rem;text-align:center}
+footer .f-logo{font-family:Georgia,serif;font-size:1.4rem;color:var(--gold2);margin-bottom:.6rem}
+footer p{color:var(--muted);font-size:.9rem;max-width:640px;margin:0 auto .6rem}
+footer .tiny{font-size:.78rem;opacity:.75}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:680px){.nav-links{display:none}.hero{padding:5rem 1.1rem 4rem}.form-grid{grid-template-columns:1fr}form.sample-form{padding:1.6rem}.section{padding:3.5rem 1.1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card:hover,.btn-gold:hover,.btn-ghost:hover,.why div:hover{transform:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="sample-banner">Sample Website &middot; Demo only &mdash; all names, prices &amp; timings are samples</div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">Luxe <span>Cuts</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#timings">Timings</a></li>
+      <li><a href="#booking" class="btn btn-gold nav-cta">Book Now</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+  <p class="eyebrow reveal">Luxury Salon &middot; Sample Site</p>
+  <h1 class="reveal">Look Sharp.<br><em>Feel Luxurious.</em></h1>
+  <p class="sub reveal">Precision cuts, indulgent rituals and premium care &mdash; a sample luxury salon experience showing what your salon website could look like.</p>
+  <div class="hero-ctas reveal">
+    <a class="btn btn-gold" href="#booking">Book an Appointment</a>
+    <a class="btn btn-ghost" href="#services">Explore Services</a>
+  </div>
+  <p class="hero-meta reveal">Open daily &middot; <strong>10:00 AM &ndash; 9:00 PM</strong> <span style="opacity:.7">(sample timings)</span></p>
+</section>
+<section id="services" class="section">
+  <p class="kicker reveal">Our Menu</p>
+  <h2 class="reveal">Signature Services</h2>
+  <p class="lead reveal">Every service below is a sample listing with sample pricing, shown to demonstrate the design.</p>
+  <div class="cards">
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Precision Haircut</h3><p>A tailored cut, wash and style finish by senior stylists. Sample description.</p><div class="price">&#8377;299<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Beard Sculpting</h3><p>Shape, line-up and hot-towel finish for a crisp, clean look. Sample description.</p><div class="price">&#8377;199<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Luxury Facial</h3><p>Deep-cleanse, exfoliation and glow mask ritual. Sample description.</p><div class="price">&#8377;499<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Hair Color &amp; Keratin</h3><p>Global color, balayage or keratin smoothening. Sample description.</p><div class="price">&#8377;1499<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Hair Spa Ritual</h3><p>Nourishing spa therapy with a relaxing head massage. Sample description.</p><div class="price">&#8377;799<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Classic Hot-Towel Shave</h3><p>Traditional barber shave with a soothing finish. Sample description.</p><div class="price">&#8377;149<small> onwards*</small></div></div></article>
+  </div>
+  <p class="form-note reveal" style="margin-top:2rem">*All prices are SAMPLE ONLY and do not represent real pricing.</p>
+</section>
+<section id="about" class="section about">
+  <div class="about-inner">
+    <p class="kicker reveal">About Us</p>
+    <h2 class="reveal">The Luxe Cuts Experience</h2>
+    <p class="reveal">Luxe Cuts is a <strong>sample</strong> luxury salon concept. This demo page shows a premium dark-and-gold design with elegant typography, service cards and an enquiry form &mdash; everything here is fictional and for demonstration only.</p>
+    <div class="why">
+      <div class="reveal"><b>Premium Ambience</b><span>Dark, calm interiors with gold accents (sample description).</span></div>
+      <div class="reveal"><b>Skilled Stylists</b><span>Experienced grooming professionals (sample description).</span></div>
+      <div class="reveal"><b>Hygiene First</b><span>Sanitised tools and fresh linens (sample description).</span></div>
+    </div>
+  </div>
+</section>
+<section id="timings" class="section">
+  <div class="timings reveal">
+    <h3>Visit Us</h3>
+    <p>Sample location: <strong>Sample City</strong> (address is a placeholder)</p>
+    <p class="big">Open Daily &middot; 10:00 AM &ndash; 9:00 PM</p>
+    <p>Sample timings only. Walk-ins and appointments both welcome (sample text).</p>
+  </div>
+</section>
+<section id="booking" class="section">
+  <p class="kicker reveal">Reserve Your Chair</p>
+  <h2 class="reveal">Book an Appointment</h2>
+  <p class="lead reveal">Fill in this sample enquiry form. Nothing is sent to any server &mdash; it is a design demo.</p>
+  <div class="booking-wrap">
+    <form class="sample-form reveal" novalidate>
+      <div class="form-grid">
+        <label>Your name<input type="text" name="name" required placeholder="e.g. Sample Guest"></label>
+        <label>Phone<input type="tel" name="phone" required placeholder="e.g. 98XXX XXXXX"></label>
+        <label>Service<select name="service"><option>Precision Haircut</option><option>Beard Sculpting</option><option>Luxury Facial</option><option>Hair Color &amp; Keratin</option><option>Hair Spa Ritual</option><option>Classic Hot-Towel Shave</option></select></label>
+        <label>Preferred date / time<input type="text" name="slot" placeholder="e.g. Saturday, 5 PM (sample)"></label>
+        <label class="full">Message<textarea name="message" rows="4" placeholder="Anything we should know? (sample field)"></textarea></label>
+      </div>
+      <button class="btn btn-gold" type="submit" style="width:100%">Send Sample Enquiry</button>
+      <p class="form-note">Sample form &mdash; your details are not sent anywhere.</p>
+    </form>
+    <div class="form-notice" hidden>
+      <h3>Sample Notice</h3>
+      <p>Thank you, <strong class="n-name">friend</strong>! This is a <strong>SAMPLE</strong> website, so your enquiry about &ldquo;<span class="n-service">a service</span>&rdquo; was <strong>not sent</strong> anywhere and no booking was made.</p>
+      <p>To continue this demo, use the sample contact options below:</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="https://wa.me/910000000000?text=Sample%20enquiry%20for%20Luxe%20Cuts" target="_blank" rel="noopener">WhatsApp (Sample)</a>
+        <a class="btn btn-ghost" href="mailto:sample@example.com?subject=Sample%20enquiry%20%E2%80%94%20Luxe%20Cuts">Email (Sample)</a>
+      </div>
+      <p class="tiny">Sample Phone: 00000 00000 &middot; Sample Location: Sample City &middot; These are placeholders, not real contact details.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="f-logo">Luxe Cuts</div>
+  <p><strong>SAMPLE WEBSITE</strong> &mdash; built as a design demo. All names, prices, timings and contact details on this page are samples only.</p>
+  <p class="tiny">Sample Phone: 00000 00000 &middot; Sample Location: Sample City &middot; &copy; 2026 Luxe Cuts (Sample)</p>
+</footer>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var t=document.querySelector(a.getAttribute('href'));if(t){ev.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}});});
+  document.querySelectorAll('form.sample-form').forEach(function(form){form.addEventListener('submit',function(ev){ev.preventDefault();
+    var n=form.querySelector('[name="name"]');var s=form.querySelector('[name="service"]');
+    var wrap=form.closest('.booking-wrap')||form.parentElement;var notice=wrap.querySelector('.form-notice');
+    form.style.display='none';
+    if(notice){notice.hidden=false;var nn=notice.querySelector('.n-name');if(nn&&n)nn.textContent=n.value||'friend';var ns=notice.querySelector('.n-service');if(ns&&s)ns.textContent=s.value;notice.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});}
+  });});
+})();
+</script>
+</body>
+</html>
