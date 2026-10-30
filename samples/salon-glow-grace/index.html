@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow &amp; Grace Salon &amp; Spa — Sample Website</title>
+<meta name="description" content="Sample salon and spa website. All names, prices and timings are samples only.">
+<style>
+:root{--bg:#130a11;--bg2:#1a0f17;--card:#211420;--pink:#ff5c8a;--pink2:#ff9ebb;--text:#fbeff3;--muted:#cfa9b8;--line:rgba(255,92,138,.28)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+section[id]{scroll-margin-top:88px}
+.sample-banner{background:linear-gradient(90deg,#a32450,var(--pink),#a32450);color:#2b0716;text-align:center;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 1rem}
+.nav{position:sticky;top:0;z-index:60;background:rgba(19,10,17,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.95rem 1.25rem}
+.logo{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;color:var(--pink2);text-decoration:none}
+.logo span{color:var(--text);font-weight:400;font-style:italic}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;transition:color .25s ease}
+.nav-links a:hover{color:var(--pink2)}
+.nav-cta{padding:.55rem 1.35rem!important;font-size:.9rem!important}
+.btn{display:inline-block;padding:.9rem 2rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem;border:none;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;text-align:center;font-family:inherit}
+.btn-pink{background:linear-gradient(135deg,#ff7ba0,#e0446f);color:#2b0716}
+.btn-pink:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(255,92,138,.38)}
+.btn-ghost{border:2px solid var(--pink);color:var(--pink2);background:transparent}
+.btn-ghost:hover{background:rgba(255,92,138,.12);transform:translateY(-2px)}
+.hero{padding:6.5rem 1.25rem 5.5rem;text-align:center;background:radial-gradient(720px 340px at 18% 8%,rgba(255,92,138,.18),transparent 60%),radial-gradient(720px 360px at 85% 90%,rgba(255,92,138,.10),transparent 60%),repeating-linear-gradient(45deg,rgba(255,92,138,.04) 0 2px,transparent 2px 16px),var(--bg)}
+.eyebrow{color:var(--pink);letter-spacing:.3em;text-transform:uppercase;font-size:.76rem;font-weight:700;margin-bottom:1.1rem}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6.5vw,4.4rem);line-height:1.08;margin-bottom:1.2rem;color:#fff;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--pink2)}
+.hero .sub{max-width:640px;margin:0 auto 2.3rem;color:var(--muted);font-size:1.12rem}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.hero-meta{margin-top:2.4rem;color:var(--muted);font-size:.92rem}
+.hero-meta strong{color:var(--pink2)}
+.section{max-width:1120px;margin:0 auto;padding:4.5rem 1.25rem}
+.kicker{color:var(--pink);letter-spacing:.24em;text-transform:uppercase;font-size:.76rem;font-weight:700;text-align:center;margin-bottom:.8rem}
+.section h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,4.5vw,2.8rem);text-align:center;margin-bottom:.7rem;color:#fff}
+.lead{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 3rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.6rem}
+.card{background:linear-gradient(160deg,#25172466,#130a11);background-color:#1f1220;border:1px solid var(--line);border-radius:1.1rem;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(0,0,0,.5);border-color:var(--pink)}
+.card-art{height:150px;position:relative;background:radial-gradient(circle at 28% 30%,rgba(255,123,160,.55),transparent 55%),radial-gradient(circle at 78% 72%,rgba(255,92,138,.3),transparent 52%),linear-gradient(135deg,#3a1c33,#170d15)}
+.card-art::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 10px,rgba(255,255,255,.05) 10px 12px)}
+.card-body{padding:1.6rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card-body h3{font-family:Georgia,serif;font-size:1.28rem;color:#fff}
+.card-body p{color:var(--muted);font-size:.95rem;flex:1}
+.price{font-size:1.55rem;font-weight:800;color:var(--pink2);margin-top:.4rem}
+.price small{font-size:.82rem;color:var(--muted);font-weight:600}
+.rituals{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.ritual{background:#1d111c;border:1px solid var(--line);border-radius:1rem;padding:1.6rem;text-align:center;transition:transform .3s ease,border-color .3s ease}
+.ritual:hover{transform:translateY(-5px);border-color:var(--pink)}
+.ritual .icon{font-size:2rem;margin-bottom:.6rem}
+.ritual b{display:block;color:var(--pink2);font-size:1.05rem;margin-bottom:.4rem}
+.ritual span{color:var(--muted);font-size:.9rem}
+.timings{text-align:center;background:linear-gradient(135deg,#1d111c,#150c14);border:1px solid var(--line);border-radius:1.2rem;padding:2.6rem 1.5rem;max-width:760px;margin:0 auto}
+.timings h3{font-family:Georgia,serif;font-size:1.6rem;margin-bottom:.4rem;color:#fff}
+.timings p{color:var(--muted)}
+.timings .big{font-size:1.4rem;color:var(--pink2);font-weight:800;margin:.7rem 0}
+.booking-wrap{max-width:720px;margin:0 auto}
+form.sample-form{background:#1d111c;border:1px solid var(--line);border-radius:1.2rem;padding:2.2rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.4rem}
+.form-grid .full{grid-column:1/-1}
+label{display:block;font-size:.9rem;font-weight:600;color:var(--muted)}
+input,select,textarea{width:100%;margin-top:.4rem;padding:.85rem 1rem;border-radius:.7rem;border:1px solid rgba(255,92,138,.32);background:#150c14;color:var(--text);font-size:1rem;font-family:inherit;transition:border-color .25s ease,box-shadow .25s ease}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,92,138,.2)}
+textarea{resize:vertical}
+.form-note{margin-top:1rem;font-size:.85rem;color:var(--muted);text-align:center}
+.form-notice{background:#1d111c;border:2px dashed var(--pink);border-radius:1.2rem;padding:2.4rem;text-align:center}
+.form-notice h3{font-family:Georgia,serif;font-size:1.7rem;color:var(--pink2);margin-bottom:1rem}
+.form-notice p{color:var(--muted);margin-bottom:1rem}
+.form-notice .tiny{font-size:.82rem;margin-top:1.4rem}
+footer{border-top:1px solid var(--line);background:#0d060c;padding:2.8rem 1.25rem;text-align:center}
+footer .f-logo{font-family:Georgia,serif;font-size:1.4rem;color:var(--pink2);margin-bottom:.6rem}
+footer p{color:var(--muted);font-size:.9rem;max-width:640px;margin:0 auto .6rem}
+footer .tiny{font-size:.78rem;opacity:.75}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:680px){.nav-links{display:none}.hero{padding:5rem 1.1rem 4rem}.form-grid{grid-template-columns:1fr}form.sample-form{padding:1.6rem}.section{padding:3.5rem 1.1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card:hover,.btn-pink:hover,.btn-ghost:hover,.ritual:hover{transform:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="sample-banner">Sample Website &middot; Demo only &mdash; all names, prices &amp; timings are samples</div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">Glow <span>&amp; Grace</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#rituals">Rituals</a></li>
+      <li><a href="#timings">Timings</a></li>
+      <li><a href="#booking" class="btn btn-pink nav-cta">Book Now</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+  <p class="eyebrow reveal">Salon &amp; Spa &middot; Sample Site</p>
+  <h1 class="reveal">Glow,<br><em>Inside Out.</em></h1>
+  <p class="sub reveal">A premium sample salon &amp; spa website with service packages and a booking enquiry form &mdash; everything here is fictional and for demonstration only.</p>
+  <div class="hero-ctas reveal">
+    <a class="btn btn-pink" href="#booking">Book a Session</a>
+    <a class="btn btn-ghost" href="#services">View Packages</a>
+  </div>
+  <p class="hero-meta reveal">Open daily &middot; <strong>10:00 AM &ndash; 8:00 PM</strong> <span style="opacity:.7">(sample timings)</span></p>
+</section>
+<section id="services" class="section">
+  <p class="kicker reveal">Packages</p>
+  <h2 class="reveal">Services &amp; Packages</h2>
+  <p class="lead reveal">Sample services with sample pricing, shown to demonstrate the design.</p>
+  <div class="cards">
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Hair Spa</h3><p>Deep-nourish spa therapy with a calming scalp massage. Sample description.</p><div class="price">&#8377;799<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Bridal Package</h3><p>Complete bridal look: hair, makeup trial and glow rituals. Sample description.</p><div class="price">&#8377;9999<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Manicure &amp; Pedicure</h3><p>Soak, scrub, massage and polish for hands and feet. Sample description.</p><div class="price">&#8377;499<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Waxing</h3><p>Gentle full-body and facial waxing options. Sample description.</p><div class="price">&#8377;299<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Glow Facial Ritual</h3><p>Brightening facial with de-tan and hydration mask. Sample description.</p><div class="price">&#8377;899<small> onwards*</small></div></div></article>
+    <article class="card reveal"><div class="card-art"></div><div class="card-body"><h3>Body Polish &amp; Wrap</h3><p>Exfoliating polish followed by a nourishing wrap. Sample description.</p><div class="price">&#8377;1299<small> onwards*</small></div></div></article>
+  </div>
+  <p class="form-note reveal" style="margin-top:2rem">*All prices are SAMPLE ONLY and do not represent real pricing.</p>
+</section>
+<section id="rituals" class="section" style="background:var(--bg2);max-width:none">
+  <div style="max-width:1120px;margin:0 auto">
+  <p class="kicker reveal">The Experience</p>
+  <h2 class="reveal">Signature Rituals</h2>
+  <p class="lead reveal">Sample highlights of a visit to Glow &amp; Grace.</p>
+  <div class="rituals">
+    <div class="ritual reveal"><div class="icon">&#9673;</div><b>Welcome Ritual</b><span>Herbal tea and consultation on arrival (sample).</span></div>
+    <div class="ritual reveal"><div class="icon">&#9673;</div><b>Calm Suites</b><span>Private, softly-lit treatment rooms (sample).</span></div>
+    <div class="ritual reveal"><div class="icon">&#9673;</div><b>Clean Promise</b><span>Fresh linens and sanitised tools (sample).</span></div>
+    <div class="ritual reveal"><div class="icon">&#9673;</div><b>Afterglow Care</b><span>Take-home tips after every session (sample).</span></div>
+  </div>
+  </div>
+</section>
+<section id="timings" class="section">
+  <div class="timings reveal">
+    <h3>Visit Us</h3>
+    <p>Sample location: <strong>Sample City</strong> (address is a placeholder)</p>
+    <p class="big">Open Daily &middot; 10:00 AM &ndash; 8:00 PM</p>
+    <p>Sample timings only. Bridal trials by prior appointment (sample text).</p>
+  </div>
+</section>
+<section id="booking" class="section">
+  <p class="kicker reveal">Reserve Your Ritual</p>
+  <h2 class="reveal">Book an Appointment</h2>
+  <p class="lead reveal">Fill in this sample enquiry form. Nothing is sent to any server &mdash; it is a design demo.</p>
+  <div class="booking-wrap">
+    <form class="sample-form reveal" novalidate>
+      <div class="form-grid">
+        <label>Your name<input type="text" name="name" required placeholder="e.g. Sample Guest"></label>
+        <label>Phone<input type="tel" name="phone" required placeholder="e.g. 98XXX XXXXX"></label>
+        <label>Service / Package<select name="service"><option>Hair Spa</option><option>Bridal Package</option><option>Manicure &amp; Pedicure</option><option>Waxing</option><option>Glow Facial Ritual</option><option>Body Polish &amp; Wrap</option></select></label>
+        <label>Preferred date / time<input type="text" name="slot" placeholder="e.g. Friday, 4 PM (sample)"></label>
+        <label class="full">Message<textarea name="message" rows="4" placeholder="Anything we should know? (sample field)"></textarea></label>
+      </div>
+      <button class="btn btn-pink" type="submit" style="width:100%">Send Sample Enquiry</button>
+      <p class="form-note">Sample form &mdash; your details are not sent anywhere.</p>
+    </form>
+    <div class="form-notice" hidden>
+      <h3>Sample Notice</h3>
+      <p>Thank you, <strong class="n-name">friend</strong>! This is a <strong>SAMPLE</strong> website, so your enquiry about &ldquo;<span class="n-service">a service</span>&rdquo; was <strong>not sent</strong> anywhere and no booking was made.</p>
+      <p>To continue this demo, use the sample contact options below:</p>
+      <div class="hero-ctas">
+        <a class="btn btn-pink" href="https://wa.me/910000000000?text=Sample%20enquiry%20for%20Glow%20and%20Grace" target="_blank" rel="noopener">WhatsApp (Sample)</a>
+        <a class="btn btn-ghost" href="mailto:sample@example.com?subject=Sample%20enquiry%20%E2%80%94%20Glow%20%26%20Grace">Email (Sample)</a>
+      </div>
+      <p class="tiny">Sample Phone: 00000 00000 &middot; Sample Location: Sample City &middot; These are placeholders, not real contact details.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="f-logo">Glow &amp; Grace</div>
+  <p><strong>SAMPLE WEBSITE</strong> &mdash; built as a design demo. All names, prices, timings and contact details on this page are samples only.</p>
+  <p class="tiny">Sample Phone: 00000 00000 &middot; Sample Location: Sample City &middot; &copy; 2026 Glow &amp; Grace Salon &amp; Spa (Sample)</p>
+</footer>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var t=document.querySelector(a.getAttribute('href'));if(t){ev.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}});});
+  document.querySelectorAll('form.sample-form').forEach(function(form){form.addEventListener('submit',function(ev){ev.preventDefault();
+    var n=form.querySelector('[name="name"]');var s=form.querySelector('[name="service"]');
+    var wrap=form.closest('.booking-wrap')||form.parentElement;var notice=wrap.querySelector('.form-notice');
+    form.style.display='none';
+    if(notice){notice.hidden=false;var nn=notice.querySelector('.n-name');if(nn&&n)nn.textContent=n.value||'friend';var ns=notice.querySelector('.n-service');if(ns&&s)ns.textContent=s.value;notice.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});}
+  });});
+})();
+</script>
+</body>
+</html>
