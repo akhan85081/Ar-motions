@@ -182,7 +182,7 @@
             <a href="/" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Home</a>             <a href="#latest-work" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Latest Work</a>
             <a href="/portfolio" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Portfolio</a>
             <a href="#services" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Services</a>
-            <a href="#how-it-works" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">How it works</a>
+            <a href="#how-it-works" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">How It Works</a>
             <a href="#faq" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">FAQ</a>
             <a href="/terms" class="text-xl font-semibold mb-6 hover:text-brand-neon transition-colors">Terms</a>
             <button onclick="openOwnerModal(event)" class="text-left text-xl font-semibold mb-6 text-brand-light hover:text-brand-neon transition-colors cursor-pointer flex items-center gap-2"><i class="fas fa-user-tie"></i> Know the Owner</button>
@@ -251,6 +251,16 @@
                     <!-- Video 4 -->
                     <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-[9/16]" data-aos="fade-up" data-aos-delay="300">
                         <iframe src="https://player.vimeo.com/video/1224077827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Vertical Video Edit Portfolio 4"></iframe>
+                    </div>
+                </div>
+
+                <!-- SaaS Work - New Placement -->
+                <div class="flex justify-center mb-10" data-aos="fade-up">
+                    <div class="w-full max-w-3xl">
+                        <div class="relative w-full overflow-hidden rounded-2xl liquid-glass bg-black/50 aspect-video">
+                            <iframe src="https://player.vimeo.com/video/1241904768?badge=0&autopause=0&player_id=0&app_id=58479" class="absolute top-0 left-0 w-full h-full rounded-2xl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="SaaS work"></iframe>
+                        </div>
+                        <p class="text-center text-gray-200 font-semibold text-sm md:text-base mt-3">SaaS work</p>
                     </div>
                 </div>
 
@@ -623,7 +633,7 @@
             
             interactiveElements.forEach(el => {
                 el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-                el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('mouseleave'));
             });
         }
 
