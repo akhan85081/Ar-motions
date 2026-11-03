@@ -106,7 +106,7 @@
             border-radius: 50px; padding: 12px 24px; display: flex; align-items: center; gap: 10px;
             font-weight: 600; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 50; transition: all 0.3s ease; text-decoration: none;
         }
-        .whatsapp-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6); }
+        .whatsapp-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6); } .instagram-btn { position: fixed; bottom: 102px; right: 30px; background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045); color: white; border-radius: 50px; padding: 12px 24px; display: flex; align-items: center; gap: 10px; font-weight: 600; box-shadow: 0 10px 30px rgba(253, 29, 29, 0.4); z-index: 50; transition: all 0.3s ease; text-decoration: none; } .instagram-btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(253, 29, 29, 0.6); } @media (max-width: 640px) { .instagram-btn { bottom: 88px; right: 20px; padding: 10px 18px; } }
         @media (max-width: 640px) {
             .whatsapp-btn { bottom: 20px; right: 20px; padding: 10px 18px; }
         }
@@ -522,7 +522,7 @@
                 <h4 class="font-bold text-lg mb-4 text-white">Contact Me</h4>
                 <address class="not-italic">
                     <ul class="space-y-4 text-gray-400 text-sm flex flex-col items-center sm:items-start">
-                        <li class="flex items-center gap-3">
+                        <li class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon"><i class="fab fa-instagram" aria-hidden="true"></i></div><a href="https://www.instagram.com/arshad_khanwolf/" target="_blank" rel="noopener" class="hover:text-white transition-colors">Instagram</a></li><li class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-neon"><i class="fas fa-phone" aria-hidden="true"></i></div>
                             <a href="tel:+919302687554" class="hover:text-white transition-colors font-semibold">+91 93026 87554</a>
                         </li>
@@ -549,7 +549,7 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Button -->
+    <!-- Instagram Button --><a href="https://www.instagram.com/arshad_khanwolf/" target="_blank" rel="noopener" class="instagram-btn cursor-pointer" aria-label="Instagram"><i class="fab fa-instagram text-xl" aria-hidden="true"></i><span class="hidden sm:inline">Instagram</span></a><!-- WhatsApp Button -->
     <button id="wa-btn-trigger" class="whatsapp-btn cursor-pointer" aria-label="Chat with me on WhatsApp">
         <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>
         <span class="hidden sm:inline">Chat Now</span>
